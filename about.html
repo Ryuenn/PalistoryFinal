@@ -53,6 +53,20 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <style>
+        /* Keep main nav on a single line */
+        .main-menu > ul { white-space: nowrap; }
+        @media (min-width: 992px) and (max-width: 1399px) {
+            .main-menu > ul > li { margin: 0 10px; }
+        }
+        /* Extend red bar left (shrink logo gap) and keep notice off the search button */
+        @media (min-width: 992px) {
+            .header-layout1 .header-logo { margin-right: 16px !important; }
+            .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
+            .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
+            .header-notice { padding-right: 0; }
+        }
+    </style>
 </head>
 
 <body>
@@ -144,7 +158,7 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/Palistory_LogoReal.png" alt="Palistory" style="height:55px;"></a>
+                <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -153,10 +167,10 @@
                         <a href="about.html">About Palistory</a>
                         <ul class="sub-menu">
                             <li><a href="about.html">Organizational Information</a></li>
-                            <li><a href="team.html">Team Members</a></li>
-                            <li><a href="team.html">Story Tellers</a></li>
                         </ul>
                     </li>
+                    <li><a href="team.html">Team Members</a></li>
+                    <li><a href="team.html">Story Tellers</a></li>
                     <li class="menu-item-has-children">
                         <a href="#">Events</a>
                         <ul class="sub-menu">
@@ -173,61 +187,15 @@
     <!--==============================
 	Header Area
 ==============================-->
-    <header class="th-header header-default">
-        <div class="menu-top">
-            <div class="container">
-                <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
-                    <div class="col-auto d-none d-lg-block">
-                        <div class="header-logo">
-                            <a href="index.html"><img src="assets/img/Palistory_LogoReal.png" alt="Palistory" style="height:55px;"></a>
-                        </div>
-                    </div>
-                    <div class="col-auto d-none d-md-block">
-                        <div class="info-card-wrap">
-                            <div class="info-card">
-                                <div class="box-icon">
-                                    <i class="fal fa-film"></i>
-                                    <div class="bg-shape1" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                    <div class="bg-shape2" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                </div>
-                                <div class="box-content">
-                                    <p class="box-text">Non-profit 501(c)(3) | EIN: 99-1125525</p>
-                                    <h4 class="box-title">Telling Palestinian Stories Through Film</h4>
-                                </div>
-                            </div>
-                            <div class="info-card">
-                                <div class="box-icon">
-                                    <i class="fal fa-envelope-open"></i>
-                                    <div class="bg-shape1" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                    <div class="bg-shape2" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                </div>
-                                <div class="box-content">
-                                    <p class="box-text">Email us any time:</p>
-                                    <h4 class="box-title"><a href="mailto:info@palistory.com">INFO@PALISTORY.COM</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                                        <div class="col-auto header-social-col">
-                        <div class="th-social">
-                            <a href="https://www.instagram.com/palistory.usa/" target="_blank"><i class="fab fa-instagram"></i></a>
-                            <a href="https://www.youtube.com/@Palistory" target="_blank"><i class="fab fa-youtube"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <header class="th-header header-layout1 onepage-nav">
         <div class="sticky-wrapper">
             <!-- Main Menu Area -->
             <div class="container">
                 <div class="menu-area">
+                    <div class="header-logo" style="margin-left:-40px;">
+                        <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
+                    </div>
                     <div class="menu-area-wrap">
-                        <div class="col-auto d-inline-block d-lg-none">
-                            <div class="header-logo">
-                                <a href="index.html"><img src="assets/img/Palistory_LogoReal.png" alt="Palistory" style="height:50px;"></a>
-                            </div>
-                        </div>
                                                 <nav class="main-menu d-none d-lg-block">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
@@ -235,10 +203,10 @@
                                     <a href="about.html">About Palistory</a>
                                     <ul class="sub-menu">
                                         <li><a href="about.html">Organizational Information</a></li>
-                                        <li><a href="team.html">Team Members</a></li>
-                                        <li><a href="team.html">Story Tellers</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="team.html">Team Members</a></li>
+                                <li><a href="team.html">Story Tellers</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Events</a>
                                     <ul class="sub-menu">
@@ -250,12 +218,12 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </nav>
-                        <p class="header-notice"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Are you ready to help them? Let’s become a volunteers...</p>
+                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
                     </div>
                     <div class="header-button">
-                        <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none"><i class="far fa-search"></i></button>
+                        <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="far fa-search"></i></button>
                         
-                        <a href="https://secure.qgiv.com/for/palistory/" target="_blank" class="th-btn style3 d-lg-block d-none"><i class="fas fa-heart me-2"></i> Make a Donation</a>
+                        <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="th-btn style3 d-xl-block d-none"><i class="fas fa-heart me-2"></i> Donate Now</a>
                         <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
                     </div>
                 </div>
@@ -872,34 +840,17 @@ Brand Area
     <!--==============================
 	Footer Area
 ==============================-->
-    <footer class="footer-wrapper footer-default" data-bg-src="assets/img/bg/footer-default-bg-mask.png">
-        <div class="footer-bg-shape2 shape-mockup jump" data-top="20%" data-right="0">
-            <img src="assets/img/shape/footer-bg-shape3.png" alt="img">
+    <footer class="footer-wrapper footer-layout1">
+        <div class="shape-mockup footer-bg-shape1-1 jump" data-left="0" data-top="0">
+            <img src="assets/img/shape/footer-bg-shape1-1.png" alt="img">
         </div>
-        <div class="footer-bg-shape3 shape-mockup d-none" data-bottom="0" data-right="0">
-            <img src="assets/img/shape/footer-bg-shape2.png" alt="img">
-        </div>
-        <div class="footer-top">
-            <div class="container">
-                <div class="subscribe-box">
-                    <div class="row gy-40 align-items-center justify-content-center">
-                        <div class="col-xl-6">
-                            <h4 class="subscribe-box_title">Subscribe to Our Newsletter</h4>
-                            <p class="subscribe-box_text">Regular inspections and feedback mechanisms</p>
-                        </div>
-                        <div class="col-xl-6 col-lg-8">
-                            <form class="newsletter-form">
-                                <div class="form-group">
-                                    <input class="form-control" type="email" placeholder="Enter Email Address" required="">
-                                </div>
-                                <button type="submit" class="th-btn style3"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+        <div class="shape-mockup footer-bg-shape1-3 jump" data-right="0" data-bottom="0">
+            <div class="color-masking2">
+                <div class="masking-src" data-mask-src="assets/img/shape/footer-bg-shape1-2.png" style="background: var(--theme-color3); mix-blend-mode: multiply;"></div>
+                <img src="assets/img/shape/footer-bg-shape1-2.png" alt="img" style="filter: hue-rotate(82deg) saturate(0.8) brightness(0.6);">
             </div>
         </div>
-        <div class="widget-area">
+        <div class="widget-area space-top">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-xl-auto">
@@ -908,8 +859,24 @@ Brand Area
                                 <div class="about-logo">
                                     <a href="index.html"><img src="assets/img/Palistory_LogoReal.png" alt="Palistory" style="height:50px;"></a>
                                 </div>
-                                <p class="about-text"> Our secure online donation platform allows you to make contributions quickly and safely. Choose from various.</p>
-                                <a href="contact.html" class="th-btn"><i class="fas fa-heart me-2"></i> Donate Now</a>
+                                <p class="about-text mb-3">Palistory is a non-profit 501(c)(3) organization dedicated to the telling of the heart-felt stories of Palestinians who were forcefully displaced from their lands beginning in 1948. Contact Us to see how you can help support us.</p>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme">
+                                        <i class="fas fa-gift"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <h4 class="box-title"><a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer">Make Donation</a></h4>
+                                    </div>
+                                </div>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme2">
+                                        <i class="fal fa-envelope-open"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <p class="box-text">Email us:</p>
+                                        <h4 class="box-title"><a href="mailto:INFO@PALISTORY.COM">INFO@PALISTORY.COM</a></h4>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -918,76 +885,37 @@ Brand Area
                             <h3 class="widget_title">Quick Links</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="blog.html">Our News</a></li>
-                                    <li><a href="about.html">Our Campaign</a></li>
-                                    <li><a href="contact.html">Privacy policy</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-auto">
-                        <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Our Service</h3>
-                            <div class="menu-all-pages-container">
-                                <ul class="menu">
-                                    <li><a href="donate-now.html">Give Donation</a></li>
-                                    <li><a href="faq.html">Education Support</a></li>
-                                    <li><a href="faq.html">Food Support</a></li>
-                                    <li><a href="faq.html">Health Support</a></li>
-                                    <li><a href="gallery.html">Our Campaign </a></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Palistory</a></li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="team.html">Story Tellers</a></li>
+                                    <li><a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer">Contribute</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
-                        <div class="widget footer-widget">
-                            <div class="th-widget-contact">
-                                <h3 class="widget_title">Contact Us</h3>
-                                <div class="info-card">
-                                    <div class="box-icon">
-                                        <i class="fal fa-phone"></i>
-                                        <div class="bg-shape1" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                        <div class="bg-shape2" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                    </div>
-                                    <div class="box-content">
-                                        <p class="box-text">Call us any time:</p>
-                                        <h4 class="box-title"><a href="tel:16336547896">+163-3654-7896</a></h4>
-                                    </div>
+                        <div class="widget newsletter-widget footer-widget">
+                            <h3 class="widget_title">Newsletter</h3>
+                            <p class="footer-text mb-4">Subscribe to our newsletter to get our daily latest news and updates</p>
+                            <form class="newsletter-form">
+                                <div class="form-group style-dark">
+                                    <input class="form-control" type="email" placeholder="Your email" required="">
                                 </div>
-                                <div class="info-card">
-                                    <div class="box-icon">
-                                        <i class="fal fa-envelope-open"></i>
-                                        <div class="bg-shape1" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                        <div class="bg-shape2" data-mask-src="assets/img/shape/info_card_icon_bg_shape_1_1.png"></div>
-                                    </div>
-                                    <div class="box-content">
-                                        <p class="box-text">Email us any time:</p>
-                                        <h4 class="box-title"><a href="mailto:info@donat.com">info@donat.com</a></h4>
-                                    </div>
-                                </div>
-                                <div class="th-social style2">
-                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
+                                <button type="submit" class="th-btn style5">Submit</button>
+                            </form>
+                            <div class="th-social style6">
+                                <a href="https://www.instagram.com/palistory" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@palistory" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="copyright-wrap">
+        <div class="copyright-wrap bg-theme text-center">
             <div class="container">
-                <div class="row justify-content-center gy-3 align-items-center">
-                    <div class="col-lg-12">
-                        <p class="copyright-text text-center">
-                            <i class="fal fa-copyright"></i> Copyright 2025 <a href="index.html">Donat</a>. All Rights Reserved.
-                        </p>
-                    </div>
-                </div>
+                <p class="copyright-text" style="color:#fff;">© 2025 Copyrights by <a href="index.html" style="color:#fff;">Palistory.com</a> . All Rights Reserved</p>
             </div>
         </div>
     </footer>

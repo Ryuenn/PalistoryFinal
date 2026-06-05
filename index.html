@@ -111,6 +111,19 @@
             .hero-style2 .hero-text,
             .hero-style2 .btn-wrap { opacity: 1; animation: none; }
         }
+
+        /* Keep main nav on a single line */
+        .main-menu > ul { white-space: nowrap; }
+        @media (min-width: 992px) and (max-width: 1399px) {
+            .main-menu > ul > li { margin: 0 10px; }
+        }
+        /* Extend red bar left (shrink logo gap) and keep notice off the search button */
+        @media (min-width: 992px) {
+            .header-layout1 .header-logo { margin-right: 16px !important; }
+            .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
+            .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
+            .header-notice { padding-right: 0; }
+        }
     </style>
 
 </head>
@@ -213,10 +226,10 @@
                         <a href="about.html">About Palistory</a>
                         <ul class="sub-menu">
                             <li><a href="about.html">Organizational Information</a></li>
-                            <li><a href="team.html">Team Members</a></li>
-                            <li><a href="team.html">Story Tellers</a></li>
                         </ul>
                     </li>
+                    <li><a href="team.html">Team Members</a></li>
+                    <li><a href="team.html">Story Tellers</a></li>
                     <li class="menu-item-has-children">
                         <a href="#">Events</a>
                         <ul class="sub-menu">
@@ -238,7 +251,7 @@
             <!-- Main Menu Area -->
             <div class="container">
                 <div class="menu-area">
-                    <div class="header-logo">
+                    <div class="header-logo" style="margin-left:-40px;">
                         <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
                     </div>
                     <div class="menu-area-wrap">
@@ -249,10 +262,10 @@
                                     <a href="about.html">About Palistory</a>
                                     <ul class="sub-menu">
                                         <li><a href="about.html">Organizational Information</a></li>
-                                        <li><a href="team.html">Team Members</a></li>
-                                        <li><a href="team.html">Story Tellers</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="team.html">Team Members</a></li>
+                                <li><a href="team.html">Story Tellers</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Events</a>
                                     <ul class="sub-menu">
@@ -264,7 +277,7 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </nav>
-                        <p class="header-notice" style="font-size:0.8em;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
+                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
                     </div>
                     <div class="header-button">
                         <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="far fa-search"></i></button>
@@ -717,7 +730,7 @@ FAQ Area
 <!--==============================
 Team Area
 ==============================-->
-    <section class="space team-area-2">
+    <section class="space team-area-2" id="team-members">
 
         <div class="container">
             <div class="title-area text-center">
