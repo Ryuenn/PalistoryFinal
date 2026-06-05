@@ -1,0 +1,140 @@
+/* Counter 1 ---------------------------------- */
+.counter-card-wrap {
+    $counter-list-border: 3;
+    $counter-twocolumn: 2;
+    --space-x: 60px;
+    --space-y: 40px;
+    --th-border-color: rgba(255,255,255,0.1);
+    // Reset All
+    &:not(:nth-child(#{$counter-list-border}n)) {
+        border-right: unset;
+    }
+    // For 2 Column
+    &:not(:nth-last-child(-n + #{$counter-twocolumn})) {
+        padding-bottom: var(--space-y);
+    }
+    &:not(:nth-child(-n + #{$counter-twocolumn})) {
+        padding-top: var(--space-y);    
+        border-top: 2px solid $border-color;
+    }
+    &:nth-child(odd) {
+        padding-right: var(--space-x);
+    }
+    &:nth-child(even) {
+        padding-left: var(--space-x);
+        border-left: 2px solid $border-color;
+    }
+    &:not(:nth-last-child(-n + 4)) {
+        border-top: 0;
+    }
+    @include xxl {
+        --space-x: 40px;
+    }
+    @include xl {
+        --space-x: 30px;
+        --space-y: 30px;
+    }
+    @include lg {
+        --space-x: 20px;
+        --space-y: 25px;
+    }
+    @include md {
+        --space-x: 30px;
+        --space-y: 30px;
+    }
+    @include sm {
+        &:nth-child(even) {
+            padding-left: 12px;
+            border-left: 0;
+        }
+        &:not(:nth-child(-n + 2)) {
+            border-top: 0;
+            padding-top: 0;
+        }
+        &:nth-child(odd) {
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 0;
+        }
+    }
+    @include xs {
+        &:not(:nth-child(-n + 2)) {
+            padding-bottom: var(--space-x);
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.counter-card {
+    .box-number {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 0px;
+        margin-top: -0.2em;
+        @include xl {
+            font-size: 40px;
+        }
+        @include lg {
+            font-size: 32px;
+        }
+    }
+    .box-text {
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
+ 
+/* Counter 2 ---------------------------------- */
+.counter-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .divider {
+        width: 1px;
+        height: 65px;
+        border: 1px solid $border-color;
+        &:last-of-type {
+            display: none;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    @include sm {
+        flex-wrap: wrap;
+        gap: 30px 0;
+        .counter-card {
+            flex: 50%;
+        }
+    }
+    @include vxs {
+        .counter-card {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+}
+
+/* Counter 3 ---------------------------------- */
+.counter-wrap.style2 {
+    border-radius: 60px;
+    padding: 60px;
+    margin-top: -70px;
+    position: relative;
+    z-index: 2;
+    @include xl {
+        margin-top: 120px;
+    }
+    @include md {
+        padding: 40px;
+        margin-top: 80px;
+    }
+    @include xs {
+        .counter-card {
+            flex: 100%;
+            text-align: center;
+        }
+    }
+}

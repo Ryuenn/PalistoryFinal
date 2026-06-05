@@ -1,0 +1,145 @@
+/* Project Card -------------------------------*/
+.project-wrap1 {
+    max-width: 1720px;
+    margin: 0 auto;
+}
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    .project-img {
+        overflow: hidden;
+        img {
+            width: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+    }
+    .project-content {
+        padding: 30px 25px 25px;
+        background-color: transparent;
+        border-radius: 0px;
+        position: absolute;
+        z-index: 3;
+        transition: 0.4s ease-in-out;
+        left: -20px;
+        right: 0;
+        bottom: 0;
+        visibility: hidden;
+        opacity: 0;
+        margin-right: 55px;
+        .project-card-bg-shape {
+            position: absolute;
+            inset: 0;
+            background: $theme-color2;
+            z-index: -1;
+            width: 0;
+            transition: 0.4s;
+        }
+    }
+    .project-title {
+        font-weight: 700;
+        font-size: 24px;
+        margin-top: -0.2em;
+        margin-bottom: 2px;
+        a {
+            color: $white-color;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .project-subtitle {
+        font-size: 14px;
+        font-weight: 400;
+        color: $white-color;
+        margin-bottom: -0.3em;
+    }
+    &:hover {
+        .project-img {
+            img {
+                filter: grayscale(1);
+            }
+        }
+        .project-content {
+            opacity: 1;
+            visibility: visible;
+            left: 0;
+        }
+        .project-card-bg-shape {
+            width: 100%;
+        }
+    }
+    @include md {
+        .project-content {
+            margin-right: 0;
+        }
+    }
+}
+
+/* Project Card 2 -------------------------------*/
+.project-card.style2 {
+    border-radius: 0;
+    .project-img {
+        height: 100%;
+        img {
+            height: 100%;
+            min-height: none;
+        }
+    }
+    .project-content {
+        margin-right: 0;
+        padding: 175px 40px 40px;
+        left: 0;
+        bottom: -40px;
+        .project-card-bg-shape {
+            width: 100%;
+            background: $theme-color;
+        }
+        @include ml {
+            padding: 150px 40px 40px;
+        }
+        @include vxs {
+            padding: 150px 30px 30px;
+        }
+    }
+    .project-title {
+        font-size: 36px;
+        font-weight: 800;
+        margin-bottom: 11px;
+        a {
+            color: $white-color;
+            &:hover {
+                color: $theme-color2;
+            }
+        }
+        @include xxl {
+            font-size: 30px;
+        }
+        @include ml {
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+    .link-btn {
+        color: $white-color;
+        &:hover {
+            color: $theme-color2;
+            &:before {
+                background: $theme-color2;
+            }
+        }
+    }
+    &:hover {
+        .project-content {
+            bottom: 0;
+        }
+    }
+    @include sm {
+        .project-content {
+            bottom: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

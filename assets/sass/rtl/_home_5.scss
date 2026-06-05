@@ -1,0 +1,195 @@
+/* Header 4 ---------------------------------- */
+.header-layout4 {
+    .social-links {
+        .social-title {
+            margin: 0 0 0 10px;
+        }
+
+        a {
+            margin: 0 0 0 15px;
+
+            &:last-child {
+                margin-left: 0 !important;
+            }
+        }
+    }
+    .header-notice {
+        padding-right: 204px;
+        padding-left: 0;
+    }
+    .header-logo {
+        padding-right: 20px;
+        @include hd {
+            padding-right: 0;
+        }
+        @include xxl {
+            padding-right: 0;
+        }
+    }
+    .header-button {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+    .menu-area {
+        &:after {
+            inset: 0 142px 0 0;
+        }
+        .logo-bg {
+            right: 0;
+            left: auto;
+            transform: rotateY(-180deg);
+        }
+        .logo-bg2 {
+            right: 142px;
+            left: auto;
+            transform: rotateY(-180deg);
+        }
+    }
+    @include hd {
+        .header-notice {
+            padding-right: 0;
+        }
+    }
+    @media (max-width: 1800px) {
+        .header-notice {
+            padding-right: 0;
+        }
+    }
+}
+@include xxl {
+    .header-layout4 {
+        .main-menu ul.mega-menu {
+            left: 0 !important;
+            right: -360px !important;
+        }
+    }
+}
+@include xl {
+    .header-layout4 {
+        .main-menu ul.mega-menu {
+            left: 0 !important;
+            right: -300px !important;
+        }
+    }
+}
+@include lg {
+    .header-layout4 {
+        .main-menu ul.mega-menu {
+            left: 0 !important;
+            right: -500px !important;
+        }
+    }
+}
+
+/* About 5 ---------------------------------- */
+.img-box5 {
+    .about-shape5-1 {
+        right: -285px;
+        left: auto;
+        img {
+            transform: rotateY(180deg);
+        }
+    }
+}
+/* Event Area 3---------------------------------- */
+.event-card3 {
+	.event-date {
+		span {
+			margin-left: 8px;
+            margin-right: 0;
+		}
+	}
+    .event-card-meta {
+		span,
+		a {
+			margin-left: 20px;
+            margin-right: 0;
+			i {
+				margin-left: 10px;
+			}
+			&:last-child {
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+	}
+	.event-speakers {
+		.thumb {
+			&:after {
+				margin-right: -18px;
+                margin-left: 0;
+			}
+		}
+		.event-speaker-text {
+			margin-right: -31px;
+            margin-left: 0;
+		}
+	}
+    .btn-wrap {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+/* Faq 4 ---------------------------------- */ 
+.faq-img4 {
+    margin: -120px -320px 0 0;
+    @include xxl {
+        margin: -120px -100px 0 0;
+    }
+    @include md {
+        margin: -80px -100px 40px 0;
+    }
+    @include xs {
+        margin: -80px -50px 0 0;
+    }
+}
+
+/* Project Card 2 -------------------------------*/
+.project-card.style2 {
+    .project-content {
+        right: 0;
+        margin-left: 0;
+    }
+    &:hover {
+        .project-content {
+            bottom: 0;
+        }
+    }
+    @include sm {
+        .project-content {
+            bottom: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+/* Testimonial Area 5---------------------------------- */
+.testi-slider5 {
+    .slider-pagination.swiper-pagination-progressbar {
+        right: 10px;
+        left: auto;
+    }
+    .slider-pagination2 {
+        .current-slide {
+            margin-left: 290px;
+            margin-right: 0;
+            @include vxs {
+                margin-left: 220px;
+            }
+        }
+    }
+}
+
+.contact-page-form-wrap {
+    .contact-thumb1-1 {
+        margin-right: -315px;
+        margin-left: 0;
+        @include xxl {
+            margin-right: -100px;
+        }
+        @include lg {
+            margin-right: 0;
+        }
+    }
+}

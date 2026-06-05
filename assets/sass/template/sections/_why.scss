@@ -1,0 +1,109 @@
+/* Why Choose Us Area ---------------------------------- */
+.why-img-box1 {
+    position: relative;
+    margin: 0 0 0 -315px;
+    height: 622px;
+    .img1 {
+        height: 100%;
+        width: 100%;
+        filter: grayscale(9);
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .why-img-shape {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        img {
+            height: 100%;
+        }
+    }
+    @include xxl {
+        margin-left: -100px;
+    }
+    @include xl {
+        height: 738px;
+        margin-left: -50px;
+    }
+    @include lg {  
+        height: auto;  
+        margin: 0;
+        img {
+            border-radius: 30px;
+        }
+    }
+}
+.why-wrap-1 {
+    @include lg {
+        margin-top: 60px;
+    }
+}
+.why-feature-grid {
+    display: flex;
+    gap: 20px;
+    .box-icon {
+        width: 70px;
+        height: 70px;
+        line-height: 68px;
+        border-radius: 30px;
+        text-align: center;
+        flex: none;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+    @include ml {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+    @include xl {
+        display: block;
+        .media-body {
+            margin-top: 20px;
+        }
+    }
+}
+.progress-bar-wrap {
+    .progress-bar_title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    .progress {
+        background: $smoke-color2;
+        height: 10px;
+        border-radius: 30px;
+        overflow: visible;
+        position: relative;
+        .progress-bar {
+            background: $theme-color2;
+            border-radius: 30px;
+            overflow: visible;
+        }
+        .progress-value {
+            position: absolute;
+            right: 0;
+            top: -30px;
+            font-size: 20px;
+            font-weight: 600;
+
+        }
+    }
+}

@@ -1,0 +1,357 @@
+/* Pricing Card ---------------------------------- */
+.price-wrap1 {
+    max-width: 1720px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px 50px 0 0;
+}
+.price-thumb1 {
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+    .price-thumb-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img {
+            width: auto;
+        }
+    }
+}
+.price-card {
+    position: relative;
+    padding: 30px;
+    border-radius: 500px 500px 60px 60px;
+    background: $white-color;
+    text-align: center;
+    .price-card-thumb {
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+        }
+        .price-card_price {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 180px;
+            height: 80px;
+            background-color: $theme-color;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            color: $white-color;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.4s;
+            .currency {
+                font-size: 24px;
+                font-weight: 700;
+                position: relative;
+                top: 0px;
+                margin-right: 0px;
+            }
+        }
+    }
+    .box-title {
+        margin-bottom: -0.15em;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .box-text {
+        margin-top: 7px;
+        margin-bottom: 22px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .price-card_content {
+        margin-bottom: 25px;
+        .checklist {
+            display: inline-block;
+            li {
+                color: $body-color;
+                align-items: start;
+                i {
+                    transition: 0.4s;
+                }
+                &.unavailable {
+                    i {
+                        color: $light-color;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+    .th-btn {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &:hover {
+        .price-card_price {
+            background: $theme-color2;
+        }
+        .price-card_content {
+            .checklist {
+                li {
+                    i {
+                        color: $theme-color2;
+                    }
+                }
+            }
+        }
+    }
+    @include xl {
+        .box-title {
+            font-size: 22px;
+        }
+    }
+}
+
+
+/* Pricing Card 2---------------------------------- */
+.price-card2 {
+    display: flex;
+    .price-card-title-wrap {
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.09);
+        border-radius: 30px 100px 0 30px;
+        background: $white-color;
+        padding: 54px 40px;
+        flex: none;
+    }
+    .price-card-price-wrap {
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.09);
+        padding: 30px;
+        border-radius: 50% 50% 50% 0;
+    }
+    .price-card_title {
+        font-size: 30px;
+        font-weight: 700;
+        color: $title-color;
+        margin-top: -0.2em;
+        margin-bottom: 0px;
+    }
+    .price-card_text {
+        max-width: 278px;
+        margin-bottom: -0.3em;
+    }
+    .price-card_price {
+        font-size: 48px;
+        font-weight: 800;
+        font-family: $title-font;
+        color: $white-color;
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 0px;
+        background: $theme-color;
+        width: 132px;
+        height: 132px;
+        line-height: 132px;
+        justify-content: center;
+        border-radius: 50%;
+        transition: 0.4s;
+        .currency {            
+            margin-right: 5px;
+            position: relative;
+            top: 4px;
+            font-size: 24px;
+            font-weight: 700;
+            color: $white-color;
+        }
+    }
+    .price-card_content {
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.09);
+        padding: 40px 40px 40px 80px;
+        border-radius: 100px 30px 30px 100px;
+        display: flex;
+        width: -webkit-fill-available;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        &:after {
+            content: '';
+            position: relative;
+            background: $border-color;
+            display: block;
+            width: 3px;
+            height: 100%;
+        }
+        .checklist {
+            position: relative;
+            margin-top: -0.3em;
+            margin-bottom: -0.3em;
+            li {
+                color: $body-color;
+                font-size: 16px;
+                font-weight: 400;
+                font-family: $body-font;
+                line-height: inherit;
+                align-items: start;
+                i {
+                    position: relative;
+                    transition: 0.4s;
+                    top: 4px;
+                }
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+                &.unavailable {
+                    i {
+                        opacity: 0.2;
+                    }
+                } 
+            }
+        }
+        .th-btn {
+            align-self: center;
+            order: 3;
+        }
+    }
+    &:hover {
+        .price-card_price {
+            background: $theme-color2;
+        }
+        .checklist li > i {
+            color: $theme-color2;
+        }
+        .th-btn {
+            background: $theme-color2;
+        }
+    }
+    @include lg {
+        display: block;
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.09);
+        border-radius: 30px;
+        padding: 30px;
+        .price-card-title-wrap,
+        .price-card_content,
+        .price-card-price-wrap {
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+        }
+        .price-card-price-wrap {
+            margin: 25px 0;
+            .price-card_price {
+                display: flex;
+                border-radius: 20px;
+                width: auto;
+                height: auto;
+                line-height: normal;
+            }
+        }
+        .price-card_content {
+            display: block;
+            .checklist {
+                margin-bottom: 30px;
+            }
+            .th-btn {
+                width: 100%;
+            }
+        }
+        .price-card_title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+    }
+    @include md {
+        border-radius: 20px;
+    }
+    @include xs {
+        .price-card_price {
+            font-size: 45px;
+        }
+    }
+}
+
+/* Pricing Card 3---------------------------------- */
+.price-card3 {
+    text-align: center;
+    padding: 28px 50px 60px;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 0 0 500px 500px;
+        filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.1));
+        background: $white-color;
+        z-index: -2;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        height: 90px;
+        border-radius: 30px 30px 0 0;
+        background: $theme-color;
+        z-index: -1;
+    }
+    .price-card-title-wrap {
+        .price-card_title {
+            color: $white-color;
+            margin-bottom: 58px;
+            font-size: 30px;
+        }
+    }
+    .price-card_price {
+        font-size: 48px;
+        font-weight: 800;
+        color: $title-color;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        line-height: 0.75;
+        gap: 5px;
+        margin-bottom: 28px;
+        .currency {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .duration {
+            font-size: 18px;
+            font-weight: 600;
+            color: $body-color;
+        }
+    }
+    .checklist {
+        display: inline-block;
+        margin-bottom: 30px;
+        li {
+            &.unavailable {
+                i {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+    &.active {
+        &:before {
+            background: $theme-color2;
+        }
+        .checklist li > i {
+            color: $theme-color2;
+        }
+        .th-btn {
+            background: $theme-color2;
+            box-shadow: inset 0 0 0 0 $theme-color;
+            &:hover {
+                box-shadow: inset 0 -100px 0 0 $theme-color;
+            }
+        }
+    } 
+    @include vxs {
+        padding: 28px 30px 60px;
+    }
+}
+

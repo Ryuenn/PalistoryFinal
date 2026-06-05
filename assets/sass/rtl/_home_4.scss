@@ -1,0 +1,274 @@
+/* Header 3 ---------------------------------- */
+.header-layout3 {
+    .header-logo {
+        margin-left: 80px;
+        margin-right: 0;
+    }
+    .menu-area {
+        .menu-area-wrap {
+            padding: 0 30px 0 18px;
+        }
+    }
+    .header-notice {
+        margin-right: auto;
+        margin-left: 0;
+    }
+    .header-button {
+        margin-right: 10px;
+        margin-left: 0;
+    }
+}
+@include xxl {
+    .header-layout3 {
+        .main-menu ul.mega-menu {
+            left: 0 !important;
+            right: -360px !important;
+        }
+    }
+}
+@include ml {
+    .header-layout3 {
+        .main-menu ul.mega-menu {
+            left: -50px !important;
+        }
+    }
+}
+@include xl {
+    .header-layout3 {
+        .header-logo {
+            margin-left: 30px;
+        }
+        .header-button {
+            margin-right: 0;
+        }
+    }
+    .header-layout3 {
+        .main-menu ul.mega-menu {
+            left: 0 !important;
+            right: -300px !important;
+        }
+    }
+}
+@include md {
+    .header-layout3 {
+        .header-logo {
+            margin-left: 0;
+        }
+    }
+}
+
+/* Hero 4 -------------------------------------*/
+.hero-4 {
+    padding-right: 80px;
+    padding-left: 0;
+    @include hd {
+        padding-right: 0;
+    }
+    @include xxl {
+        padding-right: 0;
+    }
+    .hero-inner {
+        &:after {
+            background: linear-gradient(-89.74deg, #051311 32.34%, rgba(26, 104, 91, 0) 109.1%);
+        }
+    }
+    .hero-thumb-tab {
+        left: 84px;
+        right: auto;
+        transform: translate(0, -50%);
+        &:after,
+        &:before {
+            clip-path: path('M3.99999 0.101681L0.674986 5.85835L3.42999 5.85834L3.99999 39.8983L4.56999 5.85834L7.32499 5.85834L3.99999 0.101681Z');
+        }
+    }
+    
+    @include xl {
+        .hero-thumb-tab {
+            left: 40px;
+        }
+    }
+    @include sm {
+        .hero-inner {
+            &:after {
+                background: #051311;
+            }
+        }
+    }
+}
+.hero-slider4 {
+    border-radius: 0 50px 50px 0;
+    @include hd {
+        border-radius: 0;
+    }
+    @include xxl {
+        border-radius: 0;
+    }
+}
+.hero-style4 {
+    margin-right: -80px;
+    @include hd {
+        margin-right: 0;
+    }
+    @include xxl {
+        margin-right: 0;
+    }
+}
+
+//Donation 4---------------------------------------
+.donation-card.style4 {
+    .donation-card_progress-wrap .progress {
+        .progress-value {
+            left: 0;
+            right: auto;
+            transform: translate(-50%, 0);
+        }
+    }
+}
+.donation4-btn-wrap {
+    .th-btn {
+        margin-right: auto;
+        margin-left: 0;
+    }
+    @include lg {
+        .th-btn {
+            margin-right: 0;
+        }
+    }
+}
+
+//Call to action 4---------------------------------------
+.cta-wrap4 {
+    .cta-content-wrap {
+        .th-btn {
+            margin-right: auto;
+            margin-left: 0;
+        }
+    }
+    @include sm {
+        .cta-content-wrap {
+            .th-btn {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+/* Testimonial Area 4---------------------------------- */
+.testi-thumb-slider4 {
+    .testi-box-img {
+        border-radius: 0;
+        .testi-card_review {
+            border-radius: 50px 50px 0 30px;
+        }
+    }
+    @include ml {
+        .testi-box-img .testi-card_review {
+            border-radius: 50px 50px 0 28px;
+        }
+    }
+    @include lg {
+        .testi-box-img .testi-card_review {
+            border-radius: 50px 50px 0 20px;
+        }
+    }
+}
+.testimonial-slider4 {
+    .slider-pagination.swiper-pagination-progressbar {
+        margin: 85px auto 0 30px;
+        left: 0;
+        right: auto;
+    }
+    .slider-pagination2 {
+        left: 0;
+        right: auto;
+        .current-slide {
+            margin-left: 270px;
+            margin-right: 0;
+        }
+    }
+    @include sm {
+        .slider-pagination.swiper-pagination-progressbar {
+            margin: 70px 55px 0 30px;
+        }
+        .slider-pagination2 {
+            right: 0;
+            .current-slide {
+                margin-left: 0;
+            }
+            .total-slides {
+                margin-right: auto;
+                margin-left: 0;
+            }
+        }
+    }
+}
+.testi-card4 {
+    .box-text {
+        color: $white-color;
+        margin-bottom: 50px;
+        font-size: 18px;
+        font-weight: 600;
+        @include xs {
+            font-size: 16px;
+        }
+    }
+    .box-title {
+        font-size: 24px;
+        color: $white-color;
+        margin-bottom: 4px;
+    }
+    .box-desig {
+        color: $theme-color2;
+        margin-bottom: -0.3em;
+    }
+}
+
+/* Event Area 2---------------------------------- */
+.event-card2 {
+	.event-speakers {
+		.thumb {
+			&:after {
+				margin-right: -18px;
+                margin-left: 0;
+				z-index: 1;
+			}
+		}
+		.event-speaker-text {
+			margin-right: -31px;
+            margin-left: 0;
+		}
+	}
+    .event-card-meta {
+		span,
+		a {
+			margin-left: 20px;
+            margin-right: 0;
+			i {
+				margin-left: 10px;
+			}
+			&:last-child {
+				margin-left: 0;
+				padding-left: 0;
+			}
+		}
+	}
+	@include md {
+		display: block;
+		.box-thumb {
+			margin-bottom: 30px;
+			img {
+				width: 100%;
+			}
+		}
+		.event-location {
+			margin-bottom: 20px;
+		}
+	}
+	@include xs {
+		padding: 30px;
+		.box-thumb {
+			margin-bottom: 20px;
+		}
+	}
+}

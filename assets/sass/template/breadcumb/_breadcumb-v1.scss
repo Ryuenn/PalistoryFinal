@@ -1,0 +1,121 @@
+.breadcumb-menu {
+    max-width: 100%;
+    padding: 0;
+    margin: 23px 0 -0.5em 0;
+    list-style-type: none;
+    position: relative;
+    li {
+        display: inline-block;
+        margin-right: 3px;
+        padding-right: 3px;
+        list-style: none;
+        position: relative;
+
+        &:after {
+            content: "\f061";
+            position: relative;
+            margin-left: 6px;
+            font-weight: 500;
+            font-size: 15px;
+            color: $white-color;
+            font-family: $icon-font;
+        }
+
+        &:last-child {
+            padding-right: 0;
+            margin-right: 0;
+            color: $white-color;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    li,
+    a,
+    span {
+        white-space: normal;
+        word-break: break-word;
+        font-weight: 500;
+        font-size: 16px;
+        color: $theme-color2;
+    }
+}
+
+.breadcumb-title {
+    margin: -0.15em 0 -0.18em 0;
+	line-height: 1.1;
+    font-weight: 800;
+    color: $white-color;
+}
+
+@media (min-width: 1300px) {
+    .breadcumb-title {
+        font-size: 64px;
+    }
+}
+
+.breadcumb-wrapper {
+    background-color: $title-color;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    .breadcumb-content {
+        --space: 165px;
+        padding: calc(var(--space) + 30px) 0 var(--space);
+        position: relative;
+        z-index: 1;
+        text-align: center;
+    }
+    &:before {
+        mix-blend-mode: multiply;
+    }
+    .breadcumb-thumb {
+        position: relative; 
+        z-index: 1;
+        text-align: end;    
+        margin: -124px -50px 0px 0;   
+    }
+}
+@include lg {
+    .breadcumb-wrapper {
+        .breadcumb-content {
+            --space: 140px;
+        }
+    }
+	.breadcumb-menu {
+        margin: 25px 0 -0.5em 0;
+        li,
+        a,
+        span {
+            font-size: 16px;
+        }
+    }
+}
+
+@include md {
+    .breadcumb-wrapper {
+        text-align: center;
+        .breadcumb-content {
+            --space: 110px;
+        }
+    }
+}
+@include sm {
+    .breadcumb-wrapper {
+        .breadcumb-content {
+            padding: 110px 0;
+        }
+    }
+}
+@include xs {
+    .breadcumb-wrapper {
+        .breadcumb-content {
+            padding: 100px 0;
+        }
+    }
+	.breadcumb-title {
+		font-size: 34px;
+	}
+}

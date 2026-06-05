@@ -1,0 +1,574 @@
+//Donation 1---------------------------------------
+.donation-card {
+    background: $white-color;
+    border-radius: 30px;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0px 16px 30px -4px rgba(12, 12, 13, 0.05);
+    .box-thumb {
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+        img {
+            transition: 0.4s;
+            width: 100%;
+        }
+    }
+    &-tag {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: $theme-color;
+        border-radius: 30px;
+        color: $white-color;
+        display: inline-block;
+        padding: 1px 13px;
+    }
+    &-shape {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 309px;
+        height: 207px;
+        background: $theme-color;
+        opacity: 0.09;
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.416;
+        margin-bottom: 30px;
+    }
+    .donation-card_progress-wrap {
+        .progress {
+            height: 6px;
+            background: transparent;
+            position: relative;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            &:after {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: $theme-color;
+                opacity: 0.2;
+            }
+            .progress-bar {
+                height: 6px;
+                background: $theme-color;
+                border-radius: 30px;
+            }
+        }
+        .donation-card_progress-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 23px;
+            .donation-card_raise {
+                font-size: 16px;
+                font-weight: 600;
+                color: $title-color;
+            }
+            .donation-card_goal {
+                font-size: 16px;
+                font-weight: 600;
+                color: $theme-color;
+            }
+        }
+    }
+    .th-btn {
+        padding: 16px 30px;
+    }
+    &:hover {
+        .box-thumb {
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+    @include xl {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+    @include lg {
+        .box-title {
+            font-size: 24px;
+        }
+    }
+    @include md {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+    @include vxs {
+        padding: 20px;
+    }
+}
+
+//Donation 2---------------------------------------
+.donation-card.style2 {
+    display: flex;
+    gap: 30px;
+    .box-thumb {
+        margin-bottom: 0;
+        border-radius: 16px;
+        flex: none;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        .donation-card-shape {
+            right: 0;
+            left: auto;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            height: auto;
+            position: absolute;
+            background: $white-color;
+            z-index: 1;
+            opacity: 1;
+        }
+    }
+    .box-title {
+        margin-bottom: 3px;
+        font-size: 22px;
+        line-height: 1.4545;
+    }
+    .box-content {
+        align-self: center;
+    }
+    .donation-card_progress-wrap {
+        .progress {
+            overflow: visible;
+            &:after {
+                border-radius: inherit;
+                background: $theme-color2;
+            }
+            .progress-bar {
+                position: relative;
+                overflow: visible;
+                background: $theme-color2;
+                .progress-value {
+                    position: absolute;
+                    right: 0;
+                    top: -10px;
+                    background: $theme-color;
+                    border-radius: 30px;
+                    line-height: 1;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding: 3px 5px;
+                    transform: translate(50%, -100%);
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -12px;
+                        left: 50%;
+                        width: 6px;
+                        height: 12px;
+                        border-top: solid 12px $theme-color;
+                        border-left: solid 6px transparent;
+                        border-right: solid 6px transparent;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
+        }
+    }
+    @include lg {
+        gap: 20px;
+        .box-thumb {
+            flex: auto;
+        }
+    }
+    @include xs {
+        display: block;
+        .box-thumb {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+//Donation 3---------------------------------------
+.donation-card.style3 {
+    display: flex;
+    gap: 30px;
+    box-shadow: 0px 16px 50px 10px rgba(12, 12, 13, 0.07);
+    .box-thumb {
+        margin-bottom: 0;
+        border-radius: 16px;
+        flex: 1;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        .donation-card-shape {
+            right: 0;
+            left: auto;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            height: auto;
+            position: absolute;
+            background: $white-color;
+            z-index: 1;
+            opacity: 1;
+        }
+        .donation-card-tag {
+            right: auto;
+            left: 10px;
+        }
+    }
+    .box-content {
+        flex: 1;
+        align-self: center;
+    }
+    .box-title {
+        margin-bottom: 8px;
+    }
+    .donation-card_progress-wrap {
+        .progress {
+            margin-bottom: 7px;
+            &:after {
+                border-radius: inherit;
+                background: $theme-color2;
+            }
+            .progress-bar {
+                background: $theme-color2;
+            }
+        }
+        .donation-card_progress-content {
+            margin-bottom: 20px;
+            .donation-card_goal,
+            .donation-card_raise {
+                font-size: 16px;
+                font-weight: 500;
+                color: $body-color;
+                line-height: normal;
+                .donation-card_goal-number,
+                .donation-card_raise-number {
+                    font-weight: 700;
+                    color: $title-color;
+                    display: block;
+                }
+            }
+        }
+    }
+    @include xs {
+        display: block;
+        .box-thumb {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+//Donation 4---------------------------------------
+.donation-card.style4 {
+    padding: 10px;
+    border-radius: 20px;
+    .box-thumb {
+        border-radius: 15px;
+        margin-bottom: 24px;
+    }
+    .box-content {
+        border-radius: 15px;
+        background: $smoke-color2;
+        padding: 30px 20px 20px;
+    }
+    .subtitle {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .box-title {
+        margin-bottom: 20px;
+    }
+    .donation-card_progress-wrap .progress {
+        overflow: visible;
+        .progress-bar {
+            overflow: visible;
+            position: relative;
+        }
+        .progress-value {
+            background: $theme-color;
+            color: $white-color;
+            position: absolute;
+            top: -34px;
+            right: 0;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: $caveat-font;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            padding: 0 10px;
+            transform: translate(50%, 0);
+            &:after {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-top: solid 12px $theme-color;
+                border-left: solid 12px transparent;
+                border-right: solid 12px transparent;
+                transform: translate(0, 100%);
+            }
+        }
+    }
+}
+.donation4-btn-wrap {
+    border: 1px solid $body-color;
+    border-radius: 500px;
+    padding: 20px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    flex-wrap: wrap;
+    .thumb {
+        width: 56px;
+        height: 56px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .title {
+        font-size: 30px;
+        font-weight: 400;
+        font-family: $caveat-font;
+        margin-bottom: 0;
+        @include xs {
+            font-size: 24px;
+        }
+    }
+    .th-btn {
+        margin-left: auto;
+    }
+    @include lg {
+        border-radius: 20px;
+        justify-content: center;
+        padding: 30px;
+        gap: 20px 24px;
+        text-align: center;
+        .th-btn {
+            margin-left: 0;
+        }
+    }
+}
+
+//Donation Details---------------------------------------
+.donation-progress-wrap {
+    background: $gray-color;
+    padding: 36px 30px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    .media-left {
+        width: -webkit-fill-available;
+        padding-top: 23px;
+    }
+    .progress {
+        background: transparent;
+        position: relative;
+        border-radius: 30px;
+        height: 10px;
+        overflow: visible;
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color2;
+            opacity: 0.2;
+            border-radius: 30px;
+        }
+        .progress-bar {
+            border-radius: 30px;
+            background: $theme-color2;
+            overflow: visible;
+            position: relative;
+        }
+        .progress-value {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            font-size: 16px;
+            font-weight: 600;
+            color: $title-color;
+            transform: translate(50%, 0);
+        }
+    }
+    .donation-progress-content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: -0.4em;
+        span {
+            font-size: 16px;
+            font-weight: 500;
+            color: $body-color;
+            span {
+                font-weight: 700;
+                color: $title-color;
+            }
+        }
+    }
+    .btn-wrap {
+        flex: none;
+    }
+    .give-btn.give-btn-modal {
+        border: 0;
+        background: $theme-color;
+        color: $white-color;
+        &:hover {
+            background: $theme-color2;
+        }
+    }
+    @include lg {
+        display: block;
+        padding: 30px 20px;
+        .btn-wrap {
+            margin-top: 30px;
+            justify-content: center;
+        }
+    }
+    @include md {
+        display: flex;
+        .btn-wrap {
+            margin-top: 0px;
+        }
+    }
+    @include sm {
+        border-radius: 10px;
+        display: block;
+        .btn-wrap {
+            margin-top: 30px;
+        }
+    }
+}
+
+.donation-form-v1 {
+    border: 1px solid $border-color;
+    border-radius: 30px;
+    padding: var(--widget-padding-y, 40px) var(--widget-padding-x, 40px);
+    .donation-form-notice {
+        border-radius: 30px;
+        background: $gray-color;
+        padding: 16px 20px;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 30px;
+        display: flex;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            left: 27px;
+            background: $theme-color;
+            z-index: -1;
+        }
+        i {
+            color: $yellow-color;
+            margin-right: 20px;
+            align-self: center;
+        }
+        span {
+            display: contents;
+        }
+    }
+    .donate-input {
+        position: relative;
+        max-width: 260px;
+        margin-bottom: 20px;
+        input {
+            box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.08);
+            background: $white-color;
+            height: 60px;
+            padding: 0 20px 0 65px;
+            font-size: 22px;
+            font-weight: 700;
+            color: $title-color;
+        }
+        .icon {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            right: auto;
+            width: 50px;
+            height: 50px;
+            background: $theme-color;
+            border-radius: 50%;
+            text-align: center;
+            color: $white-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+    .donate-amount-button-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px 10px;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 40px;
+        margin-bottom: 32px;
+        li {
+            border: 1px solid $border-color;
+            font-size: 16px;
+            font-weight: 600;
+            color: $title-color;
+            border-radius: 30px;
+            height: 40px;
+            line-height: 40px;
+            min-width: 100px;
+            padding: 0 34px;
+            cursor: pointer;
+            transition: 0.4s;
+            &.active,
+            &:hover {
+                background: $theme-color;
+                color: $white-color;
+            }             
+        }
+    }
+    .donate-payment-method {
+        display: flex;
+        gap: 10px 30px;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 33px;
+        margin-bottom: 32px;
+        input[type="radio"] ~ label {
+            padding-left: 20px;
+        }
+        input[type="radio"] ~ label::before {
+            width: 13px;
+            height: 13px;
+            top: 2px;
+            border: 1px solid $border-color;
+            font-size: 6.5px;
+            line-height: 12px;
+            color: $border-color;
+        }
+        input[type="radio"]:checked ~ label::before {
+            background: $white-color;
+            border-color: $theme-color2;
+            color: $theme-color2;
+        }
+    }
+    @include sm {
+        --widget-padding-y: 30px;
+        --widget-padding-x: 30px;
+        border-radius: 20px;
+    }
+}

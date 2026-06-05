@@ -1,0 +1,298 @@
+
+.footer-widget {
+    margin-bottom: 50px;
+    max-width: 360px;
+    &,
+    .widget {
+        padding: 0;
+        border: none;
+        padding-bottom: 0;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    
+    .form-group {
+        > i {
+            color: $theme-color;
+            top: 18px;
+        }
+    }
+
+    .widget_title {
+        max-width: 270px;
+        color: $white-color;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin: -0.12em 0 30px 0;
+        padding: 0 0 15px 0;
+        &:before {
+            display: none;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 70px;
+            background-color: $theme-color2;
+            opacity: 1;
+            z-index: 1;
+        }
+        img {
+            margin: -7px 10px 0 0;
+        }
+    }
+
+    &.widget_meta,
+    &.widget_pages,
+    &.widget_archive,
+    &.widget_categories,
+    &.widget_nav_menu {
+        ul {
+            margin-top: -4px;
+        }
+        .menu,
+        > ul {
+            margin-bottom: -4px;
+        }
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            padding: 0 0 0 24px;
+            margin-bottom: 14px;
+            font-family: $body-font;
+            display: block;
+            max-width: 100%;
+            width: max-content;
+            background-color: transparent;
+            border: none;
+            position: relative;
+            box-shadow: none;
+            &:before {
+                content: "\e09f";
+                position: absolute;
+                font-weight: 400;
+                font-family: $icon-font;
+                left: 0;
+                top: 0;
+                opacity: 1;
+                transform: translateY(0);
+                font-size: 16px;
+                background-color: transparent;
+                border: none;
+                color: $theme-color2;
+                transition: 0.4s;
+            }
+            &:after {
+                display: none;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: $theme-color2;
+                &:before {
+                    color: $theme-color2;
+                    transform: rotate(45deg)
+                }
+            }
+        }
+        &:has(span) {
+            a {
+                padding: 0 24px;
+            }
+        }
+        li {
+            > span {
+                @include equal-size(auto);
+                background-color: transparent;
+                color: $body-color;
+                line-height: 1;
+                top: 2px;
+                right: 0;
+            }
+        }
+    }
+    .recent-post {
+        max-width: 300px;
+        margin-bottom: 20px;
+        .media-img {
+            max-width: 80px;
+            &:after {
+                line-height: 74px;
+            }
+        }
+        .post-title {
+            color: $white-color;
+        }
+        &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+		.recent-post-meta {
+            margin-top: -0.4em;
+            a {
+                font-weight: 400;
+                line-height: 1.2;
+            }
+			i {
+				color: $theme-color;
+			}
+			a:hover {
+				i {
+					color: $theme-color;
+				}
+			}
+		}
+    }
+    &.wp-block-rss,
+    &.widget_rss { 
+        --title-color: #829592;
+    }
+}
+.about-logo {
+    margin-bottom: 15px;
+}
+.th-widget-about {
+    max-width: 315px;
+    .about-logo {
+        margin-bottom: 30px;
+        img {
+            height: 40px;
+        }
+    }
+    .about-text {
+        margin-bottom: 32px;
+        margin-top: -0.5em;
+    }
+    .info-card {
+        &:not(:first-child) {
+            margin-top: 16px;
+        }
+        .box-title {
+            font-size: 20px;
+            font-weight: 600;
+            a {
+                color: $white-color;
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+        }
+    }
+}
+.th-widget-contact {
+    background: rgba($color: #1A685B, $alpha: 0.26);
+    border: 1px solid rgba($color: #1A685B, $alpha: 0.46);
+    border-radius: 30px;
+    padding: 30px 100px 30px 30px;
+    position: relative;
+    .widget_title {
+        padding-bottom: 0;
+        &:after {
+            display: none;
+        }
+    }
+    .info-card {
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+        .box-title {
+            font-size: 20px;
+            font-weight: 600;
+            a {
+                color: $white-color;
+                &:hover {
+                    color: $theme-color2;
+                }
+            }
+        }
+    }
+    .th-social {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba($color: #1A685B, $alpha: 0.26);
+        border: 1px solid rgba($color: #1A685B, $alpha: 0.46);
+        border-radius: 30px;
+        padding: 3px;
+        display: flex;
+        width: 52px;
+        flex-wrap: wrap;
+        align-content: space-between;
+        a {
+            display: block;
+            margin: 0;
+            height: 44px;
+        }
+    }
+    @include md {
+        padding: 30px 80px 30px 30px;
+    }
+    @media (max-width: 330px) {
+        padding: 30px;
+        .th-social {
+            position: relative;
+            width: auto;
+            gap: 14px;
+            margin-top: 30px;
+        }
+    }
+}
+.footer-text {
+    margin-top: -0.5em;
+    margin-bottom: 25px;
+}
+.social-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .social-title {
+        font-size: 20px;
+        color: $white-color;
+        font-weight: 600;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
+.icon-group {
+    a {
+        color: $white-color;
+        font-size: 18px;
+        margin-right: 17px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@include lg {
+    .footer-widget {
+        &.widget_meta,
+        &.widget_pages,
+        &.widget_archive,
+        &.widget_categories,
+        &.widget_nav_menu {
+            a {
+                margin-bottom: 16px;
+            }
+    
+        }
+    }
+}
+
+@include sm {
+    .footer-widget {
+        .widget_title {
+            margin-bottom: 35px;
+        }
+    }
+    .th-widget-about .about-text {
+        margin-bottom: 20px;;
+    }
+    .social-box.mb-30 {
+        margin-bottom: 25px;
+    }
+}

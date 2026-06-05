@@ -1,0 +1,85 @@
+/* Process Card ---------------------------------- */
+.process-card-wrap {
+    position: relative;
+    .process-card {
+        margin-top: 60px;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            width: 116px;
+            height: 62px;
+            top: 61px;
+            background: url(../img/icon/process-arrow1-1.svg);
+            display: block;
+            right: -10px;
+            transform: translate(50%, 0);
+        }
+        @include xl {
+            margin-top: 0;
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &:nth-child(2) {
+        .process-card {
+            margin-top: 0;
+            &:after {
+                top: 132px;
+                transform: translate(50%, 0) rotate(20deg);
+            }
+        }
+    }
+    &:last-child {
+        .process-card {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+.process-card {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    .process-card-thumb-wrap {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+        .process-card-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, calc(-50% + 20px));
+            transition: 0.4s;
+            img {
+                transition: 0.4s;
+            }
+        }
+        .process-card-shape {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    .box-content {
+        padding: 0;
+        margin:  30px 0 0;
+        position: relative;
+    }
+    .box-title {
+        margin-bottom: 11px;
+        font-size: 24px;
+        font-weight: 700;
+    }    
+    &:hover {
+        .process-card-thumb-wrap {
+            .process-card-icon {
+                img {
+                    transform: rotateY(180deg);
+                }
+            }
+        }
+    }
+}
