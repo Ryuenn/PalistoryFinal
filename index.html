@@ -60,9 +60,57 @@
         #getInvolvedSlider .box-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
         #getInvolvedSlider .box-content { min-height: 200px; display: flex; flex-direction: column; align-items: center; }
         #getInvolvedSlider .box-content .box-text { flex: 1; margin-bottom: 20px; }
-        #getInvolvedSlider .box-content .th-btn { margin-top: auto; }
+        #getInvolvedSlider .box-content .th-btn { margin-top: auto; background: #1F1F1F !important; border-color: #1F1F1F !important; box-shadow: none !important; }
+        #getInvolvedSlider .box-content .th-btn:hover { background: #000 !important; border-color: #000 !important; }
         #teamSlider2 .team-img { height: 620px; overflow: hidden; }
         #teamSlider2 .team-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+        .team-area-2 .slider-arrow { display: inline-block !important; }
+        #getInvolvedSlider .box-icon:after { border-color: var(--theme-color3) !important; }
+        #getInvolvedSlider .box-icon img { filter: hue-rotate(82deg) saturate(0.55) brightness(0.72); }
+        #getInvolvedSlider .service-card:hover .box-icon:after { background-color: var(--theme-color3) !important; }
+
+        /* Hero image reveal + gentle float */
+        .hero-2-img {
+            animation: heroReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) both,
+                       heroFloat 6s ease-in-out 1.4s infinite;
+        }
+        @keyframes heroReveal {
+            0%   { opacity: 0; transform: translateY(40px) scale(0.94); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-16px); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-2-img { animation: heroReveal 1.4s ease both; }
+        }
+
+        /* Hero text staggered reveal */
+        .hero-style2 .sub-title,
+        .hero-style2 .hero-title .title1,
+        .hero-style2 .hero-title .title2,
+        .hero-style2 .hero-text,
+        .hero-style2 .btn-wrap {
+            opacity: 0;
+            animation: heroTextUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .hero-style2 .sub-title            { animation-delay: 0.15s; }
+        .hero-style2 .hero-title .title1   { animation-delay: 0.30s; }
+        .hero-style2 .hero-title .title2   { animation-delay: 0.45s; }
+        .hero-style2 .hero-text            { animation-delay: 0.65s; }
+        .hero-style2 .btn-wrap             { animation-delay: 0.85s; }
+        @keyframes heroTextUp {
+            0%   { opacity: 0; transform: translateY(28px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero-style2 .sub-title,
+            .hero-style2 .hero-title .title1,
+            .hero-style2 .hero-title .title2,
+            .hero-style2 .hero-text,
+            .hero-style2 .btn-wrap { opacity: 1; animation: none; }
+        }
     </style>
 
 </head>
@@ -78,17 +126,7 @@
    		Code Start From Here 
 	******************************** -->
 
-    <!--==============================
-     Preloader
-  ==============================-->
-    <div class="preloader ">
-        <button class="th-btn style2 preloaderCls">Cancel Preloader </button>
-        <div class="preloader-inner">
-            <span class="loader">
-                Palistory
-                <span class="loading-text">Palistory</span>
-            </span>
-        </div>
+    
     </div><!--==============================
     Sidemenu
 ============================== -->
@@ -312,15 +350,19 @@ Hero Area
     <!--======== / Hero Section ========-->
 
     <!-- Red Banner -->
-    <div style="background-color:#c51919; padding:20px 40px; display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:32px;">
-        <div style="display:flex; align-items:center; gap:16px; color:#fff;">
-            <i class="fas fa-gift" style="font-size:2rem;"></i>
-            <div>
-                <div>With each donation of $100 or more, we will send you a free gift.</div>
-                <div style="font-weight:700; font-size:1.1rem;">Rock the Kuffiyeh. Rep the Resistance.</div>
+    <div style="background-color:#c51919; padding:55px 0;">
+        <div class="container">
+            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px;">
+                <div style="display:flex; align-items:center; gap:16px; color:#fff;">
+                    <i class="fas fa-gift" style="font-size:2rem;"></i>
+                    <div>
+                        <div>With each donation of $100 or more, we will send you a free gift.</div>
+                        <div style="font-weight:700; font-size:1.1rem;">Rock the Kuffiyeh. Rep the Resistance.</div>
+                    </div>
+                </div>
+                <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" style="background:#fff; color:#c51919; font-weight:700; padding:12px 28px; border:2px solid #fff; text-decoration:none; white-space:nowrap;">Donate Now</a>
             </div>
         </div>
-        <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" style="background:#fff; color:#c51919; font-weight:700; padding:12px 28px; border:2px solid #fff; text-decoration:none; white-space:nowrap;">Donate Now</a>
     </div>
 
     <!--==============================
@@ -358,7 +400,7 @@ About Area
                                 <div class="box-icon">
                                     <i class="fas fa-users" style="font-size:1.6rem; color:var(--theme-color);"></i>
                                 </div>
-                                <h4 class="box-title">Humanizing Through Storytelling</h4>
+                                <h4 class="box-title">Humanizing<br><span style="white-space:nowrap;">Through Storytelling</span></h4>
                                 <p class="box-text">Our films spotlight lived experiences to restore dignity and depth.</p>
                             </div>
                         </div>
@@ -376,7 +418,7 @@ About Area
                                 <div class="box-icon">
                                     <i class="fas fa-archive" style="font-size:1.6rem; color:var(--theme-color);"></i>
                                 </div>
-                                <h4 class="box-title">Archiving for Impact</h4>
+                                <h4 class="box-title">Archiving for<br>Impact</h4>
                                 <p class="box-text">We preserve Palestinian voices for education, activism, and future generations.</p>
                             </div>
                         </div>
@@ -392,7 +434,7 @@ About Area
 Service Area
 ==============================-->
     <section class="space-bottom overflow-hidden" id="service-sec">
-        <div class="service-wrap1 space th-radius overflow-hidden" data-bg-src="assets/img/bg/gray-bg2.png" data-overlay="gray" data-opacity="5">
+        <div class="service-wrap1 th-radius overflow-hidden" style="padding-top:40px; padding-bottom:40px;" data-bg-src="assets/img/bg/gray-bg2.png" data-overlay="gray" data-opacity="5">
             <div class="shape-mockup service-bg-shape1-5 d-xxl-inline-block d-none z-index-3 spin" data-top="15%" data-left="18%">
                 <div class="color-masking">
                     <div class="masking-src" data-mask-src="assets/img/shape/service_shape2_1.png"></div>
@@ -415,7 +457,7 @@ Service Area
                     </div>
                 </div>
                 <div class="position-relative">
-                    <div class="swiper th-slider" id="getInvolvedSlider" data-slider-options='{"spaceBetween":30,"loop":false,"rewind":true,"breakpoints":{"0":{"slidesPerView":1},"768":{"slidesPerView":2},"1200":{"slidesPerView":3}}}' style="--swiper-wrapper-align-items:stretch;">
+                    <div class="swiper th-slider" id="getInvolvedSlider" data-slider-options='{"spaceBetween":30,"loop":false,"rewind":true,"initialSlide":0,"centeredSlides":false,"breakpoints":{"0":{"slidesPerView":1},"768":{"slidesPerView":2},"1200":{"slidesPerView":3}}}' style="--swiper-wrapper-align-items:stretch;">
                         <div class="swiper-wrapper" style="align-items:stretch;">
                             <div class="swiper-slide" style="height:auto;">
                                 <div class="service-card style2" style="height:100%;">
@@ -509,7 +551,7 @@ Service Area
     <!--==============================
 Story Tellers Area
 ==============================-->
-    <section class="space-bottom overflow-hidden" style="padding-top:20px;">
+    <section class="space-bottom overflow-hidden" style="padding-top:0; margin-top:-60px;">
         <div class="container">
             <div class="row justify-content-center mb-40">
                 <div class="col-lg-8 text-center">
@@ -585,7 +627,7 @@ Why Stories Area
         <div class="container">
             <div class="row gx-60 align-items-center">
                 <div class="col-lg-6">
-                    <div class="img-box1">
+                    <div>
                         <img src="assets/img/palistory-film.png" alt="Palistory Film" style="width:100%; border-radius:12px;">
                     </div>
                 </div>
@@ -676,7 +718,7 @@ FAQ Area
 Team Area
 ==============================-->
     <section class="space team-area-2">
-        <div class="shape-mockup team-bg-shape2-1 spin d-xxl-block d-none" data-top="20%" data-right="3%"><img src="assets/img/shape/hand-group-shape1.png" alt="img"></div>
+
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title after-none before-none">Our Team</span>
@@ -1338,13 +1380,10 @@ Blog Area - REMOVED
         <div class="shape-mockup footer-bg-shape1-1 jump" data-left="0" data-top="0">
             <img src="assets/img/shape/footer-bg-shape1-1.png" alt="img">
         </div>
-        <div class="shape-mockup footer-bg-shape1-2 jump-reverse" data-right="0" data-top="15%">
-            <img src="assets/img/floatingfooter.png" alt="img" width="208" height="176">
-        </div>
         <div class="shape-mockup footer-bg-shape1-3 jump" data-right="0" data-bottom="0">
             <div class="color-masking2">
-                <div class="masking-src" data-mask-src="assets/img/shape/footer-bg-shape1-2.png"></div>
-                <img src="assets/img/shape/footer-bg-shape1-2.png" alt="img">
+                <div class="masking-src" data-mask-src="assets/img/shape/footer-bg-shape1-2.png" style="background: var(--theme-color3); mix-blend-mode: multiply;"></div>
+                <img src="assets/img/shape/footer-bg-shape1-2.png" alt="img" style="filter: hue-rotate(82deg) saturate(0.8) brightness(0.6);">
             </div>
         </div>
         <div class="widget-area space-top">
@@ -1412,7 +1451,7 @@ Blog Area - REMOVED
         </div>
         <div class="copyright-wrap bg-theme text-center">
             <div class="container">
-                <p class="copyright-text">© 2025 Copyrights by <a href="index.html">Palistory.com</a> . All Rights Reserved</p>
+                <p class="copyright-text" style="color:#fff;">© 2025 Copyrights by <a href="index.html" style="color:#fff;">Palistory.com</a> . All Rights Reserved</p>
             </div>
         </div>
     </footer>
