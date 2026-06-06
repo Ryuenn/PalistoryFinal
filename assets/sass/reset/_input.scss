@@ -195,12 +195,12 @@ textarea {
         }
         .form-select,
         .form-control {
-            background: transparent;
+            background: #ffffff;
             border: 1px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(30px);
             color: $white-color;
             &::placeholder {
-                color: $border-color;
+                color: #000000;
             }
         }
         > i {
