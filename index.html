@@ -124,6 +124,19 @@
             .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
             .header-notice { padding-right: 0; }
         }
+
+        /* Scroll reveal */
+        [data-reveal] {
+            opacity: 0;
+            transform: translateY(45px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+        [data-reveal].is-visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+        }
     </style>
 
 </head>
@@ -228,14 +241,14 @@
                             <li><a href="about.html">Organizational Information</a></li>
                         </ul>
                     </li>
-                    <li><a href="team.html">Team Members</a></li>
+                    <li><a href="index.html#team-members">Team Members</a></li>
                     <li><a href="team.html">Story Tellers</a></li>
                     <li class="menu-item-has-children">
                         <a href="#">Events</a>
                         <ul class="sub-menu">
                             <li><a href="event.html">Upcoming Events</a></li>
                             <li><a href="gallery.html">Photo Gallery</a></li>
-                            <li><a href="gallery.html">Video Gallery</a></li>
+                            <li><a href="videogallery.html">Video Gallery</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -264,14 +277,14 @@
                                         <li><a href="about.html">Organizational Information</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="team.html">Team Members</a></li>
+                                <li><a href="index.html#team-members">Team Members</a></li>
                                 <li><a href="team.html">Story Tellers</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Events</a>
                                     <ul class="sub-menu">
                                         <li><a href="event.html">Upcoming Events</a></li>
                                         <li><a href="gallery.html">Photo Gallery</a></li>
-                                        <li><a href="gallery.html">Video Gallery</a></li>
+                                        <li><a href="videogallery.html">Video Gallery</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact.html">Contact Us</a></li>
@@ -1231,7 +1244,7 @@ Team Area
 Cta Area
 ==============================-->
     <section class="overflow-hidden" id="contact-sec">
-        <div style="position:relative; padding:100px 20px; text-align:center; background-color:var(--theme-color); background-image:url('assets/img/faqs/A-580x580.png'); background-size:cover; background-position:center;">
+        <div style="position:relative; padding:100px 20px; text-align:center; background-color:var(--theme-color); background-image:url('assets/img/cta1.png'); background-size:cover; background-position:center;">
             <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(197,25,25,0.85), rgba(197,25,25,0.95));"></div>
             <div style="position:relative; z-index:2; max-width:800px; margin:0 auto;">
                 <span class="sub-title after-none before-none justify-content-center" style="color:#fff;">Contact Us</span>
@@ -1503,6 +1516,51 @@ Blog Area - REMOVED
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Scroll reveal animation -->
+    <script>
+        (function () {
+            // Elements to reveal on scroll (skip hero — it already animates on load,
+            // skip swiper sliders to avoid hiding off-screen slides, skip the footer)
+            var selectors = ['.title-area', '.feature-card', '.about-wrap2', '.slider-area', '.checklist'];
+            var nodes = [];
+            document.querySelectorAll(selectors.join(',')).forEach(function (el) {
+                if (el.closest('.th-hero-wrapper')) return;
+                if (el.closest('.swiper')) return;
+                if (el.closest('.footer-wrapper')) return;
+                el.setAttribute('data-reveal', '');
+                nodes.push(el);
+            });
+
+            // Stagger cards that share the same row so they cascade in
+            var groups = new Map();
+            nodes.forEach(function (el) {
+                var key = el.closest('.row') || el.parentNode;
+                var arr = groups.get(key) || [];
+                arr.push(el);
+                groups.set(key, arr);
+            });
+            groups.forEach(function (arr) {
+                if (arr.length > 1) {
+                    arr.forEach(function (el, i) { el.style.transitionDelay = (i * 0.12) + 's'; });
+                }
+            });
+
+            if (!('IntersectionObserver' in window)) {
+                nodes.forEach(function (el) { el.classList.add('is-visible'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('is-visible');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+            nodes.forEach(function (el) { io.observe(el); });
+        })();
+    </script>
 
 </body>
 

@@ -1,0 +1,767 @@
+<!doctype html>
+<html class="no-js" lang="zxx" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sumud 15 — Palistory</title>
+    <meta name="author" content="Palistory">
+    <meta name="description" content="Upcoming events from Palistory - Palestinian storytelling nonprofit">
+    <meta name="keywords" content="Palistory, events, Palestinian, documentary, screenings"
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--==============================
+	  Google Fonts
+	============================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!--==============================
+	    All CSS File
+	============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Fontawesome Icon -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <!-- Swiper Js -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Keep main nav on a single line */
+        .main-menu > ul { white-space: nowrap; }
+        @media (min-width: 992px) and (max-width: 1399px) {
+            .main-menu > ul > li { margin: 0 10px; }
+        }
+        /* Extend red bar left (shrink logo gap) and keep notice off the search button */
+        @media (min-width: 992px) {
+            .header-layout1 .header-logo { margin-right: 16px !important; }
+            .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
+            .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
+            .header-notice { padding-right: 0; }
+        }
+    </style>
+    <!-- Upcoming Events (SUMUD 15) — Tailwind + fonts, scoped to #sumud-content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            important: '#sumud-content',
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        sumud: {
+                            cream: '#f7f1e8', creamDark: '#ede3d2', ink: '#1a1a1a',
+                            red: '#c1272d', redDark: '#9b1f24', green: '#1a5f3f',
+                            greenDark: '#114229', muted: '#6b6358'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        pulseSlow: { '0%, 100%': { opacity: '0.5' }, '50%': { opacity: '1' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #sumud-content .cream-bg {
+            background-color: #f7f1e8;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(193, 39, 45, 0.06) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(26, 95, 63, 0.06) 0px, transparent 50%);
+            position: relative;
+        }
+        #sumud-content .cream-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a1a1a' fill-opacity='0.025' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+            pointer-events: none;
+        }
+        #sumud-content .keffiyeh-strip {
+            background-image:
+                linear-gradient(135deg, transparent 46%, rgba(26,26,26,0.5) 46%, rgba(26,26,26,0.5) 54%, transparent 54%),
+                linear-gradient(45deg, transparent 46%, rgba(26,26,26,0.5) 46%, rgba(26,26,26,0.5) 54%, transparent 54%);
+            background-size: 18px 18px;
+        }
+        #sumud-content .pillar-card {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+        }
+        #sumud-content .pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(26, 95, 63, 0.25);
+            border-color: #1a5f3f !important;
+        }
+        #sumud-content .serif-display { font-family: 'Playfair Display', serif; font-weight: 900; }
+        #sumud-content .cta-btn { position: relative; overflow: hidden; isolation: isolate; }
+        #sumud-content .cta-btn::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); transform: translateX(-100%); transition: transform 0.7s ease; z-index: -1; }
+        #sumud-content .cta-btn:hover::after { transform: translateX(100%); }
+        #sumud-content h1, #sumud-content h2, #sumud-content h3, #sumud-content h4, #sumud-content h5, #sumud-content h6 { color: inherit; margin: 0; }
+    </style>
+</head>
+
+<body>
+
+    <!--[if lte IE 9]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  	<![endif]-->
+
+
+    <!--********************************
+   		Code Start From Here 
+	******************************** -->
+
+    
+    </div><!--==============================
+    Sidemenu
+============================== -->
+    <div class="sidemenu-wrapper sidemenu-cart ">
+        <div class="sidemenu-content">
+            <button class="closeButton sideMenuCls"><i class="fas fa-times"></i></button>
+            <div class="widget woocommerce widget_shopping_cart">
+                <h3 class="widget_title">Shopping cart</h3>
+                <div class="widget_shopping_cart_content">
+                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="fas fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_thumb_1_1.png" alt="Cart Image">Books</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
+                            </span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="fas fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_thumb_1_2.png" alt="Cart Image">Medicine</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">$</span>899.00</span>
+                            </span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="fas fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_thumb_1_3.png" alt="Cart Image">Dress</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">$</span>756.00</span>
+                            </span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="fas fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_thumb_1_4.png" alt="Cart Image">Chair</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">$</span>723.00</span>
+                            </span>
+                        </li>
+                        <li class="woocommerce-mini-cart-item mini_cart_item">
+                            <a href="#" class="remove remove_from_cart_button"><i class="fas fa-times"></i></a>
+                            <a href="#"><img src="assets/img/product/product_thumb_1_5.png" alt="Cart Image">Cloths</a>
+                            <span class="quantity">1 ×
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">$</span>1080.00</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <p class="woocommerce-mini-cart__total total">
+                        <strong>Subtotal:</strong>
+                        <span class="woocommerce-Price-amount amount">
+                            <span class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
+                    </p>
+                    <p class="woocommerce-mini-cart__buttons buttons">
+                        <a href="cart.html" class="th-btn wc-forward">View cart</a>
+                        <a href="checkout.html" class="th-btn checkout wc-forward">Checkout</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="fas fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div><!--==============================
+    Mobile Menu
+  ============================== -->
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fas fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="about.html">About Palistory</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">Organizational Information</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#team-members">Team Members</a></li>
+                    <li><a href="team.html">Story Tellers</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Events</a>
+                        <ul class="sub-menu">
+                            <li><a href="event.html">Upcoming Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="videogallery.html">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--==============================
+	Header Area
+==============================-->
+    <header class="th-header header-layout1 onepage-nav">
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="container">
+                <div class="menu-area">
+                    <div class="header-logo" style="margin-left:-40px;">
+                        <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
+                    </div>
+                    <div class="menu-area-wrap">
+                                                <nav class="main-menu d-none d-lg-block">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="about.html">About Palistory</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about.html">Organizational Information</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="index.html#team-members">Team Members</a></li>
+                                <li><a href="team.html">Story Tellers</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Events</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="event.html">Upcoming Events</a></li>
+                                        <li><a href="gallery.html">Photo Gallery</a></li>
+                                        <li><a href="videogallery.html">Video Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
+                    </div>
+                    <div class="header-button">
+                        <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="fas fa-search"></i></button>
+                        
+                        <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="th-btn style3 d-xl-block d-none"><i class="fas fa-heart me-2"></i> Donate Now</a>
+                        <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+        <!--==============================
+    Sumud 15 Page
+==============================-->
+    <div id="sumud-content">
+        <div class="cream-bg font-sans text-sumud-ink antialiased overflow-x-hidden relative">
+
+            <!-- Decorative blur orbs -->
+            <div class="absolute top-40 left-10 w-[20rem] h-[20rem] bg-sumud-red rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-float z-0 pointer-events-none"></div>
+            <div class="absolute bottom-40 right-10 w-[24rem] h-[24rem] bg-sumud-green rounded-full mix-blend-multiply filter blur-[140px] opacity-10 animate-float z-0 pointer-events-none" style="animation-delay: 2s;"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 py-16 md:py-24">
+
+                <!-- ═══════ HERO ═══════ -->
+                <div class="text-center max-w-4xl mx-auto mb-16 animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/70 backdrop-blur-md shadow-sm border border-sumud-ink/10 text-sumud-red font-bold tracking-widest uppercase text-[11px] mb-8">
+                        <span class="relative flex h-2 w-2">
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-sumud-red"></span>
+                        </span>
+                        2026 Cohort Concluded
+                    </div>
+
+                    <div class="flex items-baseline justify-center gap-4 mb-6 flex-wrap">
+                        <span class="serif-display text-sumud-ink leading-none" style="font-size: clamp(3.5rem, 9vw, 7rem); letter-spacing: -0.02em;">SUMUD</span>
+                        <span class="serif-display text-sumud-green leading-none" style="font-size: clamp(3.5rem, 9vw, 7rem); letter-spacing: -0.02em;">15</span>
+                    </div>
+
+                    <h1 class="text-2xl md:text-4xl font-extrabold text-sumud-ink mb-3 tracking-tight">
+                        A 15-Day Challenge of Body, Mind &amp; Conscience
+                    </h1>
+                    <p class="text-sumud-red text-xl md:text-2xl font-extrabold mb-6 tracking-tight">
+                        Walk. Read. Remember. Raise.
+                    </p>
+                    <p class="text-base md:text-lg text-sumud-muted font-medium max-w-2xl mx-auto leading-relaxed mb-8">
+                        Thank you to all participants, sponsors, and community members who joined our 15-day challenge of daily discipline, collective remembrance, and meaningful action to raise support for Palistory. Together, we are keeping Palestinian stories alive.
+                    </p>
+
+                    <div class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-sumud-cream border border-sumud-ink/10 text-sumud-ink text-sm font-bold mb-8">
+                        <i class="fa-solid fa-calendar-days text-sumud-red"></i> Event Date: June 1–15, 2026 (Completed) — Registration is now closed
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="#waitlist" class="cta-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-sumud-red text-white font-bold text-sm shadow-lg shadow-sumud-red/30 hover:bg-sumud-redDark transition-colors">
+                            Join the 2027 Waitlist <i class="fa-solid fa-arrow-down text-xs"></i>
+                        </a>
+                        <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-sumud-ink/15 text-sumud-ink font-bold text-sm hover:border-sumud-green hover:text-sumud-green transition-colors">
+                            Support Palistory's Ongoing Mission
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ═══════ STATS ═══════ -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+                    <div class="text-center p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                        <div class="serif-display text-sumud-green text-4xl md:text-5xl mb-1">15</div>
+                        <p class="text-sumud-muted text-xs font-semibold uppercase tracking-wider">Days of completed discipline, remembrance &amp; action</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                        <div class="serif-display text-sumud-green text-4xl md:text-5xl mb-1">3</div>
+                        <p class="text-sumud-muted text-xs font-semibold uppercase tracking-wider">Daily commitments met: walk, read &amp; clean hydration</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                        <div class="serif-display text-sumud-red text-4xl md:text-5xl mb-1">$45</div>
+                        <p class="text-sumud-muted text-xs font-semibold uppercase tracking-wider">Entry fee directly supporting Palistory's preservation work</p>
+                    </div>
+                    <div class="text-center p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                        <div class="serif-display text-sumud-green text-4xl md:text-5xl mb-1">100%</div>
+                        <p class="text-sumud-muted text-xs font-semibold uppercase tracking-wider">Of campaign funding designated directly to Palistory</p>
+                    </div>
+                </div>
+
+                <!-- ═══════ WHY IT MATTERS ═══════ -->
+                <div class="max-w-3xl mx-auto text-center mb-20">
+                    <p class="text-sumud-green text-[11px] font-bold uppercase tracking-[0.3em] mb-3">Why it matters</p>
+                    <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink mb-5 leading-tight">Fifteen days of chosen discipline. For the fifteenth of May, nineteen forty-eight.</h2>
+                    <p class="text-sumud-muted text-base md:text-lg leading-relaxed">
+                        This challenge does not compare chosen difficulty to a lifetime of forced exile. It claims remembrance. Every day we walked, every page we read, and every contribution we secured pointed directly back to stories the world has tried to forget.
+                    </p>
+                </div>
+
+                <!-- ═══════ THE 3 DAILY RULES ═══════ -->
+                <div class="mb-20">
+                    <div class="text-center mb-10">
+                        <p class="text-sumud-green text-[11px] font-bold uppercase tracking-[0.3em] mb-3">The daily standard</p>
+                        <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink mb-3">The 3 daily rules we kept</h2>
+                        <p class="text-sumud-muted text-base max-w-2xl mx-auto">The rigorous framework our participants successfully upheld for fifteen consecutive days.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5">
+                        <div class="pillar-card p-7 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <div class="w-14 h-14 rounded-xl bg-sumud-green flex items-center justify-center shadow-md shadow-sumud-green/30 mb-5">
+                                <i class="fa-solid fa-person-walking text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">Walk 30 Minutes Every Day</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">One unbroken walk every day for 15 days. Outside is strongly preferred, but a treadmill is acceptable when needed.</p>
+                        </div>
+                        <div class="pillar-card p-7 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <div class="w-14 h-14 rounded-xl bg-sumud-red flex items-center justify-center shadow-md shadow-sumud-red/30 mb-5">
+                                <i class="fa-solid fa-book-open text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">Read 10 Pages + Share One Insight</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Read nonfiction and post one daily insight to your Instagram story. Tag @Palistory.usa and use #Sumud15.</p>
+                        </div>
+                        <div class="pillar-card p-7 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <div class="w-14 h-14 rounded-xl bg-sumud-green flex items-center justify-center shadow-md shadow-sumud-green/30 mb-5">
+                                <i class="fa-solid fa-droplet text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">Clean Hydration / No Added Sugar</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Water first. Unsweetened coffee and tea are allowed. No soda. No added sugar. Honey is allowed up to one tablespoon per day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════ SPONSORSHIP ARCHIVES ═══════ -->
+                <div class="mb-20">
+                    <div class="text-center mb-10">
+                        <p class="text-sumud-green text-[11px] font-bold uppercase tracking-[0.3em] mb-3">Sponsorship Archives</p>
+                        <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink mb-3">Our Founding Sponsors</h2>
+                        <p class="text-sumud-muted text-base max-w-2xl mx-auto">A heartfelt thank you to our foundational backers who made the inaugural Year One of Sumud 15 possible.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5 items-stretch">
+
+                        <!-- Olive Sapling -->
+                        <div class="pillar-card flex flex-col p-7 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-seedling text-sumud-green"></i>
+                                <h4 class="text-sumud-ink font-extrabold text-xl">Olive Sapling</h4>
+                            </div>
+                            <p class="text-sumud-muted text-xs italic mb-4">a new beginning</p>
+                            <p class="text-sumud-muted text-sm leading-relaxed mb-4">Day Sponsor — one day of the fifteen-day challenge dedicated in your name. Your name appears in @palistory.usa's morning post and stories on your day.</p>
+                            <ul class="text-sumud-muted text-sm space-y-2 mb-6">
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Gift Set — one traditional keffiyeh and one Palestinian stole.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Honor Roll — your name listed on every Sumud15 communication and at the virtual graduation.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Tax-Deductible Receipt — official receipt from Palistory, a 501(c)(3) nonprofit.</li>
+                            </ul>
+                            <div class="mt-auto text-center">
+                                <div class="serif-display text-sumud-ink text-3xl mb-2">$1,000</div>
+                                <span class="inline-block px-3 py-1.5 rounded-full bg-sumud-ink/5 text-sumud-muted text-[11px] font-bold uppercase tracking-wider">Campaign Closed</span>
+                            </div>
+                        </div>
+
+                        <!-- Olive Branch -->
+                        <div class="pillar-card flex flex-col p-7 rounded-2xl bg-white border-2 border-sumud-green/40 shadow-md relative">
+                            <span class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-sumud-green text-white text-[10px] font-bold uppercase tracking-wider">Most Popular</span>
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-leaf text-sumud-green"></i>
+                                <h4 class="text-sumud-ink font-extrabold text-xl">Olive Branch</h4>
+                            </div>
+                            <p class="text-sumud-muted text-xs italic mb-4">an extended hand</p>
+                            <p class="text-sumud-ink text-sm font-semibold mb-3">Everything in Olive Sapling, plus:</p>
+                            <ul class="text-sumud-muted text-sm space-y-2 mb-6">
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Three Day Sponsor — three days dedicated in your name across the arc.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Featured Spotlight — a dedicated story feature on @palistory.usa.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Expanded Gift Set — two keffiyeh, two stoles &amp; a personalized note.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Founding Sponsor — named in the launch and graduation videos.</li>
+                            </ul>
+                            <div class="mt-auto text-center">
+                                <div class="serif-display text-sumud-ink text-3xl mb-2">$2,500</div>
+                                <span class="inline-block px-3 py-1.5 rounded-full bg-sumud-ink/5 text-sumud-muted text-[11px] font-bold uppercase tracking-wider">Campaign Closed</span>
+                            </div>
+                        </div>
+
+                        <!-- Ancient Olive -->
+                        <div class="pillar-card flex flex-col p-7 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <div class="flex items-center gap-2 mb-1">
+                                <i class="fa-solid fa-tree text-sumud-green"></i>
+                                <h4 class="text-sumud-ink font-extrabold text-xl">Ancient Olive</h4>
+                            </div>
+                            <p class="text-sumud-muted text-xs italic mb-4">witness to centuries</p>
+                            <p class="text-sumud-ink text-sm font-semibold mb-3">Everything above, plus:</p>
+                            <ul class="text-sumud-muted text-sm space-y-2 mb-6">
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Week Sponsor — seven consecutive days dedicated with daily recognition.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Featured Video — up to three minutes played at the virtual graduation.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Special Autographed Surprise — a hand-signed gift held in confidence.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Year-Long Website Sponsorship — your name/logo for a full calendar year.</li>
+                                <li class="flex gap-2"><i class="fa-solid fa-check text-sumud-green mt-1"></i> Team Gift Set — five keffiyeh and five Palestinian stoles.</li>
+                            </ul>
+                            <div class="mt-auto text-center">
+                                <div class="serif-display text-sumud-ink text-3xl mb-2">$5,000</div>
+                                <span class="inline-block px-3 py-1.5 rounded-full bg-sumud-ink/5 text-sumud-muted text-[11px] font-bold uppercase tracking-wider">Campaign Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════ WELCOME KIT ═══════ -->
+                <div class="mb-20 rounded-[32px] bg-white border border-sumud-ink/10 shadow-sm p-8 md:p-12">
+                    <div class="text-center mb-8">
+                        <p class="text-sumud-green text-[11px] font-bold uppercase tracking-[0.3em] mb-3">Archived Package Details</p>
+                        <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink mb-3">The original Sumud 15 welcome kit</h2>
+                        <p class="text-sumud-muted text-base max-w-2xl mx-auto">Every registered participant received their challenge packages mailed directly to them ahead of Day 1.</p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-5 rounded-xl bg-sumud-cream/60 border border-sumud-ink/10 text-center">
+                            <i class="fa-solid fa-gift text-sumud-red text-2xl mb-3"></i>
+                            <h4 class="text-sumud-ink font-bold text-sm mb-1">Traditional Keffiyeh</h4>
+                            <p class="text-sumud-muted text-xs">Worn proudly on Day 1 and throughout the challenge.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-sumud-cream/60 border border-sumud-ink/10 text-center">
+                            <i class="fa-solid fa-ribbon text-sumud-green text-2xl mb-3"></i>
+                            <h4 class="text-sumud-ink font-bold text-sm mb-1">Palestinian Stole</h4>
+                            <p class="text-sumud-muted text-xs">Worn collectively during the virtual graduation.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-sumud-cream/60 border border-sumud-ink/10 text-center">
+                            <i class="fa-solid fa-envelope-open-text text-sumud-red text-2xl mb-3"></i>
+                            <h4 class="text-sumud-ink font-bold text-sm mb-1">Welcome Letter</h4>
+                            <p class="text-sumud-muted text-xs">Detailed cohort instructions, tips, and guidelines.</p>
+                        </div>
+                        <div class="p-5 rounded-xl bg-sumud-cream/60 border border-sumud-ink/10 text-center">
+                            <i class="fa-solid fa-book text-sumud-green text-2xl mb-3"></i>
+                            <h4 class="text-sumud-ink font-bold text-sm mb-1">Curated Reading List</h4>
+                            <p class="text-sumud-muted text-xs">Historical works, prose, and Palestinian essays.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════ COMMUNITY SPIRIT ═══════ -->
+                <div class="mb-20 rounded-[32px] bg-white border border-sumud-ink/10 shadow-sm p-8 md:p-12">
+                    <div class="mb-8">
+                        <p class="text-sumud-green text-[11px] font-bold uppercase tracking-[0.3em] mb-3">Community Spirit</p>
+                        <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink mb-3 leading-tight">We started together, we finished together.</h2>
+                        <p class="text-sumud-muted text-base max-w-2xl leading-relaxed">Daily active reflections and cohort updates were run interactively through @Palistory.usa on Instagram. The shared journey lives on under the permanent hashtag #Sumud15.</p>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-5">
+                        <div class="pillar-card p-6 rounded-2xl bg-sumud-cream/50 border border-sumud-ink/10 text-center">
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">Daily Reflections</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Participants shared deep insights from the readings daily, constructing an active archive of Palestinian study.</p>
+                        </div>
+                        <div class="pillar-card p-6 rounded-2xl bg-sumud-cream/50 border border-sumud-ink/10 text-center">
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">Public Witness</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Every walk and post created a cascade of education that reached hundreds of thousands worldwide.</p>
+                        </div>
+                        <div class="pillar-card p-6 rounded-2xl bg-sumud-cream/50 border border-sumud-ink/10 text-center">
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">Virtual Graduation</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">The cohort concluded with a historical virtual graduation. Stoles were worn, memories were honored, and stories were told.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════ A THANK YOU TO BACKERS ═══════ -->
+                <div class="mb-20 grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white shadow-sm border border-sumud-ink/10 text-sumud-green font-bold tracking-widest uppercase text-[11px] mb-6">
+                            <i class="fa-solid fa-star"></i> A Thank You to Backers
+                        </div>
+                        <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink mb-5 leading-tight">Relive the Inaugural Sponsorship Journey</h2>
+                        <p class="text-sumud-muted text-base leading-relaxed mb-4">Sumud 15 represents a turning point in educational community action. It is a long-term model designed to protect and support Palestinian narratives through self-discipline and educational sharing.</p>
+                        <p class="text-sumud-muted text-base leading-relaxed mb-8">While live sponsorships for the 2026 campaign are now officially wrapped up, you can still view our campaign prospectus and packet to see how the foundation of this landmark event was constructed.</p>
+
+                        <div class="rounded-2xl bg-white border border-sumud-ink/10 shadow-sm p-6 mb-6">
+                            <div class="w-12 h-12 rounded-xl bg-sumud-cream flex items-center justify-center mb-4">
+                                <i class="fa-solid fa-file-pdf text-sumud-red text-xl"></i>
+                            </div>
+                            <h4 class="text-sumud-ink font-extrabold text-lg mb-2">View the Sponsorship Packet</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Review the blueprint of benefits, cultural preservation items, and long-term organizational goals of Sumud 15.</p>
+                        </div>
+
+                        <a href="assets/Sumud15-Sponsorship-Packet.pdf" target="_blank" rel="noopener" class="cta-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white border border-sumud-ink/15 text-sumud-ink font-bold text-sm hover:border-sumud-green hover:text-sumud-green transition-colors">
+                            View PDF Prospectus <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <a href="assets/Sumud15-Sponsorship-Packet.pdf" target="_blank" rel="noopener" class="block relative group">
+                        <img src="assets/img/sumud15-sponsorship-packet-cover.png" alt="Sumud 15 Sponsorship Packet" class="w-full rounded-[28px] shadow-[0_30px_60px_-20px_rgba(26,26,26,0.25)] border border-sumud-ink/10 transition-transform duration-500 group-hover:-translate-y-1.5">
+                    </a>
+                </div>
+
+                <!-- ═══════ WAITLIST FORM ═══════ -->
+                <div id="waitlist" class="mb-20 grid lg:grid-cols-2 gap-6 items-stretch">
+                    <!-- Left: Concluded card -->
+                    <div class="rounded-[28px] bg-sumud-ink p-8 md:p-10 text-white relative overflow-hidden flex flex-col justify-center">
+                        <div class="absolute bottom-0 left-0 right-0 h-2.5 keffiyeh-strip opacity-30"></div>
+                        <h3 class="serif-display text-2xl md:text-3xl mb-3">Sumud 15: Concluded</h3>
+                        <p class="text-white/70 text-sm leading-relaxed mb-6">Registration for our most recent challenge is officially closed. However, our educational initiatives are continuous.</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-2 p-3.5 rounded-xl bg-white/10 text-white text-sm font-semibold"><i class="fa-solid fa-star text-sumud-red"></i> Get priority notifications for 2027</div>
+                            <div class="flex items-center gap-2 p-3.5 rounded-xl bg-white/10 text-white text-sm font-semibold"><i class="fa-solid fa-star text-sumud-red"></i> Receive general Palistory educational insights</div>
+                            <div class="flex items-center gap-2 p-3.5 rounded-xl bg-white/10 text-white text-sm font-semibold"><i class="fa-solid fa-star text-sumud-red"></i> Gain early access to limited future cohort spots</div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Waitlist form -->
+                    <div class="rounded-[28px] bg-white border border-sumud-ink/10 shadow-sm p-8 md:p-10">
+                        <h3 class="serif-display text-2xl md:text-3xl text-sumud-ink mb-2">Join the Waitlist</h3>
+                        <p class="text-sumud-muted text-sm leading-relaxed mb-6">Sign up below to be the first to know when we reopen registrations for our next educational challenges, cohorts, and cultural events.</p>
+                        <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('waitlist-success').classList.remove('hidden');">
+                            <label class="block text-sumud-ink text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" required placeholder="Enter your full name" class="w-full px-4 py-3 rounded-xl bg-sumud-cream/50 border border-sumud-ink/15 text-sumud-ink text-sm mb-5 focus:outline-none focus:border-sumud-green">
+                            <label class="block text-sumud-ink text-sm font-bold mb-2">Email Address</label>
+                            <input type="email" required placeholder="Enter your email address" class="w-full px-4 py-3 rounded-xl bg-sumud-cream/50 border border-sumud-ink/15 text-sumud-ink text-sm mb-6 focus:outline-none focus:border-sumud-green">
+                            <button type="submit" class="cta-btn w-full px-6 py-3.5 rounded-xl bg-sumud-red text-white font-bold text-sm shadow-lg shadow-sumud-red/30 hover:bg-sumud-redDark transition-colors">Submit Registration Interest</button>
+                        </form>
+                        <p id="waitlist-success" class="hidden mt-4 text-sumud-green text-sm font-semibold">Thank you! You have been successfully added to our priority waitlist.</p>
+                        <p class="text-sumud-muted text-xs mt-4 leading-relaxed">Your details will be kept secure and used solely to keep you updated on Palistory's upcoming cohorts.</p>
+                    </div>
+                </div>
+
+                <!-- ═══════ FAQ ═══════ -->
+                <div class="max-w-3xl mx-auto mb-20">
+                    <div class="text-center mb-10">
+                        <p class="text-sumud-green text-[11px] font-bold uppercase tracking-[0.3em] mb-3">In Retrospect</p>
+                        <h2 class="serif-display text-3xl md:text-4xl text-sumud-ink">Frequently asked questions</h2>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <h4 class="text-sumud-ink font-bold text-base mb-2">Can I run the challenge on my own schedule?</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">While the official group cohort is over, you are welcome to adopt the three guidelines (walk, read, hydration) on your own terms to support individual discipline.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <h4 class="text-sumud-ink font-bold text-base mb-2">How often does Palistory host Sumud 15?</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Sumud 15 is scheduled as an annual landmark challenge. Join our waitlist to stay informed about dates and details for future cohorts.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <h4 class="text-sumud-ink font-bold text-base mb-2">Can I still get a keffiyeh or a stole?</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">These specialized sets were exclusive to active challenge registrants and sponsors. However, you can keep an eye on Palistory's general storefront for future releases.</p>
+                        </div>
+                        <div class="p-6 rounded-2xl bg-white border border-sumud-ink/10 shadow-sm">
+                            <h4 class="text-sumud-ink font-bold text-base mb-2">Are general donations still open?</h4>
+                            <p class="text-sumud-muted text-sm leading-relaxed">Yes. Although the specific event is closed, you can support Palistory's archival and educational projects directly on our homepage at any time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════ CLOSING ═══════ -->
+                <div class="text-center max-w-3xl mx-auto rounded-[32px] bg-sumud-green p-10 md:p-14 text-white relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-2.5 keffiyeh-strip opacity-30"></div>
+                    <p class="text-white/70 text-[11px] font-bold uppercase tracking-[0.3em] mb-3">Until Next Time</p>
+                    <h2 class="serif-display text-3xl md:text-4xl mb-4">Discipline. Community. A shared act of remembrance.</h2>
+                    <p class="text-white/85 text-base md:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+                        Thank you for being part of Sumud 15. We look forward to standing together, learning together, and walking together again in the future.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="https://palistory.com/sumud15/" target="_blank" rel="noopener" class="cta-btn inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-sumud-green font-bold text-sm shadow-lg hover:bg-sumud-cream transition-colors">
+                            Sign Up for Next Cohort <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="index.html" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-transparent border border-white/40 text-white font-bold text-sm hover:bg-white/10 transition-colors">
+                            Back to Home
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<!--==============================
+		Footer Area
+==============================-->
+<footer class="footer-wrapper footer-layout1">
+        <div class="shape-mockup footer-bg-shape1-1 jump" data-left="0" data-top="0">
+            <img src="assets/img/shape/footer-bg-shape1-1.png" alt="img">
+        </div>
+        <div class="shape-mockup footer-bg-shape1-3 jump" data-right="0" data-bottom="0">
+            <div class="color-masking2">
+                <div class="masking-src" data-mask-src="assets/img/shape/footer-bg-shape1-2.png" style="background: var(--theme-color3); mix-blend-mode: multiply;"></div>
+                <img src="assets/img/shape/footer-bg-shape1-2.png" alt="img" style="filter: hue-rotate(82deg) saturate(0.8) brightness(0.6);">
+            </div>
+        </div>
+        <div class="widget-area space-top">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget footer-widget">
+                            <div class="th-widget-about">
+                                <div class="about-logo">
+                                    <a href="index.html"><img src="assets/img/Palistory_LogoReal.png" alt="Palistory" style="height:50px;"></a>
+                                </div>
+                                <p class="about-text mb-3">Palistory is a non-profit 501(c)(3) organization dedicated to the telling of the heart-felt stories of Palestinians who were forcefully displaced from their lands beginning in 1948. Contact Us to see how you can help support us.</p>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme">
+                                        <i class="fas fa-gift"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <h4 class="box-title"><a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer">Make Donation</a></h4>
+                                    </div>
+                                </div>
+                                <div class="info-card style2">
+                                    <div class="box-icon bg-theme2">
+                                        <i class="fas fa-envelope-open"></i>
+                                    </div>
+                                    <div class="box-content">
+                                        <p class="box-text">Email us:</p>
+                                        <h4 class="box-title"><a href="mailto:INFO@PALISTORY.COM">INFO@PALISTORY.COM</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xl-auto">
+                        <div class="widget widget_nav_menu footer-widget">
+                            <h3 class="widget_title">Quick Links</h3>
+                            <div class="menu-all-pages-container">
+                                <ul class="menu">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About Palistory</a></li>
+                                    <li><a href="event.html">Events</a></li>
+                                    <li><a href="team.html">Story Tellers</a></li>
+                                    <li><a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer">Contribute</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-auto">
+                        <div class="widget newsletter-widget footer-widget">
+                            <h3 class="widget_title">Newsletter</h3>
+                            <p class="footer-text mb-4">Subscribe to our newsletter to get our daily latest news and updates</p>
+                            <form class="newsletter-form">
+                                <div class="form-group style-dark">
+                                    <input class="form-control" type="email" placeholder="Your email" required="">
+                                </div>
+                                <button type="submit" class="th-btn style5">Submit</button>
+                            </form>
+                            <div class="th-social style6">
+                                <a href="https://www.instagram.com/palistory" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/@palistory" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap bg-theme text-center">
+            <div class="container">
+                <p class="copyright-text" style="color:#fff;">© 2025 Copyrights by <a href="index.html" style="color:#fff;">Palistory.com</a> . All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!--********************************
+			Code End  Here 
+	******************************** -->
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

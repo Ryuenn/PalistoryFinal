@@ -4,16 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Donat - Charity & Donation HTML Template - About</title>
-    <meta name="author" content="Donat">
-    <meta name="description" content="Donat - Charity & Donation HTML Template">
-    <meta name="keywords" content="Donat - Charity & Donation HTML Template">
+    <title>Video Gallery - Palistory</title>
+    <meta name="author" content="Palistory">
+    <meta name="description" content="Palistory Video Gallery">
     <meta name="robots" content="INDEX,FOLLOW">
-
-    <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
@@ -32,26 +29,45 @@
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
+    <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <!-- Swiper Js -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Tailwind CSS (preflight disabled) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false, container: false },
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+                    colors: {
+                        brand: { red: '#c60000', dark: '#09090b' }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         /* Keep main nav on a single line */
@@ -59,101 +75,58 @@
         @media (min-width: 992px) and (max-width: 1399px) {
             .main-menu > ul > li { margin: 0 10px; }
         }
-        /* Extend red bar left (shrink logo gap) and keep notice off the search button */
         @media (min-width: 992px) {
             .header-layout1 .header-logo { margin-right: 16px !important; }
             .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
             .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
             .header-notice { padding-right: 0; }
         }
+
+        .premium-bg {
+            background-color: #f8fafc;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(198, 0, 0, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.05) 0px, transparent 50%);
+            position: relative;
+        }
+        .premium-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .video-card {
+            border-radius: 20px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 8px 30px -8px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+        .video-card:hover {
+            box-shadow: 0 24px 50px -12px rgba(198, 0, 0, 0.18);
+            transform: translateY(-4px);
+        }
+        .video-card iframe {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            display: block;
+            border: none;
+        }
+        .video-card.shorts-card iframe {
+            aspect-ratio: 9 / 16;
+        }
     </style>
 </head>
 
 <body>
 
-    <!--[if lte IE 9]>
-    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  	<![endif]-->
-
-
-    <!--********************************
-   		Code Start From Here 
-	******************************** -->
-
-    
-    </div><!--==============================
-    Sidemenu
-============================== -->
-    <div class="sidemenu-wrapper sidemenu-cart ">
-        <div class="sidemenu-content">
-            <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget woocommerce widget_shopping_cart">
-                <h3 class="widget_title">Shopping cart</h3>
-                <div class="widget_shopping_cart_content">
-                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_1.png" alt="Cart Image">Books</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_2.png" alt="Cart Image">Medicine</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>899.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_3.png" alt="Cart Image">Dress</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>756.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_4.png" alt="Cart Image">Chair</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>723.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_5.png" alt="Cart Image">Cloths</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>1080.00</span>
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="woocommerce-mini-cart__total total">
-                        <strong>Subtotal:</strong>
-                        <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
-                    </p>
-                    <p class="woocommerce-mini-cart__buttons buttons">
-                        <a href="cart.html" class="th-btn wc-forward">View cart</a>
-                        <a href="checkout.html" class="th-btn checkout wc-forward">Checkout</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="popup-search-box d-none d-lg-block">
-        <button class="searchClose"><i class="far fa-times"></i></button>
-        <form action="#">
-            <input type="text" placeholder="What are you looking for?">
-            <button type="submit"><i class="fal fa-search"></i></button>
-        </form>
     </div><!--==============================
     Mobile Menu
-  ============================== -->
+    ============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
@@ -184,19 +157,30 @@
             </div>
         </div>
     </div>
+
     <!--==============================
-	Header Area
-==============================-->
+    Search Box
+    ============================== -->
+    <div class="popup-search-box d-none d-lg-block">
+        <button class="searchClose"><i class="far fa-times"></i></button>
+        <form action="#">
+            <input type="text" placeholder="What are you looking for?">
+            <button type="submit"><i class="fal fa-search"></i></button>
+        </form>
+    </div>
+
+    <!--==============================
+    Header Area
+    ============================== -->
     <header class="th-header header-layout1 onepage-nav">
         <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
             <div class="container">
                 <div class="menu-area">
                     <div class="header-logo" style="margin-left:-40px;">
                         <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
                     </div>
                     <div class="menu-area-wrap">
-                                                <nav class="main-menu d-none d-lg-block">
+                        <nav class="main-menu d-none d-lg-block">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li class="menu-item-has-children">
@@ -222,7 +206,6 @@
                     </div>
                     <div class="header-button">
                         <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="far fa-search"></i></button>
-                        
                         <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="th-btn style3 d-xl-block d-none"><i class="fas fa-heart me-2"></i> Donate Now</a>
                         <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
                     </div>
@@ -231,37 +214,77 @@
         </div>
     </header>
 
-
     <!--==============================
-    Breadcumb
-============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/aboutus.png" data-overlay="theme">
+    Breadcrumb
+    ============================== -->
+    <div class="breadcumb-wrapper" data-bg-src="assets/img/videogalleryheader.png" data-overlay="theme">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">About Us</h1>
+                <h1 class="breadcumb-title">Video Gallery</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li>About Us</li>
+                    <li>Video Gallery</li>
                 </ul>
             </div>
         </div>
     </div>
+
     <!--==============================
-    Organizational Information
-==============================-->
-    <section class="space-bottom" style="padding-top:40px;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <img src="assets/img/organizational-information.png" alt="Organizational Information" style="max-width:100%; height:auto; border-radius:12px;">
+    Video Gallery Section
+    ============================== -->
+    <div class="premium-bg py-20 relative" style="overflow: hidden;">
+
+        <div class="absolute top-20 left-10 w-[30rem] h-[30rem] bg-red-400 rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-float z-0 pointer-events-none"></div>
+        <div class="absolute bottom-40 right-10 w-[40rem] h-[40rem] bg-blue-300 rounded-full mix-blend-multiply filter blur-[150px] opacity-20 animate-float z-0 pointer-events-none" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- Recent Highlights Section -->
+            <div class="mt-24">
+
+                <!-- Shorts grid (portrait 9:16) -->
+                <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+
+                    <div class="video-card shorts-card">
+                        <iframe src="https://www.youtube.com/embed/520Q2_WFC3w" title="Palistory Short" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
+                    <div class="video-card shorts-card">
+                        <iframe src="https://www.youtube.com/embed/lEBywUueM8w" title="Palistory Short" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
+                    <div class="video-card shorts-card">
+                        <iframe src="https://www.youtube.com/embed/2hLbrk0UhVk" title="Palistory Short" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
+                    <div class="video-card shorts-card">
+                        <iframe src="https://www.youtube.com/embed/gGEOfQMhLqk" title="Palistory Short" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
+                    <div class="video-card shorts-card">
+                        <iframe src="https://www.youtube.com/embed/DMcTs8vi-fk" title="Palistory Short" allowfullscreen loading="lazy"></iframe>
+                    </div>
+
                 </div>
             </div>
+
+            <!-- Link to YouTube Channel -->
+            <div class="mt-20 text-center">
+                <a href="https://www.youtube.com/@Palistory" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-brand-dark bg-white border border-gray-200 rounded-full shadow-lg hover:shadow-xl hover:border-brand-red transition-all duration-300 overflow-hidden cursor-pointer">
+                    <span class="relative z-10 flex items-center gap-2 group-hover:text-brand-red transition-colors duration-300">
+                        <i class="fab fa-youtube"></i> Visit Our YouTube Channel
+                    </span>
+                    <div class="absolute inset-0 h-full w-full scale-0 rounded-full bg-red-50 transition-all duration-300 group-hover:scale-100 z-0"></div>
+                </a>
+            </div>
+
         </div>
-    </section>
+    </div>
+
     <!--==============================
-		Footer Area
-==============================-->
-<footer class="footer-wrapper footer-layout1">
+    Footer Area
+    ============================== -->
+    <footer class="footer-wrapper footer-layout1">
         <div class="shape-mockup footer-bg-shape1-1 jump" data-left="0" data-top="0">
             <img src="assets/img/shape/footer-bg-shape1-1.png" alt="img">
         </div>
@@ -341,10 +364,6 @@
         </div>
     </footer>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
-
     <!-- Scroll To Top -->
     <div class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -352,26 +371,14 @@
         </svg>
     </div>
 
-    <!--==============================
-    All Js File
-============================== -->
-    <!-- Jquery -->
+    <!-- JS -->
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <!-- Swiper Js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
+    <!-- Plugins main.js depends on (must load before it, or it halts early) -->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Range Slider -->
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <!-- Isotope Filter -->
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
-
-    <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
 </body>
 

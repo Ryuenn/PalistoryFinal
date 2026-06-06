@@ -67,6 +67,76 @@
             .header-notice { padding-right: 0; }
         }
     </style>
+    <!-- Upcoming Events (SUMUD 15) — Tailwind + fonts, scoped to #sumud-content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            important: '#sumud-content',
+            corePlugins: { preflight: false, container: false },
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        sumud: {
+                            cream: '#f7f1e8', creamDark: '#ede3d2', ink: '#1a1a1a',
+                            red: '#c1272d', redDark: '#9b1f24', green: '#1a5f3f',
+                            greenDark: '#114229', muted: '#6b6358'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulseSlow 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        pulseSlow: { '0%, 100%': { opacity: '0.5' }, '50%': { opacity: '1' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        #sumud-content .cream-bg {
+            background-color: #f7f1e8;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(193, 39, 45, 0.06) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(26, 95, 63, 0.06) 0px, transparent 50%);
+            position: relative;
+        }
+        #sumud-content .cream-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231a1a1a' fill-opacity='0.025' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+            pointer-events: none;
+        }
+        #sumud-content .keffiyeh-strip {
+            background-image:
+                linear-gradient(135deg, transparent 46%, rgba(26,26,26,0.5) 46%, rgba(26,26,26,0.5) 54%, transparent 54%),
+                linear-gradient(45deg, transparent 46%, rgba(26,26,26,0.5) 46%, rgba(26,26,26,0.5) 54%, transparent 54%);
+            background-size: 18px 18px;
+        }
+        #sumud-content .pillar-card {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+        }
+        #sumud-content .pillar-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -15px rgba(26, 95, 63, 0.25);
+            border-color: #1a5f3f !important;
+        }
+        #sumud-content .serif-display { font-family: 'Playfair Display', serif; font-weight: 900; }
+        #sumud-content .cta-btn { position: relative; overflow: hidden; isolation: isolate; }
+        #sumud-content .cta-btn::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%); transform: translateX(-100%); transition: transform 0.7s ease; z-index: -1; }
+        #sumud-content .cta-btn:hover::after { transform: translateX(100%); }
+    </style>
 </head>
 
 <body>
@@ -169,14 +239,14 @@
                             <li><a href="about.html">Organizational Information</a></li>
                         </ul>
                     </li>
-                    <li><a href="team.html">Team Members</a></li>
+                    <li><a href="index.html#team-members">Team Members</a></li>
                     <li><a href="team.html">Story Tellers</a></li>
                     <li class="menu-item-has-children">
                         <a href="#">Events</a>
                         <ul class="sub-menu">
                             <li><a href="event.html">Upcoming Events</a></li>
                             <li><a href="gallery.html">Photo Gallery</a></li>
-                            <li><a href="gallery.html">Video Gallery</a></li>
+                            <li><a href="videogallery.html">Video Gallery</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -205,14 +275,14 @@
                                         <li><a href="about.html">Organizational Information</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="team.html">Team Members</a></li>
+                                <li><a href="index.html#team-members">Team Members</a></li>
                                 <li><a href="team.html">Story Tellers</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Events</a>
                                     <ul class="sub-menu">
                                         <li><a href="event.html">Upcoming Events</a></li>
                                         <li><a href="gallery.html">Photo Gallery</a></li>
-                                        <li><a href="gallery.html">Video Gallery</a></li>
+                                        <li><a href="videogallery.html">Video Gallery</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact.html">Contact Us</a></li>
@@ -221,7 +291,7 @@
                         <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
                     </div>
                     <div class="header-button">
-                        <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="far fa-search"></i></button>
+                        <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="fas fa-search"></i></button>
                         
                         <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="th-btn style3 d-xl-block d-none"><i class="fas fa-heart me-2"></i> Donate Now</a>
                         <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
@@ -235,7 +305,7 @@
     <!--==============================
     Breadcumb
 ============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.jpg" data-overlay="theme">
+    <div class="breadcumb-wrapper " data-bg-src="assets/img/upcomingeventsheader.png" data-overlay="theme" style="background-position:center bottom;">
         <div class="container">
             <div class="breadcumb-content">
                 <h1 class="breadcumb-title">Upcoming Events</h1>
@@ -245,137 +315,142 @@
                 </ul>
             </div>
         </div>
-    </div><!--==============================
-Events Area
+    </div>
+    <!--==============================
+    Events Area (SUMUD 15)
 ==============================-->
-    <section class="th-blog-wrapper space-top space-extra-bottom">
-        <div class="container">
-            <div class="row gx-40">
-                <div class="col-xxl-8 col-lg-7">
+    <div id="sumud-content">
+        <div class="cream-bg font-sans text-sumud-ink antialiased overflow-x-hidden py-10 md:py-14 relative">
 
-                    <div class="th-blog blog-single has-post-thumbnail">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog-s-1-1.jpg" alt="Palistory Documentary Screening">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="#"><i class="fas fa-calendar-days"></i>TBD — Coming Soon</a>
-                                <a href="#"><i class="fas fa-map-marker-alt"></i>Location TBA</a>
-                                <a href="#"><i class="fas fa-tags"></i>Documentary Screening</a>
-                            </div>
-                            <h2 class="blog-title">Palistory Documentary — Feature Film Premiere</h2>
-                            <p class="blog-text">We are in active production of our feature-length documentary, <em>Palistory</em>. The film captures firsthand Palestinian voices from occupied territories and the diaspora. Stay connected for screening announcements, premiere dates, and how you can host a community screening near you.</p>
-                            <a href="contact.html" class="th-btn btn-sm">Get Notified <i class="fas fa-arrow-up-right ms-2"></i></a>
-                        </div>
+            <div class="absolute top-20 left-10 w-[20rem] h-[20rem] bg-sumud-red rounded-full mix-blend-multiply filter blur-[120px] opacity-10 animate-float z-0 pointer-events-none"></div>
+            <div class="absolute bottom-20 right-10 w-[24rem] h-[24rem] bg-sumud-green rounded-full mix-blend-multiply filter blur-[140px] opacity-10 animate-float z-0 pointer-events-none" style="animation-delay: 2s;"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+
+                <!-- Header Section -->
+                <div class="text-center max-w-4xl mx-auto mb-16 animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/70 backdrop-blur-md shadow-sm border border-sumud-ink/10 text-sumud-red font-bold tracking-widest uppercase text-[11px] mb-8">
+                        <i class="fa-solid fa-calendar-days"></i> Upcoming Events
                     </div>
-
-                    <div class="th-blog blog-single has-post-thumbnail">
-                        <div class="blog-img">
-                            <img src="assets/img/blog/blog-s-1-2.jpg" alt="Episodic Doc-Series">
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="#"><i class="fas fa-calendar-days"></i>Ongoing — In Production</a>
-                                <a href="#"><i class="fas fa-tags"></i>Episodic Series</a>
-                            </div>
-                            <h2 class="blog-title">Palistory Episodic Doc-Series — Content in Progress</h2>
-                            <p class="blog-text">Alongside the feature film, we are gathering content for the <em>Palistory</em> episodic documentary series. Each episode spotlights a different Palestinian story, region, or voice. Subscribe to our mailing list to be the first to watch new episodes as they release.</p>
-                            <a href="contact.html" class="th-btn btn-sm">Subscribe for Updates <i class="fas fa-arrow-up-right ms-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="th-blog blog-single has-post-thumbnail">
-                        <div class="blog-img" data-overlay="black" data-opacity="5">
-                            <img src="assets/img/blog/blog-s-1-3.jpg" alt="Community Screening">
-                            <a href="https://www.youtube.com/@Palistory" target="_blank" class="play-btn popup-video"><i class="fas fa-play"></i></a>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="#"><i class="fas fa-calendar-days"></i>Watch Now</a>
-                                <a href="#"><i class="fas fa-tags"></i>Video Content</a>
-                            </div>
-                            <h2 class="blog-title">Watch Our Storyteller Interviews on YouTube</h2>
-                            <p class="blog-text">While we complete production, visit our YouTube channel to watch sneak-peek interviews with our featured story tellers — Dr. Hassan El-Najjar, Ghada El-Najjar, Jamal Awad, Dr. Abeer Abouyabis, Rev. Fahed Abuakel, and Musa Ghanayem. These raw, powerful conversations are just the beginning.</p>
-                            <a href="https://www.youtube.com/@Palistory" target="_blank" class="th-btn btn-sm">Watch on YouTube <i class="fas fa-arrow-up-right ms-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="th-blog blog-single">
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="#"><i class="fas fa-calendar-days"></i>Open Invitation</a>
-                                <a href="#"><i class="fas fa-tags"></i>Host an Event</a>
-                            </div>
-                            <h2 class="blog-title">Host a Palistory Screening in Your Community</h2>
-                            <p class="blog-text">Are you an educator, community organizer, or ally who wants to bring Palestinian storytelling to your audience? We welcome partnerships with schools, universities, cultural centers, mosques, churches, and community spaces. Contact us to discuss hosting a Palistory event near you.</p>
-                            <a href="contact.html" class="th-btn btn-sm">Contact Us <i class="fas fa-arrow-up-right ms-2"></i></a>
-                        </div>
-                    </div>
-
+                    <h1 class="serif-display text-5xl md:text-7xl lg:text-8xl text-sumud-ink mb-6 leading-[1.1] tracking-tight">
+                        What's <span class="text-sumud-green">Next</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-sumud-muted font-medium max-w-2xl mx-auto leading-relaxed">
+                        Join us in the journey ahead — walk, read, remember, and stand with Palestine.
+                    </p>
                 </div>
-                <div class="col-xxl-4 col-lg-5">
-                    <aside class="sidebar-area">
-                        <div class="widget widget_search">
-                            <form class="search-form">
-                                <input type="text" placeholder="Search events...">
-                                <button type="submit"><i class="far fa-search"></i></button>
-                            </form>
-                        </div>
-                        <div class="widget widget_categories">
-                            <h3 class="widget_title">Event Types</h3>
-                            <ul>
-                                <li>
-                                    <a href="#">Documentary Screenings</a>
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                </li>
-                                <li>
-                                    <a href="#">Community Gatherings</a>
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                </li>
-                                <li>
-                                    <a href="#">Fundraising Events</a>
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                </li>
-                                <li>
-                                    <a href="gallery.html">Photo Gallery</a>
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/@Palistory" target="_blank">Video Gallery</a>
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="widget">
-                            <h3 class="widget_title">Stay Connected</h3>
-                            <p style="font-size:0.95rem;color:#666;margin-bottom:20px;">Subscribe to our mailing list to be the first to know about upcoming screenings, events, and new content releases.</p>
-                            <a href="contact.html" class="th-btn" style="display:block;text-align:center;">Join Mailing List <i class="fas fa-arrow-up-right ms-2"></i></a>
-                        </div>
-                        <div class="widget widget_tag_cloud">
-                            <h3 class="widget_title">Topics</h3>
-                            <div class="tagcloud">
-                                <a href="#">Palestine</a>
-                                <a href="#">Documentary</a>
-                                <a href="#">Storytelling</a>
-                                <a href="#">Film</a>
-                                <a href="#">Justice</a>
-                                <a href="#">Diaspora</a>
+
+                <!-- ✦ FEATURED BANNER — SUMUD 15 -->
+                <a href="sumud15.html" class="block animate-fade-in-up" style="animation-delay: 0.15s;">
+                    <div class="relative overflow-hidden rounded-[32px] shadow-[0_30px_60px_-20px_rgba(26,26,26,0.25)] bg-white border border-sumud-ink/10 group">
+
+                        <div class="absolute top-0 left-0 right-0 h-2.5 bg-sumud-red keffiyeh-strip opacity-90"></div>
+                        <div class="absolute bottom-0 left-0 right-0 h-2.5 bg-sumud-green keffiyeh-strip opacity-90"></div>
+
+                        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full border-[32px] border-sumud-red/15 pointer-events-none animate-pulse-slow"></div>
+                        <div class="absolute -bottom-40 -left-40 w-[28rem] h-[28rem] rounded-full border-[28px] border-sumud-green/10 pointer-events-none"></div>
+
+                        <div class="absolute z-10 pointer-events-none hidden md:block" style="top:55px;left:-70px;width:260px;height:16px;background:#c1272d;transform:rotate(-45deg);box-shadow:0 4px 16px rgba(193,39,45,0.35);"></div>
+
+                        <div class="relative z-10 grid md:grid-cols-2 gap-0">
+
+                            <!-- LEFT: Date + Title block -->
+                            <div class="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-between">
+
+                                <div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-sumud-red/10 border border-sumud-red/20 text-sumud-red text-[10px] font-bold uppercase tracking-widest mb-5">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sumud-red opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-sumud-red"></span>
+                                    </span>
+                                    Registration Open
+                                </div>
+
+                                <div>
+                                    <div class="flex items-baseline gap-3 mb-4 flex-wrap">
+                                        <span class="serif-display text-sumud-ink leading-none" style="font-size: clamp(2.75rem, 6vw, 4.5rem); letter-spacing: -0.02em;">SUMUD</span>
+                                        <span class="serif-display text-sumud-green leading-none" style="font-size: clamp(2.75rem, 6vw, 4.5rem); letter-spacing: -0.02em;">15</span>
+                                    </div>
+
+                                    <h2 class="text-sumud-ink text-lg sm:text-xl md:text-2xl font-extrabold leading-tight mb-2 tracking-tight">
+                                        A 15-Day Challenge of Body, Mind &amp; Conscience
+                                    </h2>
+
+                                    <p class="text-sumud-red text-base sm:text-lg md:text-xl font-extrabold mb-4 tracking-tight">
+                                        Walk. Read. Remember. Raise.
+                                    </p>
+
+                                    <p class="text-sumud-muted text-sm md:text-base leading-relaxed max-w-md mb-6">
+                                        A 15-day fundraising challenge honoring the resilience of the Palestinian people — and preserving their stories for generations to come.
+                                    </p>
+
+                                    <div class="flex flex-wrap gap-2 mb-6">
+                                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-sumud-cream border border-sumud-ink/10 text-sumud-ink text-xs font-semibold">
+                                            <i class="fa-solid fa-calendar-days text-sumud-red"></i> June 1–15, 2026
+                                        </div>
+                                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-sumud-cream border border-sumud-ink/10 text-sumud-ink text-xs font-semibold">
+                                            <i class="fa-solid fa-hashtag text-sumud-green"></i> #Sumud15
+                                        </div>
+                                        <div class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-sumud-cream border border-sumud-ink/10 text-sumud-ink text-xs font-semibold">
+                                            <i class="fa-solid fa-heart text-sumud-red"></i> Tax-Deductible
+                                        </div>
+                                    </div>
+
+                                    <span class="cta-btn inline-flex items-center gap-2 px-6 py-3 rounded-full bg-sumud-red text-white font-bold text-sm shadow-lg shadow-sumud-red/30 group-hover:bg-sumud-redDark transition-colors">
+                                        Learn More <i class="fa-solid fa-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <!-- RIGHT: Three pillars -->
+                            <div class="p-6 sm:p-8 md:p-10 lg:p-12 md:border-l border-sumud-ink/10 flex flex-col justify-center gap-3 bg-sumud-cream/40">
+
+                                <p class="text-sumud-green text-[10px] font-bold uppercase tracking-[0.3em] mb-1">The 3 Daily Rules</p>
+
+                                <div class="pillar-card flex items-center gap-3 p-3.5 rounded-xl bg-white border border-sumud-ink/10">
+                                    <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sumud-green flex items-center justify-center shadow-md shadow-sumud-green/30">
+                                        <i class="fa-solid fa-person-walking text-white text-base"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h4 class="text-sumud-ink font-bold text-sm md:text-base leading-tight">Walk 30 Minutes</h4>
+                                        <p class="text-sumud-muted text-xs">One unbroken walk, every day for 15 days.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pillar-card flex items-center gap-3 p-3.5 rounded-xl bg-white border border-sumud-ink/10">
+                                    <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sumud-red flex items-center justify-center shadow-md shadow-sumud-red/30">
+                                        <i class="fa-solid fa-book-open text-white text-base"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h4 class="text-sumud-ink font-bold text-sm md:text-base leading-tight">Read 10 Pages</h4>
+                                        <p class="text-sumud-muted text-xs">Share daily insights using #Sumud15.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pillar-card flex items-center gap-3 p-3.5 rounded-xl bg-white border border-sumud-ink/10">
+                                    <div class="flex-shrink-0 w-11 h-11 rounded-lg bg-sumud-green flex items-center justify-center shadow-md shadow-sumud-green/30">
+                                        <i class="fa-solid fa-droplet text-white text-base"></i>
+                                    </div>
+                                    <div class="min-w-0">
+                                        <h4 class="text-sumud-ink font-bold text-sm md:text-base leading-tight">Clean Hydration</h4>
+                                        <p class="text-sumud-muted text-xs">Water, unsweetened tea &amp; coffee.</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="widget" style="background:#f8f8f8;padding:25px;border-radius:12px;text-align:center;">
-                            <h3 class="widget_title">Support Our Work</h3>
-                            <p style="font-size:0.9rem;color:#666;margin-bottom:15px;">Your donations fund production, promotion, and bringing these stories to audiences worldwide.</p>
-                            <a href="https://secure.qgiv.com/for/palistory/" target="_blank" class="th-btn"><i class="fas fa-heart me-2"></i> Donate Now</a>
-                        </div>
-                    </aside>
-                </div>
+                    </div>
+                </a>
+
             </div>
         </div>
-    </section>
+    </div>
+
+
     <!--==============================
-	Footer Area
+		Footer Area
 ==============================-->
-    <footer class="footer-wrapper footer-layout1">
+<footer class="footer-wrapper footer-layout1">
         <div class="shape-mockup footer-bg-shape1-1 jump" data-left="0" data-top="0">
             <img src="assets/img/shape/footer-bg-shape1-1.png" alt="img">
         </div>

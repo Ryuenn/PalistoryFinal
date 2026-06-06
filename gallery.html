@@ -4,16 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Donat - Charity & Donation HTML Template - Gallery</title>
-    <meta name="author" content="Donat">
-    <meta name="description" content="Donat - Charity & Donation HTML Template">
-    <meta name="keywords" content="Donat - Charity & Donation HTML Template">
+    <title>Gallery - Palistory</title>
+    <meta name="author" content="Palistory">
+    <meta name="description" content="Palistory Events Gallery Archive">
     <meta name="robots" content="INDEX,FOLLOW">
-
-    <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicons - Place favicon.ico in the root directory -->
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
@@ -32,26 +29,57 @@
     <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <!--==============================
-	  Google Fonts
-	============================== -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
+    <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
-    <!-- Swiper Js -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Swiper CSS (CDN v11 for coverflow effect) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind CSS (preflight disabled to avoid breaking existing header/footer) -->
+    <script>
+        window.tailwind = window.tailwind || {};
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins="></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false, container: false },
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#c60000',
+                            dark: '#09090b',
+                            gray: '#fafafa'
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         /* Keep main nav on a single line */
@@ -59,90 +87,95 @@
         @media (min-width: 992px) and (max-width: 1399px) {
             .main-menu > ul > li { margin: 0 10px; }
         }
-        /* Extend red bar left (shrink logo gap) and keep notice off the search button */
         @media (min-width: 992px) {
             .header-layout1 .header-logo { margin-right: 16px !important; }
             .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
             .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
             .header-notice { padding-right: 0; }
         }
+
+        /* Events section background */
+        .premium-bg {
+            background-image:
+                radial-gradient(at 0% 0%, rgba(198, 0, 0, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(15, 23, 42, 0.05) 0px, transparent 50%);
+            position: relative;
+            background-color: #f8fafc;
+        }
+        .premium-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Swiper overrides */
+        .mySwiper {
+            width: 100%;
+            padding: 40px 0 80px 0;
+        }
+        .mySwiper .swiper-slide {
+            width: 800px;
+            max-width: 90vw;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+        .mySwiper .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #cbd5e1;
+            opacity: 0.5;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mySwiper .swiper-pagination-bullet-active {
+            width: 40px;
+            border-radius: 8px;
+            background-color: #c60000 !important;
+            opacity: 1;
+            box-shadow: 0 0 10px rgba(198, 0, 0, 0.5);
+        }
+
+        /* Tilt cards */
+        .tilt-card {
+            transition: box-shadow 0.5s ease, transform 0.5s ease;
+            transform-style: preserve-3d;
+        }
+        .tilt-card:hover {
+            box-shadow: 0 30px 60px -15px rgba(198, 0, 0, 0.2);
+            z-index: 10;
+        }
+        .js-tilt-glare { border-radius: 24px; }
+
+        /* Tab buttons */
+        .tab-btn { position: relative; z-index: 1; }
+        .tab-btn.active { color: #fff; }
+        .tab-btn.active::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: #c60000;
+            border-radius: 10px;
+            z-index: -1;
+            box-shadow: 0 4px 14px 0 rgba(198, 0, 0, 0.39);
+        }
     </style>
 </head>
 
 <body>
 
-    <!--[if lte IE 9]>
-    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  	<![endif]-->
-
-
-    <!--********************************
-   		Code Start From Here 
-	******************************** -->
-
-    
     </div><!--==============================
     Sidemenu
-============================== -->
-    <div class="sidemenu-wrapper sidemenu-cart ">
+    ============================== -->
+    <div class="sidemenu-wrapper sidemenu-cart">
         <div class="sidemenu-content">
             <button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
-            <div class="widget woocommerce widget_shopping_cart">
-                <h3 class="widget_title">Shopping cart</h3>
-                <div class="widget_shopping_cart_content">
-                    <ul class="woocommerce-mini-cart cart_list product_list_widget ">
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_1.png" alt="Cart Image">Books</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>940.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_2.png" alt="Cart Image">Medicine</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>899.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_3.png" alt="Cart Image">Dress</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>756.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_4.png" alt="Cart Image">Chair</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>723.00</span>
-                            </span>
-                        </li>
-                        <li class="woocommerce-mini-cart-item mini_cart_item">
-                            <a href="#" class="remove remove_from_cart_button"><i class="far fa-times"></i></a>
-                            <a href="#"><img src="assets/img/product/product_thumb_1_5.png" alt="Cart Image">Cloths</a>
-                            <span class="quantity">1 ×
-                                <span class="woocommerce-Price-amount amount">
-                                    <span class="woocommerce-Price-currencySymbol">$</span>1080.00</span>
-                            </span>
-                        </li>
-                    </ul>
-                    <p class="woocommerce-mini-cart__total total">
-                        <strong>Subtotal:</strong>
-                        <span class="woocommerce-Price-amount amount">
-                            <span class="woocommerce-Price-currencySymbol">$</span>4398.00</span>
-                    </p>
-                    <p class="woocommerce-mini-cart__buttons buttons">
-                        <a href="cart.html" class="th-btn wc-forward">View cart</a>
-                        <a href="checkout.html" class="th-btn checkout wc-forward">Checkout</a>
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
     <div class="popup-search-box d-none d-lg-block">
@@ -151,9 +184,11 @@
             <input type="text" placeholder="What are you looking for?">
             <button type="submit"><i class="fal fa-search"></i></button>
         </form>
-    </div><!--==============================
+    </div>
+
+    <!--==============================
     Mobile Menu
-  ============================== -->
+    ============================== -->
     <div class="th-menu-wrapper">
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
@@ -169,14 +204,14 @@
                             <li><a href="about.html">Organizational Information</a></li>
                         </ul>
                     </li>
-                    <li><a href="team.html">Team Members</a></li>
+                    <li><a href="index.html#team-members">Team Members</a></li>
                     <li><a href="team.html">Story Tellers</a></li>
                     <li class="menu-item-has-children">
                         <a href="#">Events</a>
                         <ul class="sub-menu">
                             <li><a href="event.html">Upcoming Events</a></li>
                             <li><a href="gallery.html">Photo Gallery</a></li>
-                            <li><a href="gallery.html">Video Gallery</a></li>
+                            <li><a href="videogallery.html">Video Gallery</a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -184,19 +219,19 @@
             </div>
         </div>
     </div>
+
     <!--==============================
-	Header Area
-==============================-->
+    Header Area
+    ============================== -->
     <header class="th-header header-layout1 onepage-nav">
         <div class="sticky-wrapper">
-            <!-- Main Menu Area -->
             <div class="container">
                 <div class="menu-area">
                     <div class="header-logo" style="margin-left:-40px;">
                         <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
                     </div>
                     <div class="menu-area-wrap">
-                                                <nav class="main-menu d-none d-lg-block">
+                        <nav class="main-menu d-none d-lg-block">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li class="menu-item-has-children">
@@ -205,14 +240,14 @@
                                         <li><a href="about.html">Organizational Information</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="team.html">Team Members</a></li>
+                                <li><a href="index.html#team-members">Team Members</a></li>
                                 <li><a href="team.html">Story Tellers</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">Events</a>
                                     <ul class="sub-menu">
                                         <li><a href="event.html">Upcoming Events</a></li>
                                         <li><a href="gallery.html">Photo Gallery</a></li>
-                                        <li><a href="gallery.html">Video Gallery</a></li>
+                                        <li><a href="videogallery.html">Video Gallery</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="contact.html">Contact Us</a></li>
@@ -222,7 +257,6 @@
                     </div>
                     <div class="header-button">
                         <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="far fa-search"></i></button>
-                        
                         <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="th-btn style3 d-xl-block d-none"><i class="fas fa-heart me-2"></i> Donate Now</a>
                         <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="far fa-bars"></i></button>
                     </div>
@@ -231,104 +265,329 @@
         </div>
     </header>
 
-
     <!--==============================
-    Breadcumb
-============================== -->
-    <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.jpg" data-overlay="theme">
+    Breadcrumb
+    ============================== -->
+    <div class="breadcumb-wrapper" data-bg-src="assets/img/Photogalleryheader.png" data-overlay="theme">
         <div class="container">
             <div class="breadcumb-content">
-                <h1 class="breadcumb-title">Gallery</h1>
+                <h1 class="breadcumb-title">Photo Gallery</h1>
                 <ul class="breadcumb-menu">
                     <li><a href="index.html">Home</a></li>
-                    <li>Gallery</li>
+                    <li>Photo Gallery</li>
                 </ul>
             </div>
         </div>
-    </div><!--==============================
-Gallery Area  
-==============================-->
-    <div class="overflow-hidden space">
-        <div class="container">
-            <div class="row gy-30 gx-30 filter-active">
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_1.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_1.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
+    </div>
+
+    <!--==============================
+    Events Archive
+    ============================== -->
+    <div class="premium-bg py-20 relative" style="overflow-x: hidden;">
+
+        <div class="absolute top-20 left-10 w-[30rem] h-[30rem] bg-red-400 rounded-full mix-blend-multiply filter blur-[120px] opacity-20 animate-float z-0 pointer-events-none"></div>
+        <div class="absolute bottom-40 right-10 w-[40rem] h-[40rem] bg-blue-300 rounded-full mix-blend-multiply filter blur-[150px] opacity-20 animate-float z-0 pointer-events-none" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <!-- Header Section -->
+            <div class="text-center max-w-4xl mx-auto mb-20 animate-fade-in-up">
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/60 backdrop-blur-md shadow-sm border border-gray-200/50 text-brand-red font-bold tracking-widest uppercase text-[11px] mb-8">
+                    <i class="fa-solid fa-earth-americas"></i> Palistory Archives
                 </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_2.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_2.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-brand-dark mb-6 leading-[1.1] tracking-tight">
+                    Moments of <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-red-600">Impact</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto leading-relaxed">
+                    Explore the powerful stories, milestones, and beautiful community gatherings that define our shared journey.
+                </p>
+            </div>
+
+            <!-- Featured Slider -->
+            <div class="mb-32 relative animate-fade-in-up" style="animation-delay: 0.2s;">
+                <div class="flex items-center justify-center mb-6">
+                    <h2 class="text-3xl font-extrabold text-brand-dark flex items-center gap-3">
+                        <i class="fa-solid fa-star text-brand-red text-2xl"></i> Featured Events
+                    </h2>
                 </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_3.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_3.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide group cursor-pointer" onclick="window.location.href='https://palistory.com/palistory-at-gaza-5k'">
+                            <div class="w-full relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                                <img src="https://palistory.com/wp-content/uploads/2026/03/Palistory-Gaza-5K-Atlanta-2.png" alt="Gaza 5K Atlanta" class="w-full h-[300px] md:h-[450px] object-contain transition-transform duration-700 group-hover:scale-[1.02] opacity-95 group-hover:opacity-100">
+                                <div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md border border-gray-200 text-brand-dark text-xs font-bold uppercase px-4 py-2 rounded-full flex items-center gap-2 z-10 shadow-sm">
+                                    <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Highlight
+                                </div>
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col justify-between flex-grow transition-colors duration-500 group-hover:bg-red-50/30">
+                                <div>
+                                    <h3 class="text-brand-dark text-3xl md:text-4xl font-extrabold mb-3 tracking-tight group-hover:text-brand-red transition-colors duration-300">Palistory Gaza 5K - Atlanta</h3>
+                                    <div class="flex items-center text-gray-600 text-sm md:text-lg gap-4 mb-6 font-medium">
+                                        <span><i class="fa-solid fa-location-dot text-brand-red mr-2"></i> Atlanta, GA</span>
+                                    </div>
+                                </div>
+                                <div class="bg-brand-dark text-white font-bold py-3 px-8 rounded-xl group-hover:bg-brand-red transition-all duration-300 flex items-center gap-3 w-max shadow-md">
+                                    View Gallery <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_4.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_4.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
+
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide group cursor-pointer" onclick="window.location.href='https://palistory.com/pcrf-the-children-of-gaza'">
+                            <div class="w-full relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                                <img src="https://palistory.com/wp-content/uploads/2026/03/PCRF-–-The-Children-of-Gaza.png" alt="PCRF Event" class="w-full h-[300px] md:h-[450px] object-contain transition-transform duration-700 group-hover:scale-[1.02] opacity-95 group-hover:opacity-100">
+                                <div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md border border-gray-200 text-brand-dark text-xs font-bold uppercase px-4 py-2 rounded-full flex items-center gap-2 z-10 shadow-sm">
+                                    <span class="w-2 h-2 rounded-full bg-gray-400"></span> Past Event
+                                </div>
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col justify-between flex-grow transition-colors duration-500 group-hover:bg-red-50/30">
+                                <div>
+                                    <h3 class="text-brand-dark text-3xl md:text-4xl font-extrabold mb-3 tracking-tight group-hover:text-brand-red transition-colors duration-300">PCRF: The Children of Gaza</h3>
+                                    <div class="flex items-center text-gray-600 text-sm md:text-lg gap-4 mb-6 font-medium">
+                                        <span><i class="fa-solid fa-heart text-brand-red mr-2"></i> Charity Fundraiser</span>
+                                    </div>
+                                </div>
+                                <div class="bg-brand-dark text-white font-bold py-3 px-8 rounded-xl group-hover:bg-brand-red transition-all duration-300 flex items-center gap-3 w-max shadow-md">
+                                    View Gallery <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_6.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_6.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
+
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide group cursor-pointer" onclick="window.location.href='#'">
+                            <div class="w-full relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                                <img src="https://palistory.com/wp-content/uploads/2026/03/5K-for-Palestine-2.png" alt="5K For Palestine" class="w-full h-[300px] md:h-[450px] object-contain transition-transform duration-700 group-hover:scale-[1.02] opacity-95 group-hover:opacity-100">
+                                <div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md border border-gray-200 text-brand-dark text-xs font-bold uppercase px-4 py-2 rounded-full flex items-center gap-2 z-10 shadow-sm">
+                                    <span class="w-2 h-2 rounded-full bg-gray-400"></span> Past Event
+                                </div>
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col justify-between flex-grow transition-colors duration-500 group-hover:bg-red-50/30">
+                                <div>
+                                    <h3 class="text-brand-dark text-3xl md:text-4xl font-extrabold mb-3 tracking-tight group-hover:text-brand-red transition-colors duration-300">5K For Palestine</h3>
+                                    <div class="flex items-center text-gray-600 text-sm md:text-lg gap-4 mb-6 font-medium">
+                                        <span><i class="fa-solid fa-person-running text-brand-red mr-2"></i> Community Run</span>
+                                    </div>
+                                </div>
+                                <div class="bg-brand-dark text-white font-bold py-3 px-8 rounded-xl group-hover:bg-brand-red transition-all duration-300 flex items-center gap-3 w-max shadow-md">
+                                    View Gallery <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_5.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_5.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
+
+                        <!-- Slide 4 -->
+                        <div class="swiper-slide group cursor-pointer" onclick="window.location.href='https://palistory.com/big-night-at-shibam-coffee'">
+                            <div class="w-full relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                                <img src="https://palistory.com/wp-content/uploads/2026/03/Big-Night-at-Shibam-Coffee-2.png" alt="Shibam Coffee" class="w-full h-[300px] md:h-[450px] object-contain transition-transform duration-700 group-hover:scale-[1.02] opacity-95 group-hover:opacity-100">
+                                <div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md border border-gray-200 text-brand-dark text-xs font-bold uppercase px-4 py-2 rounded-full flex items-center gap-2 z-10 shadow-sm">
+                                    <span class="w-2 h-2 rounded-full bg-gray-400"></span> Past Event
+                                </div>
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col justify-between flex-grow transition-colors duration-500 group-hover:bg-red-50/30">
+                                <div>
+                                    <h3 class="text-brand-dark text-3xl md:text-4xl font-extrabold mb-3 tracking-tight group-hover:text-brand-red transition-colors duration-300">Big Night at Shibam Coffee</h3>
+                                    <div class="flex items-center text-gray-600 text-sm md:text-lg gap-4 mb-6 font-medium">
+                                        <span><i class="fa-solid fa-mug-hot text-brand-red mr-2"></i> Community Gathering</span>
+                                    </div>
+                                </div>
+                                <div class="bg-brand-dark text-white font-bold py-3 px-8 rounded-xl group-hover:bg-brand-red transition-all duration-300 flex items-center gap-3 w-max shadow-md">
+                                    View Gallery <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
-                </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_7.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_7.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_9.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_9.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-auto col-lg-4 filter-item">
-                    <div class="gallery-card">
-                        <div class="gallery-img">
-                            <img src="assets/img/gallery/gallery_1_8.png" alt="gallery image">
-                            <a href="assets/img/gallery/gallery_1_8.png" class="icon-btn popup-image"><i class="fas fa-eye"></i></a>
-                        </div>
-                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
+
+            <!-- Event Directory Grid -->
+            <div class="animate-fade-in-up max-w-[85rem] mx-auto" style="animation-delay: 0.4s;">
+
+                <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-brand-dark tracking-tight">
+                        Event Directory
+                    </h2>
+                    <div class="flex p-1.5 bg-white/60 backdrop-blur-md rounded-2xl shadow-sm border border-gray-200" id="event-tabs">
+                        <button onclick="filterEvents('all', this)" class="tab-btn active text-sm font-bold px-7 py-2.5 rounded-[10px] transition-all duration-300 text-white">All</button>
+                        <button onclick="filterEvents('upcoming', this)" class="tab-btn text-sm font-semibold text-gray-500 hover:text-gray-900 px-7 py-2.5 rounded-[10px] transition-all duration-300">Upcoming</button>
+                        <button onclick="filterEvents('past', this)" class="tab-btn text-sm font-semibold text-gray-500 hover:text-gray-900 px-7 py-2.5 rounded-[10px] transition-all duration-300">Past Events</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1 — Sumud 15 (May 2026) -->
+                    <a href="https://palistory.com/sumud15/" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center overflow-hidden">
+                            <img src="https://palistory.com/wp-content/uploads/2026/05/4.png" alt="Sumud 15" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]" style="filter: grayscale(1);">
+                            <div class="absolute z-10 pointer-events-none" style="top:23px;left:-35px;width:130px;height:14px;background:#c60000;transform:rotate(-45deg);"></div>
+                            <div class="absolute top-0 right-0 z-10 text-right leading-none">
+                                <div class="text-white font-extrabold text-2xl px-2 pt-1 drop-shadow-md">22</div>
+                                <div class="bg-[#c60000] text-white font-extrabold text-xs px-2 py-1 text-center tracking-widest">MAY</div>
+                            </div>
+                            <div class="absolute pointer-events-none z-10" style="bottom:-100px;right:-100px;width:200px;height:200px;border-radius:50%;border:32px solid #c60000;background:transparent;"></div>
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">Sumud 15</h3>
+                                <p class="text-gray-600 text-sm mb-6">Advocacy & Support • May 22, 2026</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 2 — Apr 2026 -->
+                    <a href="https://tinyurl.com/gt5k26" target="_blank" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/04/5K-For-Palestine-and-Sudan.png" alt="5K For Palestine & Sudan" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">5K For Palestine & Sudan</h3>
+                                <p class="text-gray-600 text-sm mb-6">Georgia Tech • April 11, 2026</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 3 — Oct 11, 2025 -->
+                    <a href="#" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/03/2025-Health-Conference-and-Gala-Fundraiser.png" alt="Health Conference" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">2025 Health Conference & Gala</h3>
+                                <p class="text-gray-600 text-sm mb-6">Medical & Relief Support • Oct 11, 2025</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 4 — Oct 4, 2025 -->
+                    <a href="#" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/03/18th-Annual-Atlanta-Arab-Festival.png" alt="Arab Festival" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">18th Annual Atlanta Arab Festival</h3>
+                                <p class="text-gray-600 text-sm mb-6">Cultural Celebration • Oct 4, 2025</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 5 — Sep 6, 2025 -->
+                    <a href="https://palistory.com/palistory-at-cair" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/03/Palistory-at-CAIR-Georgias-9th-Annual-Fundraiser.png" alt="CAIR Georgia" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">CAIR-Georgia's 9th Annual Fundraiser</h3>
+                                <p class="text-gray-600 text-sm mb-6">Advocacy & Support • Sep 6, 2025</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 6 — Apr 26, 2025 -->
+                    <a href="https://palistory.com/palistory-at-the-mist-workshop" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/03/Palistory-at-MIST-Workshop-2.png" alt="MIST Workshop" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">Palistory at MIST Workshop</h3>
+                                <p class="text-gray-600 text-sm mb-6">Educational Workshop • Apr 26, 2025</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 7 — Apr 21, 2025 -->
+                    <a href="https://palistory.com/palistory-at-masjid-al-furqan" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/03/Palistory-at-Masjid-Al-Furqan.png" alt="Masjid Al-Furqan" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">Palistory at Masjid Al-Furqan</h3>
+                                <p class="text-gray-600 text-sm mb-6">Community Engagement • Apr 21, 2025</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Card 8 — Feb 27, 2025 -->
+                    <a href="https://palistory.com/palistory-at-ruth-chris/" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                        <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
+                            <img src="https://palistory.com/wp-content/uploads/2026/05/Palistory-Dinner-at-Ruth-Chris.png" alt="Palistory at Ruth's Chris" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
+                        </div>
+                        <div class="flex-grow p-6 flex flex-col justify-between transition-colors duration-500 group-hover:bg-red-50/30">
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-dark mb-2 leading-tight group-hover:text-brand-red transition-colors duration-300">Palistory Dinner at Ruth's Chris</h3>
+                                <p class="text-gray-600 text-sm mb-6">Community Gathering • Feb 27, 2025</p>
+                            </div>
+                            <div class="flex items-center mt-auto">
+                                <span class="inline-flex items-center gap-2 text-brand-dark text-sm font-bold group-hover:text-brand-red transition-colors duration-300">
+                                    View Details <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <!-- Load More Button -->
+                <div class="mt-20 text-center">
+                    <a href="https://palistory.com/main-events" class="group relative inline-flex items-center justify-center px-10 py-4 font-bold text-brand-dark bg-white border border-gray-200 rounded-full shadow-lg hover:shadow-xl hover:border-brand-red transition-all duration-300 overflow-hidden cursor-pointer">
+                        <span class="relative z-10 flex items-center gap-2 group-hover:text-brand-red transition-colors duration-300">
+                            Explore Full Archive <i class="fa-solid fa-arrow-down transform group-hover:translate-y-1 transition-transform"></i>
+                        </span>
+                        <div class="absolute inset-0 h-full w-full scale-0 rounded-full bg-red-50 transition-all duration-300 group-hover:scale-100 z-0"></div>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
+
     <!--==============================
-	Footer Area
-==============================-->
+    Footer Area
+    ============================== -->
     <footer class="footer-wrapper footer-layout1">
         <div class="shape-mockup footer-bg-shape1-1 jump" data-left="0" data-top="0">
             <img src="assets/img/shape/footer-bg-shape1-1.png" alt="img">
@@ -409,10 +668,6 @@ Gallery Area
         </div>
     </footer>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
-
     <!-- Scroll To Top -->
     <div class="scroll-top">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -420,27 +675,68 @@ Gallery Area
         </svg>
     </div>
 
-    <!--==============================
-    All Js File
-============================== -->
-    <!-- Jquery -->
+    <!-- JS -->
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
-    <!-- Swiper Js -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <!-- Bootstrap -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
+    <!-- Plugins main.js depends on (must load before it, or it halts early) -->
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
     <script src="assets/js/jquery.counterup.min.js"></script>
-    <!-- Range Slider -->
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <!-- Isotope Filter -->
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
-
-    <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
-</body>
 
+    <!-- Swiper v11 (CDN — required for coverflow effect) -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Vanilla Tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                coverflowEffect: {
+                    rotate: 15,
+                    stretch: 0,
+                    depth: 250,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        });
+
+        function filterEvents(category, clickedBtn) {
+            document.querySelectorAll('.tab-btn').forEach(function (tab) {
+                tab.classList.remove('active', 'text-white');
+                tab.classList.add('text-gray-500');
+            });
+            clickedBtn.classList.remove('text-gray-500');
+            clickedBtn.classList.add('active', 'text-white');
+
+            document.querySelectorAll('.event-grid-item').forEach(function (card) {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    card.animate(
+                        [{ opacity: 0, transform: 'scale(0.95)' }, { opacity: 1, transform: 'scale(1)' }],
+                        { duration: 400, easing: 'ease-out' }
+                    );
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
 </html>
