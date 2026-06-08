@@ -73,6 +73,9 @@
     <style>
         /* Keep main nav on a single line */
         .main-menu > ul { white-space: nowrap; }
+        /* Remove the icon that fades in on submenu hover */
+        .main-menu ul.sub-menu li a:before { content: none !important; display: none !important; }
+        .main-menu ul.sub-menu li a:hover { padding-left: 0 !important; }
         /* Keep logo fully visible on mobile (cancel desktop -40px shift) */
         @media (max-width: 991px) { .header-layout1 .header-logo { margin-left: 0 !important; } }
         /* Keep logo aspect ratio on mobile (theme max-width was squishing it) */
@@ -164,8 +167,9 @@
         .js-tilt-glare { border-radius: 24px; }
 
         /* Tab buttons */
-        .tab-btn { position: relative; z-index: 1; }
-        .tab-btn.active { color: #fff; }
+        .tab-btn { position: relative; z-index: 1; background: transparent; border: 1px solid #e5e7eb; outline: none; -webkit-appearance: none; appearance: none; cursor: pointer; }
+        .tab-btn:focus { outline: none; box-shadow: none; }
+        .tab-btn.active { color: #fff; border-color: transparent; }
         .tab-btn.active::before {
             content: '';
             position: absolute;
@@ -173,7 +177,6 @@
             background: #c60000;
             border-radius: 10px;
             z-index: -1;
-            box-shadow: 0 4px 14px 0 rgba(198, 0, 0, 0.39);
         }
     </style>
 </head>
@@ -526,7 +529,7 @@
                     </a>
 
                     <!-- Card 6 — Apr 26, 2025 -->
-                    <a href="https://palistory.com/palistory-at-the-mist-workshop" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <a href="palistory-at-mist-workshop.html" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
                         <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
                             <img src="https://palistory.com/wp-content/uploads/2026/03/Palistory-at-MIST-Workshop-2.png" alt="MIST Workshop" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
                         </div>
@@ -562,7 +565,7 @@
                     </a>
 
                     <!-- Card 8 — Feb 27, 2025 -->
-                    <a href="https://palistory.com/palistory-at-ruth-chris/" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
+                    <a href="palistory-at-ruth-chris.html" class="event-grid-item tilt-card flex flex-col group relative rounded-[24px] overflow-hidden shadow-lg bg-white border border-gray-100" data-category="past" data-tilt data-tilt-max="4" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.2" data-tilt-scale="1.02">
                         <div class="w-full aspect-[16/9] relative bg-gray-50 border-b border-gray-100 flex items-center justify-center">
                             <img src="https://palistory.com/wp-content/uploads/2026/05/Palistory-Dinner-at-Ruth-Chris.png" alt="Palistory at Ruth's Chris" class="w-full h-full object-contain opacity-95 group-hover:opacity-100 transition-all duration-700 ease-in-out group-hover:scale-[1.03]">
                         </div>

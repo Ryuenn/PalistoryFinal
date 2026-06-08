@@ -45,6 +45,9 @@
     <style>
         /* Keep main nav on a single line */
         .main-menu > ul { white-space: nowrap; }
+        /* Remove the icon that fades in on submenu hover */
+        .main-menu ul.sub-menu li a:before { content: none !important; display: none !important; }
+        .main-menu ul.sub-menu li a:hover { padding-left: 0 !important; }
         /* Keep logo fully visible on mobile (cancel desktop -40px shift) */
         @media (max-width: 991px) { .header-layout1 .header-logo { margin-left: 0 !important; } }
         /* Keep logo aspect ratio on mobile (theme max-width was squishing it) */
