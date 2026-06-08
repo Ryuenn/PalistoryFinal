@@ -52,6 +52,12 @@
         @media (max-width: 360px) { .header-layout1 .header-logo img { height: 38px !important; } }
         /* Tagline only fits on very wide screens; hide below ~1900px so nav + buttons don't overflow */
         @media (max-width: 1899px) { .header-notice { display: none !important; } .header-layout1 .menu-area .menu-area-wrap { justify-content: center; } }
+        /* Center desktop nav links within the red pill on laptop widths */
+        @media (min-width: 992px) and (max-width: 1899px) {
+            .header-layout1 .menu-area .menu-area-wrap { justify-content: center !important; padding-left: 20px !important; padding-right: 20px !important; }
+            .header-layout1 .main-menu { -webkit-box-flex: 1; -ms-flex: 1 1 auto; flex: 1 1 auto; }
+            .header-layout1 .main-menu > ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
+        }
         /* Laptop range (1200-1399): shrink logo + tighten nav so the Donate button fits */
         @media (min-width: 1200px) and (max-width: 1399px) {
             .header-layout1 .header-logo img { height: 40px !important; }
@@ -66,7 +72,7 @@
         @media (min-width: 992px) {
             .header-layout1 .header-logo { margin-right: 16px !important; }
             .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
-            .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
+            .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; margin-right: -40px; }
             .header-notice { padding-right: 0; }
         }
     </style>
