@@ -758,13 +758,22 @@ FAQ Area
     </div>
 
     <!-- FAQ Photo Strip -->
-    <div class="overflow-hidden">
-        <div class="d-flex" style="gap:4px;">
-            <div style="flex:1;overflow:hidden;max-height:320px;"><img src="assets/img/faqs/A-580x580.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
-            <div style="flex:1;overflow:hidden;max-height:320px;"><img src="assets/img/faqs/B-580x580.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
-            <div style="flex:1;overflow:hidden;max-height:320px;"><img src="assets/img/faqs/D-580x580.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
-            <div style="flex:1;overflow:hidden;max-height:320px;"><img src="assets/img/faqs/F-580x580.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
-            <div style="flex:1;overflow:hidden;max-height:320px;"><img src="assets/img/faqs/I-580x580.png" alt="" style="width:100%;height:100%;object-fit:cover;object-position:center top;"></div>
+    <div class="overflow-hidden faq-photo-strip">
+        <style>
+            .faq-photo-strip .swiper-slide { overflow:hidden; height:320px; }
+            .faq-photo-strip .swiper-slide img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+            @media (max-width: 767px) {
+                .faq-photo-strip .swiper-slide { height:460px; }
+            }
+        </style>
+        <div class="swiper th-slider" id="faqPhotoSlider" data-slider-options='{"spaceBetween":8,"loop":true,"centeredSlides":true,"breakpoints":{"0":{"slidesPerView":1.15,"spaceBetween":10,"centeredSlides":true},"576":{"slidesPerView":2.2,"spaceBetween":10,"centeredSlides":true},"768":{"slidesPerView":3,"spaceBetween":8,"centeredSlides":false},"992":{"slidesPerView":5,"spaceBetween":4,"centeredSlides":false}}}'>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="assets/img/faqs/A-580x580.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/faqs/B-580x580.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/faqs/D-580x580.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/faqs/F-580x580.png" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/faqs/I-580x580.png" alt=""></div>
+            </div>
         </div>
     </div>
 

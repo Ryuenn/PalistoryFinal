@@ -1,0 +1,626 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PCRF: The Children of Gaza – Palistory</title>
+    <meta name="author" content="Palistory">
+    <meta name="description" content="Palistory in support of the Palestine Children's Relief Fund (PCRF) — The Children of Gaza event highlights.">
+    <meta name="robots" content="INDEX,FOLLOW">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons - Palistory icon -->
+    <link rel="icon" type="image/png" href="assets/img/favicon123.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon123.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicon123.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Fonts (theme nav + content) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Keep main nav on a single line */
+        .main-menu > ul { white-space: nowrap; }
+        /* Keep logo fully visible on mobile (cancel desktop -40px shift) */
+        @media (max-width: 991px) { .header-layout1 .header-logo { margin-left: 0 !important; } }
+        /* Keep logo aspect ratio on mobile (theme max-width was squishing it) */
+        .header-layout1 .header-logo img { width: auto !important; max-width: none !important; }
+        @media (max-width: 575px) { .header-layout1 .header-logo img { height: 44px !important; } }
+        @media (max-width: 360px) { .header-layout1 .header-logo img { height: 38px !important; } }
+        /* Tagline only fits on very wide screens; hide below ~1900px so nav + buttons don't overflow */
+        @media (max-width: 1899px) { .header-notice { display: none !important; } }
+        /* Laptop range (1200-1399): shrink logo + tighten nav so the Donate button fits */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .header-layout1 .header-logo img { height: 40px !important; }
+            .main-menu > ul > li { margin: 0 5px !important; }
+            .header-layout1 .menu-area .header-button { margin-left: 8px !important; gap: 8px !important; }
+            .header-layout1 .menu-area .menu-area-wrap { padding-right: 10px !important; }
+        }
+        @media (min-width: 992px) and (max-width: 1399px) {
+            .main-menu > ul > li { margin: 0 10px; }
+        }
+        /* Extend red bar left (shrink logo gap) and keep notice off the search button */
+        @media (min-width: 992px) {
+            .header-layout1 .header-logo { margin-right: 16px !important; }
+            .header-layout1 .menu-area .menu-area-wrap { padding-right: 40px; margin-right: 0; }
+            .header-layout1 .menu-area .header-button { margin-left: 14px; gap: 12px; }
+            .header-notice { padding-right: 0; }
+        }
+    </style>
+
+    <!-- Gallery content — Tailwind scoped to #gallery-content -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            important: '#gallery-content',
+            corePlugins: { preflight: false, container: false },
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#c60000',
+                            dark: '#111827',
+                            gray: '#f9fafb'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        /* Modal Animation */
+        .modal-enter { animation: modalFadeIn 0.3s ease-out forwards; }
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--==============================
+    Mobile Menu
+  ============================== -->
+    <div class="th-menu-wrapper">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle"><i class="fas fa-times"></i></button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="index.html#about-sec">About Palistory</a>
+                        <ul class="sub-menu">
+                            <li><a href="about.html">Organizational Information</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#team-members">Team Members</a></li>
+                    <li><a href="team.html">Story Tellers</a></li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Events</a>
+                        <ul class="sub-menu">
+                            <li><a href="event.html">Upcoming Events</a></li>
+                            <li><a href="gallery.html">Photo Gallery</a></li>
+                            <li><a href="videogallery.html">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+	Header Area
+==============================-->
+    <header class="th-header header-layout1 onepage-nav">
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="container">
+                <div class="menu-area">
+                    <div class="header-logo" style="margin-left:-40px;">
+                        <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
+                    </div>
+                    <div class="menu-area-wrap">
+                        <nav class="main-menu d-none d-lg-block">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="index.html#about-sec">About Palistory</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about.html">Organizational Information</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="index.html#team-members">Team Members</a></li>
+                                <li><a href="team.html">Story Tellers</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="#">Events</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="event.html">Upcoming Events</a></li>
+                                        <li><a href="gallery.html">Photo Gallery</a></li>
+                                        <li><a href="videogallery.html">Video Gallery</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
+                    </div>
+                    <div class="header-button">
+                        <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="th-btn style3 d-xl-block d-none"><i class="fas fa-heart me-2"></i> Donate Now</a>
+                        <button type="button" class="icon-btn th-menu-toggle d-lg-none"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN EVENT WRAPPER -->
+    <div id="gallery-content">
+    <div class="bg-transparent font-sans text-gray-800 antialiased">
+
+        <!-- Max-w-6xl for wider, premium layout -->
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+            <!-- Navigation Link -->
+            <div class="mb-6">
+                <a href="gallery.html" class="text-gray-500 hover:text-brand-red font-medium flex items-center gap-2 transition">
+                    <i class="fa-solid fa-angles-left text-sm"></i> Back to All Events
+                </a>
+            </div>
+
+            <!-- MAIN EVENT CARD (Combined Image & Content) -->
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 mb-16 overflow-hidden">
+
+                <!-- Featured Cover Photo -->
+                <div class="relative bg-[#0b0e14]">
+                    <img src="https://palistory.com/wp-content/uploads/2026/03/PCRF-–-The-Children-of-Gaza.png" alt="PCRF The Children of Gaza" class="w-full h-auto block">
+                </div>
+
+                <!-- Event Content Area -->
+                <div class="p-8 md:p-12 lg:p-16">
+                    <div class="inline-block bg-gray-100 text-gray-600 px-4 py-1.5 rounded-full text-xs font-bold tracking-wider mb-6 uppercase">
+                        Past Event
+                    </div>
+
+                    <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        PCRF: The Children of Gaza
+                    </h1>
+
+                    <!-- Event Metadata -->
+                    <div class="flex flex-wrap items-center text-gray-600 gap-4 md:gap-6 font-medium border-b border-gray-100 pb-8 mb-8">
+                        <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
+                            <i class="fa-regular fa-calendar text-brand-red"></i>
+                            <span class="text-sm md:text-base">July 26, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
+                            <i class="fa-solid fa-hand-holding-heart text-brand-red"></i>
+                            <span class="text-sm md:text-base">Charity & Fundraiser</span>
+                        </div>
+                    </div>
+
+                    <!-- Text Content -->
+                    <div class="prose max-w-none text-gray-600 space-y-6 text-lg md:text-xl leading-relaxed">
+                        <p>
+                            On <strong class="text-gray-900">July 26, 2025</strong>, Palistory hosted a special event in support of the <strong class="text-gray-900">Palestine Children’s Relief Fund (PCRF)</strong>, dedicated to providing urgent medical care, humanitarian aid, and hope to the children of Gaza.
+                        </p>
+
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">A Night of Hope and Healing</h3>
+                        <p>
+                            As the situation in Gaza continues to demand our immediate attention and unwavering support, this gathering served as a powerful beacon of solidarity. Every ticket, donation, and shared story directly contributed to PCRF's life-saving missions on the ground, delivering critical relief to those who need it most.
+                        </p>
+
+                        <!-- Quote Highlight block -->
+                        <div class="my-10 pl-6 border-l-4 border-brand-red bg-red-50/50 py-4 pr-4 rounded-r-lg">
+                            <p class="text-xl md:text-2xl font-semibold text-gray-900 italic leading-snug">
+                                "Compassion is not just a feeling; it is an action. Together, we can rebuild hope and provide healing for the children of Gaza."
+                            </p>
+                        </div>
+
+                        <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mt-10 mb-4">Standing Together</h3>
+                        <p>
+                            Through powerful testimonies, community reflections, and a shared commitment to justice, we aimed to amplify the voices of the most vulnerable. It was an honor to see our community join hands to fund critical medical interventions and stand firm in the belief that every child deserves a future free from suffering.
+                        </p>
+                    </div>
+
+                    <!-- Thank You Section -->
+                    <div class="bg-gray-50 border-l-4 border-gray-800 p-6 md:p-8 rounded-r-xl mt-10">
+                        <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <i class="fa-solid fa-earth-americas text-brand-red"></i> Continuing the Impact
+                        </h3>
+                        <p class="text-gray-700 md:text-lg mb-0">
+                            Our deepest gratitude to everyone who attended, donated, and raised their voices. While this event has concluded, our work alongside PCRF continues. Together, we are writing a story of resilience and enduring care.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Event Highlights Gallery -->
+            <div class="mb-12">
+                <div class="flex justify-between items-end mb-8 border-b border-gray-200 pb-3">
+                    <h3 class="text-3xl font-bold text-gray-900">Event Highlights</h3>
+                    <p class="text-sm text-gray-500 font-medium hidden sm:block">Hover to download <i class="fa-solid fa-arrow-pointer ml-1"></i></p>
+                </div>
+
+                <!-- Image Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/43-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/43-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/34-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/34-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/51-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/51-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/47-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/47-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/49-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/49-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/33-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/33-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/2-1-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/2-1-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/19-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/19-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/24-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/24-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/17-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/17-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/1-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/1-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/21-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/21-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/27-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/27-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/5-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/5-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/14-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/14-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="relative group rounded-xl overflow-hidden shadow-sm bg-gray-100 aspect-square border border-gray-200">
+                        <img src="https://palistory.com/wp-content/uploads/2026/03/7-scaled.png" alt="Highlight" class="w-full h-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <button onclick="openModal('https://palistory.com/wp-content/uploads/2026/03/7-scaled.png')" class="bg-white text-brand-red w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center hover:bg-brand-red hover:text-white transition transform translate-y-4 group-hover:translate-y-0 duration-300 shadow-lg text-lg md:text-2xl">
+                                <i class="fa-solid fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- SUBSCRIPTION MODAL FOR DOWNLOAD -->
+        <div id="downloadModal" class="hidden fixed inset-0 z-[9999] items-center justify-center">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+
+            <!-- Modal Content Box -->
+            <div class="bg-white rounded-2xl shadow-2xl relative z-10 max-w-md w-full mx-4 overflow-hidden modal-enter flex flex-col">
+
+                <!-- Close Button -->
+                <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center transition focus:outline-none z-20">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+
+                <!-- Modal Header -->
+                <div class="bg-gray-50 p-6 text-center border-b border-gray-100 relative">
+                    <div class="w-16 h-16 bg-red-50 text-brand-red rounded-full flex items-center justify-center mx-auto mb-4 border border-red-100">
+                        <i class="fa-solid fa-image text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900">Download Image</h3>
+                    <p class="text-gray-500 text-sm mt-2">Subscribe to our newsletter to download this high-resolution image instantly.</p>
+                </div>
+
+                <!-- Modal Form -->
+                <div class="p-6">
+                    <form id="subscribeForm" onsubmit="handleDownloadSubmit(event)">
+                        <div id="formFields">
+                            <div class="mb-4">
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+                                <div class="relative">
+                                    <i class="fa-regular fa-user absolute left-3 top-3 text-gray-400"></i>
+                                    <input type="text" id="subName" required class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition" placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address</label>
+                                <div class="relative">
+                                    <i class="fa-regular fa-envelope absolute left-3 top-3 text-gray-400"></i>
+                                    <input type="email" id="subEmail" required class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red outline-none transition" placeholder="john@example.com">
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-red text-white font-bold py-3 px-4 rounded-lg hover:bg-red-800 transition shadow-md flex justify-center items-center gap-2 group">
+                                <span>Subscribe & Download</span> <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </button>
+                        </div>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="hidden text-center py-6">
+                            <div class="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-green-100">
+                                <i class="fa-solid fa-check text-2xl"></i>
+                            </div>
+                            <h4 class="text-xl font-bold text-gray-900 mb-2">Thank You!</h4>
+                            <p class="text-gray-600">Your download will begin automatically.</p>
+                        </div>
+                    </form>
+                    <p class="text-xs text-center text-gray-400 mt-5">We respect your privacy. No spam ever.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HIDDEN CF7 FORM FOR BACKEND SUBMISSION -->
+        <div id="hidden-cf7-wrapper" style="display: none;">
+            [contact-form-7 id="4bbc48c" title="palisoty images form"]
+        </div>
+    </div>
+    </div>
+
+    <!-- Theme JS (header / mobile menu / sticky) -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Gallery / Download modal logic -->
+    <script>
+        const modal = document.getElementById('downloadModal');
+        const formFields = document.getElementById('formFields');
+        const successMessage = document.getElementById('successMessage');
+        const form = document.getElementById('subscribeForm');
+
+        let currentImageToDownload = "";
+
+        function openModal(imageUrl) {
+            currentImageToDownload = imageUrl;
+            form.reset();
+            formFields.classList.remove('hidden');
+            successMessage.classList.add('hidden');
+
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        function restoreButton() {
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if(submitBtn) {
+                submitBtn.innerHTML = '<span>Subscribe & Download</span> <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>';
+                submitBtn.disabled = false;
+            }
+        }
+
+        async function handleDownloadSubmit(e) {
+            e.preventDefault();
+
+            const nameValue = document.getElementById('subName').value;
+            const emailValue = document.getElementById('subEmail').value;
+            const subjectValue = 'Downloaded Image: ' + currentImageToDownload.split('/').pop();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+            submitBtn.disabled = true;
+
+            // Find the embedded CF7 form
+            const cf7Form = document.querySelector('#hidden-cf7-wrapper form');
+
+            if (cf7Form) {
+                // Fill out the hidden CF7 form automatically
+                const cf7Name = cf7Form.querySelector('input[name="your-name"]');
+                const cf7Email = cf7Form.querySelector('input[name="your-email"]');
+                const cf7Subject = cf7Form.querySelector('input[name="your-subject"]');
+
+                if (cf7Name) cf7Name.value = nameValue;
+                if (cf7Email) cf7Email.value = emailValue;
+                if (cf7Subject) cf7Subject.value = subjectValue;
+
+                // Trigger Contact Form 7's built-in submit listener
+                cf7Form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+            } else {
+                alert("Error: Contact Form 7 shortcode is not rendering. Please ensure Elementor is set to parse shortcodes in this HTML widget.");
+                restoreButton();
+            }
+        }
+
+        // --- CONTACT FORM 7 EVENT LISTENERS ---
+
+        // When CF7 successfully sends the email/saves data
+        document.addEventListener('wpcf7mailsent', function(event) {
+            const hiddenForm = document.querySelector('#hidden-cf7-wrapper form');
+            if (event.target === hiddenForm && !modal.classList.contains('hidden')) {
+                formFields.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+
+                setTimeout(() => {
+                    const a = document.createElement('a');
+                    a.href = currentImageToDownload;
+
+                    const urlParts = currentImageToDownload.split('/');
+                    const fileName = urlParts[urlParts.length - 1] || "Palistory_Event.jpg";
+
+                    a.download = fileName;
+                    a.target = "_blank";
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+
+                    setTimeout(() => {
+                        closeModal();
+                        restoreButton();
+                    }, 1500);
+                }, 1000);
+            }
+        }, false);
+
+        // Error handling listeners
+        document.addEventListener('wpcf7invalid', function(event) {
+            const hiddenForm = document.querySelector('#hidden-cf7-wrapper form');
+            if (event.target === hiddenForm && !modal.classList.contains('hidden')) {
+                alert('Form validation failed. Please check your details.');
+                restoreButton();
+            }
+        }, false);
+
+        document.addEventListener('wpcf7spam', function(event) {
+            const hiddenForm = document.querySelector('#hidden-cf7-wrapper form');
+            if (event.target === hiddenForm && !modal.classList.contains('hidden')) {
+                alert('Submission was blocked by anti-spam.');
+                restoreButton();
+            }
+        }, false);
+
+        document.addEventListener('wpcf7mailfailed', function(event) {
+            const hiddenForm = document.querySelector('#hidden-cf7-wrapper form');
+            if (event.target === hiddenForm && !modal.classList.contains('hidden')) {
+                alert('Failed to send info to the server. Please try again.');
+                restoreButton();
+            }
+        }, false);
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape" && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
