@@ -47,6 +47,19 @@
         .main-menu > ul { white-space: nowrap; }
         /* Keep logo fully visible on mobile (cancel desktop -40px shift) */
         @media (max-width: 991px) { .header-layout1 .header-logo { margin-left: 0 !important; } }
+        /* Keep logo aspect ratio on mobile (theme max-width was squishing it) */
+        .header-layout1 .header-logo img { width: auto !important; max-width: none !important; }
+        @media (max-width: 575px) { .header-layout1 .header-logo img { height: 44px !important; } }
+        @media (max-width: 360px) { .header-layout1 .header-logo img { height: 38px !important; } }
+        /* Tagline only fits on very wide screens; hide below ~1900px so nav + buttons don't overflow */
+        @media (max-width: 1899px) { .header-notice { display: none !important; } }
+        /* Laptop range (1200-1399): shrink logo + tighten nav so the Donate button fits */
+        @media (min-width: 1200px) and (max-width: 1399px) {
+            .header-layout1 .header-logo img { height: 40px !important; }
+            .main-menu > ul > li { margin: 0 5px !important; }
+            .header-layout1 .menu-area .header-button { margin-left: 8px !important; gap: 8px !important; }
+            .header-layout1 .menu-area .menu-area-wrap { padding-right: 10px !important; }
+        }
         @media (min-width: 992px) and (max-width: 1399px) {
             .main-menu > ul > li { margin: 0 10px; }
         }
@@ -753,6 +766,7 @@
 
     <!-- Main Js File -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/scroll-reveal.js"></script>
 </body>
 
 </html>
