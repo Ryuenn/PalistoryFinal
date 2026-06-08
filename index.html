@@ -137,6 +137,16 @@
         @media (max-width: 991px) {
             #hero .hero-style2 { padding-bottom: 55px; }
         }
+        /* Center the Palistory Mission heading and text on mobile */
+        @media (max-width: 991px) {
+            #about-sec .about-wrap2 .title-area { text-align: center; }
+            #about-sec .about-wrap2 .sub-title { justify-content: center; }
+        }
+        /* Center the Why Stories section on mobile */
+        @media (max-width: 991px) {
+            #why-stories { text-align: center; }
+            #why-stories .sub-title { justify-content: center; }
+        }
     </style>
 
 </head>
@@ -376,17 +386,24 @@ Hero Area
     <!--======== / Hero Section ========-->
 
     <!-- Red Banner -->
+    <style>
+        @media (max-width: 767px) {
+            .gift-banner-row { justify-content: center; }
+            .gift-banner-row .gift-content { flex-direction: column; text-align: center; }
+            .gift-banner-row .gift-donate { margin-left: auto; margin-right: auto; }
+        }
+    </style>
     <div style="background-color:#c51919; padding:55px 0;">
         <div class="container">
-            <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px;">
-                <div style="display:flex; align-items:center; gap:16px; color:#fff;">
+            <div class="gift-banner-row" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px;">
+                <div class="gift-content" style="display:flex; align-items:center; gap:16px; color:#fff;">
                     <i class="fas fa-gift" style="font-size:2rem;"></i>
                     <div>
                         <div>With each donation of $100 or more, we will send you a free gift.</div>
                         <div style="font-weight:700; font-size:1.1rem;">Rock the Kuffiyeh. Rep the Resistance.</div>
                     </div>
                 </div>
-                <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" style="background:#fff; color:#c51919; font-weight:700; padding:12px 28px; border:2px solid #fff; text-decoration:none; white-space:nowrap;">Donate Now</a>
+                <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="gift-donate" style="background:#fff; color:#c51919; font-weight:700; padding:12px 28px; border:2px solid #fff; text-decoration:none; white-space:nowrap;">Donate Now</a>
             </div>
         </div>
     </div>
@@ -577,11 +594,11 @@ Service Area
     <!--==============================
 Story Tellers Area
 ==============================-->
-    <section class="space-bottom overflow-hidden" style="padding-top:0; margin-top:-60px;">
+    <section class="space-bottom overflow-hidden" id="story-tellers" style="padding-top:0; margin-top:-60px;">
         <div class="container">
-            <div class="row justify-content-center mb-40">
+            <div class="row justify-content-center mb-2">
                 <div class="col-lg-8 text-center">
-                    <div class="title-area">
+                    <div class="title-area" style="margin-bottom:8px;">
                         <h2 class="sec-title">Our Story Tellers</h2>
                         <p class="mt-15">Have a look at some of what we have learned in our interviews.</p>
                     </div>
@@ -649,7 +666,7 @@ Story Tellers Area
 <!--==============================
 Why Stories Area
 ==============================-->
-    <section class="space-bottom overflow-hidden">
+    <section class="space-bottom overflow-hidden" id="why-stories">
         <div class="container">
             <div class="row gx-60 align-items-center">
                 <div class="col-lg-6">
