@@ -246,7 +246,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li class="menu-item-has-children">
-                        <a href="about.html">About Palistory</a>
+                        <a href="index.html#about-sec">About Palistory</a>
                         <ul class="sub-menu">
                             <li><a href="about.html">Organizational Information</a></li>
                         </ul>
@@ -282,7 +282,7 @@
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li class="menu-item-has-children">
-                                    <a href="about.html">About Palistory</a>
+                                    <a href="index.html#about-sec">About Palistory</a>
                                     <ul class="sub-menu">
                                         <li><a href="about.html">Organizational Information</a></li>
                                     </ul>
@@ -765,6 +765,10 @@ Team Area
             <style>
                 .team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; align-items: start; }
                 .team-grid .team-img img { width: 100%; aspect-ratio: 9 / 16; height: auto; object-fit: cover; object-position: center top; display: block; }
+                /* No grayscale on hover */
+                .team-grid .team-card2:hover .team-img img { filter: none; -webkit-filter: none; }
+                /* Center a lone social icon (e.g. cards with only Instagram) */
+                .team-grid .team-card2 .th-social a:only-child { -webkit-transform: translate(0,0); transform: translate(0,0); }
                 @media (max-width: 1199px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
                 @media (max-width: 767px)  { .team-grid { grid-template-columns: repeat(2, 1fr); } }
                 @media (max-width: 479px)  { .team-grid { grid-template-columns: 1fr; } }
@@ -778,8 +782,8 @@ Team Area
                                     <div class="team-social-hover">
                                         <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
                                         <div class="th-social">
-                                            <a target="_blank" href="https://www.facebook.com/palistory"><i class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/palistory"><i class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.facebook.com/KarateAttorney/"><i class="fab fa-facebook-f"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/karateattorney/"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -796,8 +800,7 @@ Team Area
                                     <div class="team-social-hover">
                                         <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
                                         <div class="th-social">
-                                            <a target="_blank" href="https://www.facebook.com/palistory"><i class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/palistory"><i class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/malakamustafa21/"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -813,10 +816,6 @@ Team Area
                                     </div>
                                     <div class="team-social-hover">
                                         <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
-                                        <div class="th-social">
-                                            <a target="_blank" href="https://www.facebook.com/palistory"><i class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/palistory"><i class="fab fa-instagram"></i></a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="team-card-content">
@@ -832,8 +831,7 @@ Team Area
                                     <div class="team-social-hover">
                                         <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
                                         <div class="th-social">
-                                            <a target="_blank" href="https://www.facebook.com/palistory"><i class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/palistory"><i class="fab fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/lawdawgbash/"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -849,10 +847,6 @@ Team Area
                                     </div>
                                     <div class="team-social-hover">
                                         <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
-                                        <div class="th-social">
-                                            <a target="_blank" href="https://www.facebook.com/palistory"><i class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/palistory"><i class="fab fa-instagram"></i></a>
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="team-card-content">
@@ -1451,7 +1445,7 @@ Blog Area - REMOVED
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Palistory</a></li>
+                                    <li><a href="index.html#about-sec">About Palistory</a></li>
                                     <li><a href="event.html">Events</a></li>
                                     <li><a href="team.html">Story Tellers</a></li>
                                     <li><a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer">Contribute</a></li>
