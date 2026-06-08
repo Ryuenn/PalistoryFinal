@@ -126,6 +126,11 @@
         @media (prefers-reduced-motion: reduce) {
             [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
         }
+
+        /* Trim the large bottom gap under the hero on desktop */
+        @media (min-width: 1200px) {
+            #hero .hero-style2 { padding-bottom: 120px; }
+        }
     </style>
 
 </head>
@@ -383,7 +388,7 @@ Hero Area
     <!--==============================
 About Area
 ==============================-->
-    <div class="overflow-hidden space" id="about-sec">
+    <div class="overflow-hidden space" id="about-sec" style="padding-top:40px; padding-bottom:40px;">
         <div class="shape-mockup about-bg-shape2-1 jump-reverse" data-top="10%" data-right="5%">
             <img src="assets/img/shape/heart-shape1.png" alt="shape">
         </div>
@@ -739,11 +744,15 @@ Team Area
                 <span class="sub-title after-none before-none">Our Team</span>
                 <h2 class="sec-title">Meet The Team Members</h2>
             </div>
-            <div class="slider-area">
-                <div class="swiper th-slider has-shadow team-slider2" id="teamSlider2" data-slider-options='{"spaceBetween":"30","loop":false,"rewind":true,"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"}}}'>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="th-team team-card2">
+            <style>
+                .team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; align-items: start; }
+                .team-grid .team-img img { width: 100%; aspect-ratio: 9 / 16; height: auto; object-fit: cover; object-position: center top; display: block; }
+                @media (max-width: 1199px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
+                @media (max-width: 767px)  { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+                @media (max-width: 479px)  { .team-grid { grid-template-columns: 1fr; } }
+            </style>
+            <div class="team-grid">
+                        <div class="th-team team-card2">
                                 <div class="img-wrap">
                                     <div class="team-img">
                                         <img src="assets/img/Members/ibrahim_awad-headshot3.jpg" alt="Ibrahim Awad">
@@ -761,9 +770,7 @@ Team Area
                                     <span class="team-desig">CEO</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="th-team team-card2">
+                        <div class="th-team team-card2">
                                 <div class="img-wrap">
                                     <div class="team-img">
                                         <img src="assets/img/Members/malaka_mustafa-headshot.jpg" alt="Malaka Mustafa">
@@ -781,9 +788,7 @@ Team Area
                                     <span class="team-desig">CFO</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="th-team team-card2">
+                        <div class="th-team team-card2">
                                 <div class="img-wrap">
                                     <div class="team-img">
                                         <img src="assets/img/Members/rana_hayyeh-headshot.jpg" alt="Ran Hayyeh">
@@ -801,9 +806,7 @@ Team Area
                                     <span class="team-desig">Secretary</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="th-team team-card2">
+                        <div class="th-team team-card2">
                                 <div class="img-wrap">
                                     <div class="team-img">
                                         <img src="assets/img/Members/basher_hassan-headshot.jpg" alt="Basher Hassan">
@@ -821,12 +824,10 @@ Team Area
                                     <span class="team-desig">Co Founder</span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="th-team team-card2">
+                        <div class="th-team team-card2">
                                 <div class="img-wrap">
                                     <div class="team-img">
-                                        <img src="assets/img/Members/Conrado.png" alt="Conrado Pinto">
+                                        <img src="assets/img/Members/conrado123.png" alt="Conrado Pinto">
                                     </div>
                                     <div class="team-social-hover">
                                         <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
@@ -841,11 +842,6 @@ Team Area
                                     <span class="team-desig">CRM Manager</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <button data-slider-prev="#teamSlider2" class="slider-arrow slider-prev"><i class="far fa-arrow-left"></i></button>
-                <button data-slider-next="#teamSlider2" class="slider-arrow slider-next"><i class="far fa-arrow-right"></i></button>
             </div>
         </div>
     </section>
@@ -1456,7 +1452,7 @@ Blog Area - REMOVED
                                 <button type="submit" class="th-btn style5">Submit</button>
                             </form>
                             <div class="th-social style6">
-                                <a href="https://www.instagram.com/palistory" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/palistory.usa/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                                 <a href="https://www.youtube.com/@palistory" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
