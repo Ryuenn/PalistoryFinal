@@ -56,6 +56,8 @@
     <style>
         /* Keep main nav on a single line */
         .main-menu > ul { white-space: nowrap; }
+        /* Keep logo fully visible on mobile (cancel desktop -40px shift) */
+        @media (max-width: 991px) { .header-layout1 .header-logo { margin-left: 0 !important; } }
         @media (min-width: 992px) and (max-width: 1399px) {
             .main-menu > ul > li { margin: 0 10px; }
         }
@@ -288,7 +290,7 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </nav>
-                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
+                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
                     </div>
                     <div class="header-button">
                         <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="fas fa-search"></i></button>

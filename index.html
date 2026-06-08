@@ -103,6 +103,8 @@
 
         /* Keep main nav on a single line */
         .main-menu > ul { white-space: nowrap; }
+        /* Keep logo fully visible on mobile (cancel desktop -40px shift) */
+        @media (max-width: 991px) { .header-layout1 .header-logo { margin-left: 0 !important; } }
         @media (min-width: 992px) and (max-width: 1399px) {
             .main-menu > ul > li { margin: 0 10px; }
         }
@@ -130,6 +132,10 @@
         /* Trim the large bottom gap under the hero on desktop */
         @media (min-width: 1200px) {
             #hero .hero-style2 { padding-bottom: 120px; }
+        }
+        /* Trim the hero's leftover decorative-space padding on mobile */
+        @media (max-width: 991px) {
+            #hero .hero-style2 { padding-bottom: 55px; }
         }
     </style>
 
@@ -284,7 +290,7 @@
                                 <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </nav>
-                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;"><img class="me-1" src="assets/img/icon/heart-icon.svg" alt="img">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
+                        <p class="header-notice d-none d-xxl-flex" style="font-size:0.8em; margin-left:auto; padding-left:24px; white-space:nowrap; align-items:center;">Palistory — a 501(c)(3) non-profit telling heart-felt stories of Palestinians</p>
                     </div>
                     <div class="header-button">
                         <button type="button" class="icon-btn style2 searchBoxToggler d-lg-block d-none" style="background-color:#386d3f;"><i class="far fa-search"></i></button>
@@ -398,7 +404,7 @@ About Area
                     <div class="about-wrap2">
                         <div class="title-area mb-35">
                             <span class="sub-title after-none before-none" style="font-size:1.15rem;">About Palistory</span>
-                            <h2 class="sec-title" style="font-size:3rem;">Palistory Mission</h2>
+                            <h2 class="sec-title" style="font-size:clamp(2rem, 7vw, 3rem);">Palistory Mission</h2>
                             <p class="mt-30" style="font-size:1.1rem; line-height:1.8;">Palistory, Inc. is committed to reclaiming and amplifying Palestinian narratives through film. By documenting lived experiences from Palestine and the diaspora, we challenge dehumanizing tropes and promote dignity, equity, and justice.</p>
                             <p class="mt-20" style="font-size:1.1rem; line-height:1.8;">Through documentary and narrative storytelling, we create work that advances understanding, preserves history, and contributes meaningfully to global conversations on human rights and self-determination.</p>
                         </div>
