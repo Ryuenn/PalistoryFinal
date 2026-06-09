@@ -23796,7 +23796,19 @@ span.select2-selection.select2-selection--single:focus {
     padding: 44px 28px;
     gap: 24px;
     text-align: center;
-    background-position: center center;
+    background-size: 300% auto;
+    background-position: 55% 30%;
+  }
+  .gift-banner::before {
+    background: linear-gradient(
+      to bottom,
+      #8b0000 0%,
+      rgba(139,0,0,0.5) 18%,
+      rgba(139,0,0,0) 35%,
+      rgba(139,0,0,0) 65%,
+      rgba(139,0,0,0.5) 82%,
+      #8b0000 100%
+    );
   }
   .gift-left {
     flex: none;
@@ -23832,7 +23844,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 @media (max-width: 575px) {
-  #about-sec { padding-top: 10px !important; }
+  #about-sec { padding-top: 30px !important; padding-bottom: 10px !important; }
 }
 
 /* ══════════════════════════════════════
