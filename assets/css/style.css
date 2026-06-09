@@ -23442,7 +23442,7 @@ span.select2-selection.select2-selection--single:focus {
   position: relative;
 }
 
-/* Offset dark accent block behind the image */
+/* Offset green accent block behind the image */
 .ws-media::before {
   content: '';
   position: absolute;
@@ -23451,7 +23451,7 @@ span.select2-selection.select2-selection--single:focus {
   right: -22px;
   bottom: -22px;
   border-radius: 18px;
-  background: #1F1F1F;
+  background: var(--theme-color3, #386d3f);
   z-index: 0;
 }
 
@@ -23537,4 +23537,489 @@ span.select2-selection.select2-selection--single:focus {
 
 [data-reveal="right"] {
   transform: translateX(48px);
+}
+
+/* =============================================
+   Gift / Donation CTA Banner
+   ============================================= */
+/* ── Gift / Kuffiyeh Banner ── */
+.gift-section {
+  padding: 0;
+  overflow: hidden;
+}
+
+.gift-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 360px;
+  padding: 70px 60px;
+  background: url('../img/kuffiyeh.png') center center / cover no-repeat;
+  background-color: #8b0000;
+  overflow: hidden;
+  gap: 0;
+}
+
+
+.gift-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    #8b0000 0%,
+    rgba(139,0,0,0.6) 20%,
+    rgba(139,0,0,0) 40%,
+    rgba(139,0,0,0) 60%,
+    rgba(139,0,0,0.6) 80%,
+    #8b0000 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ── Left content ── */
+.gift-left {
+  flex: 0 0 30%;
+  max-width: 340px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  padding-left: 80px;
+}
+
+.gift-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 10px;
+}
+
+.gift-eyebrow-line {
+  height: 1px;
+  background: rgba(255,255,255,0.45);
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.gift-headline {
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.0;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 14px;
+}
+
+.gift-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.gift-divider::before {
+  content: '';
+  height: 1px;
+  background: rgba(255,255,255,0.35);
+  width: 40px;
+  flex-shrink: 0;
+}
+
+.gift-divider::after {
+  display: none;
+}
+
+.gift-diamond {
+  color: #386d3f;
+  font-size: 12px;
+}
+
+.gift-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.88);
+  margin: 0;
+  text-align: left;
+}
+
+.gift-desc strong { color: #ffffff; font-weight: 700; }
+
+/* ── Middle badges ── */
+.gift-badges {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-start;
+  padding-left: 100px;
+  gap: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.gift-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.4;
+  text-align: center;
+  padding: 0 44px;
+}
+
+.gift-badge i {
+  font-size: 46px;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.gift-sep {
+  width: 1px;
+  height: 80px;
+  background: rgba(255,255,255,0.3);
+  flex-shrink: 0;
+}
+
+/* ── Kuffiyeh image ── */
+.gift-img-wrap {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -40px 0;
+}
+
+.gift-img-wrap img {
+  width: 320px;
+  max-width: 26vw;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
+/* ── Right CTA ── */
+.gift-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+  z-index: 2;
+  margin-left: auto;
+  padding-right: 60px;
+}
+
+.gift-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #9a0e0e;
+  border: 2px solid #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.gift-btn:hover {
+  background: transparent;
+  color: #ffffff;
+}
+
+.gift-tagline {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  margin: 0;
+  max-width: 180px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1199px) {
+  .gift-banner { padding: 40px; }
+  .gift-badge { padding: 0 24px; }
+}
+
+/* Tablet: stack into 2 rows — text+CTA on top, badges below */
+@media (max-width: 991px) {
+  .gift-banner {
+    flex-wrap: wrap;
+    padding: 48px 40px;
+    gap: 32px;
+    background-position: center top;
+  }
+  .gift-left {
+    flex: 1 1 auto;
+    max-width: 100%;
+    text-align: center;
+  }
+  .gift-eyebrow { justify-content: center; }
+  .gift-divider { justify-content: center; }
+  .gift-desc { text-align: center; }
+  .gift-right {
+    flex: 0 0 auto;
+    margin-left: 0;
+    align-items: center;
+  }
+  .gift-badges {
+    flex: 0 0 100%;
+    justify-content: center;
+    order: 3;
+  }
+}
+
+/* Mobile: full column, compact */
+@media (max-width: 575px) {
+  .gift-banner {
+    flex-direction: column;
+    align-items: center;
+    padding: 44px 28px;
+    gap: 24px;
+    text-align: center;
+    background-position: center center;
+  }
+  .gift-left {
+    flex: none;
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .gift-eyebrow { justify-content: center; }
+  .gift-divider { justify-content: center; }
+  .gift-desc { text-align: center; }
+  .gift-headline { font-size: 2.4rem; }
+  /* Donate button right after text */
+  .gift-right {
+    margin-left: 0;
+    align-items: center;
+    padding-right: 0;
+    width: 100%;
+  }
+  .gift-btn { width: 100%; justify-content: center; }
+  .gift-tagline { text-align: center; max-width: 280px; }
+  /* Badges row: 3 across, no separators */
+  .gift-badges {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 0;
+    order: 3;
+    width: 100%;
+    padding-left: 0;
+  }
+  .gift-sep { display: none; }
+  .gift-badge { flex: 1; padding: 0 8px; font-size: 10px; letter-spacing: 1px; }
+  .gift-badge i { font-size: 28px; }
+}
+
+@media (max-width: 575px) {
+  #about-sec { padding-top: 10px !important; }
+}
+
+/* ══════════════════════════════════════
+   Palistory Team Section
+══════════════════════════════════════ */
+.pali-team-section {
+  padding: 80px 0 60px;
+  background: #f5f0e8;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.pali-team-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pali-team-sub {
+  font-family: 'Dancing Script', cursive, serif;
+  font-size: 1.3rem;
+  color: #c51919;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.pali-team-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #111;
+  margin: 0 0 14px;
+  line-height: 1.1;
+}
+
+.pali-team-title em {
+  font-style: normal;
+  color: #c51919;
+}
+
+.pali-team-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #386d3f;
+  font-size: 18px;
+}
+
+.pali-team-divider::before,
+.pali-team-divider::after {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background: #ccc;
+}
+
+.pali-team-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Cards grid */
+.pali-team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  margin-bottom: 52px;
+}
+
+.pali-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pali-card-img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.pali-card-img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../img/palestineflag.png') center center / cover no-repeat;
+  opacity: 0.55;
+  z-index: 1;
+}
+
+.pali-card-img img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.pali-card-info {
+  background: #111;
+  padding: 16px 18px 18px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pali-card-line {
+  width: 32px;
+  height: 2px;
+  background: #c51919;
+  margin-bottom: 10px;
+  border-radius: 2px;
+}
+
+.pali-card-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 4px;
+}
+
+.pali-card-info span {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* Footer quote */
+.pali-team-quote {
+  text-align: center;
+}
+
+.pali-team-quote-line {
+  width: 60px;
+  height: 1px;
+  background: #ccc;
+  margin: 0 auto 16px;
+}
+
+.pali-quote-mark {
+  font-size: 2.5rem;
+  color: #c51919;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.pali-team-quote p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 0 14px;
+}
+
+.pali-team-quote p em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.pali-team-quote p em.green { color: #386d3f; }
+.pali-team-quote p em.red   { color: #c51919; }
+
+.pali-heart {
+  color: #c51919;
+  font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .pali-team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 767px) {
+  .pali-team-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .pali-team-section { padding: 50px 0 40px; }
+}
+
+@media (max-width: 479px) {
+  .pali-team-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .pali-card-info h3 { font-size: 14px; }
 }

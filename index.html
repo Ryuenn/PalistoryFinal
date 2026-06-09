@@ -398,8 +398,8 @@ Hero Area
             <div class="row gx-40 align-items-center flex-row-reverse">
                 <div class="col-lg-6">
                     <div class="hero-2-img" style="margin-top: 20px;">
-                        <img src="assets/img/palestinehero123.png" alt="Palistory">
-                        <div class="hero-2-shape" data-mask-src="assets/img/gazastrip.svg"></div>
+                        <img src="assets/img/flag.png" alt="Palistory" data-mask-src="assets/img/hero/hero-thumb-shape2-1.png">
+                        <div class="hero-2-shape" data-mask-src="assets/img/hero/hero-thumb-shape2-1.png"></div>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -422,28 +422,38 @@ Hero Area
     </div>
     <!--======== / Hero Section ========-->
 
-    <!-- Red Banner -->
-    <style>
-        @media (max-width: 767px) {
-            .gift-banner-row { justify-content: center; }
-            .gift-banner-row .gift-content { flex-direction: column; text-align: center; }
-            .gift-banner-row .gift-donate { margin-left: auto; margin-right: auto; }
-        }
-    </style>
-    <div style="background-color:#c51919; padding:55px 0;">
-        <div class="container">
-            <div class="gift-banner-row" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px;">
-                <div class="gift-content" style="display:flex; align-items:center; gap:16px; color:#fff;">
-                    <i class="fas fa-gift" style="font-size:2rem;"></i>
-                    <div>
-                        <div>With each donation of $100 or more, we will send you a free gift.</div>
-                        <div style="font-weight:700; font-size:1.1rem;">Rock the Kuffiyeh. Rep the Resistance.</div>
-                    </div>
+    <!-- Gift / Donation CTA Banner -->
+    <section class="gift-section">
+        <div class="gift-banner">
+            <!-- Left: text -->
+            <div class="gift-left">
+                <div class="gift-eyebrow">
+                    <span class="gift-eyebrow-line"></span>
+                    <i class="far fa-gift"></i>
+                    <span>A Thank You Gift</span>
+                    <span class="gift-eyebrow-line"></span>
                 </div>
-                <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="gift-donate" style="background:#fff; color:#c51919; font-weight:700; padding:12px 28px; border:2px solid #fff; text-decoration:none; white-space:nowrap;">Donate Now</a>
+                <h2 class="gift-headline">FREE KUFFIYEH</h2>
+                <div class="gift-divider"><span class="gift-diamond">&#9670;</span></div>
+                <p class="gift-desc">With each donation of <strong>$100 or more</strong>, we will send you a complimentary <strong>Kuffiyeh</strong> as our thank-you gift to you.</p>
+            </div>
+
+            <!-- Middle: badges -->
+            <div class="gift-badges">
+                <div class="gift-badge"><i class="fas fa-seedling"></i><span>A SYMBOL OF<br>SOLIDARITY</span></div>
+                <div class="gift-sep"></div>
+                <div class="gift-badge"><i class="fas fa-grip"></i><span>A PIECE OF<br>HERITAGE</span></div>
+                <div class="gift-sep"></div>
+                <div class="gift-badge"><i class="fas fa-times"></i><span>A REMINDER OF<br>RESILIENCE</span></div>
+            </div>
+
+            <!-- Far right: CTA -->
+            <div class="gift-right">
+                <a href="https://secure.qgiv.com/for/palistory" target="_blank" rel="noopener noreferrer" class="gift-btn">DONATE NOW &rarr;</a>
+                <p class="gift-tagline">Thank you for supporting the preservation of Palestinian stories and history.</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--==============================
 About Area
@@ -774,7 +784,7 @@ Why Stories Area
 <!--==============================
 FAQ Area
 ==============================-->
-    <div class="space-top space-extra2-bottom bg-theme">
+    <div class="space-top space-extra2-bottom faq-bg-section" style="background: linear-gradient(rgba(197,25,25,0.87), rgba(197,25,25,0.87)), url('assets/img/faqpic.png') center/cover no-repeat;">
         <div class="container">
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-xl-4">
@@ -787,7 +797,7 @@ FAQ Area
                     <div class="accordion mb-40" id="faqAccordionHome">
                         <div class="accordion-card style3 active">
                             <div class="accordion-header" id="home-collapse-item-1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-1" aria-expanded="true" aria-controls="home-collapse-1">What is Palistory?</button>
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-1" aria-expanded="true" aria-controls="home-collapse-1"><i class="far fa-book-open me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>What is Palistory?</button>
                             </div>
                             <div id="home-collapse-1" class="accordion-collapse collapse show" aria-labelledby="home-collapse-item-1" data-bs-parent="#faqAccordionHome">
                                 <div class="accordion-body">
@@ -797,7 +807,7 @@ FAQ Area
                         </div>
                         <div class="accordion-card style3">
                             <div class="accordion-header" id="home-collapse-item-2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-2" aria-expanded="false" aria-controls="home-collapse-2">Are your films based on real stories?</button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-2" aria-expanded="false" aria-controls="home-collapse-2"><i class="far fa-film me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>Are your films based on real stories?</button>
                             </div>
                             <div id="home-collapse-2" class="accordion-collapse collapse" aria-labelledby="home-collapse-item-2" data-bs-parent="#faqAccordionHome">
                                 <div class="accordion-body">
@@ -807,7 +817,7 @@ FAQ Area
                         </div>
                         <div class="accordion-card style3">
                             <div class="accordion-header" id="home-collapse-item-3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-3" aria-expanded="false" aria-controls="home-collapse-3">How can I support Palistory?</button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-3" aria-expanded="false" aria-controls="home-collapse-3"><i class="far fa-hand-holding-heart me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>How can I support Palistory?</button>
                             </div>
                             <div id="home-collapse-3" class="accordion-collapse collapse" aria-labelledby="home-collapse-item-3" data-bs-parent="#faqAccordionHome">
                                 <div class="accordion-body">
@@ -817,7 +827,7 @@ FAQ Area
                         </div>
                         <div class="accordion-card style3">
                             <div class="accordion-header" id="home-collapse-item-4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-4" aria-expanded="false" aria-controls="home-collapse-4">Is Palistory a nonprofit organization?</button>
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-4" aria-expanded="false" aria-controls="home-collapse-4"><i class="far fa-landmark me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>Is Palistory a nonprofit organization?</button>
                             </div>
                             <div id="home-collapse-4" class="accordion-collapse collapse" aria-labelledby="home-collapse-item-4" data-bs-parent="#faqAccordionHome">
                                 <div class="accordion-body">
@@ -831,123 +841,201 @@ FAQ Area
         </div>
     </div>
 
-    <!-- FAQ Photo Strip -->
-    <div class="overflow-hidden faq-photo-strip">
-        <style>
-            .faq-photo-strip .swiper-slide { overflow:hidden; height:320px; }
-            .faq-photo-strip .swiper-slide img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
-            @media (max-width: 767px) {
-                .faq-photo-strip .swiper-slide { height:460px; }
-            }
-        </style>
-        <div class="swiper th-slider" id="faqPhotoSlider" data-slider-options='{"spaceBetween":8,"loop":true,"centeredSlides":true,"breakpoints":{"0":{"slidesPerView":1.15,"spaceBetween":10,"centeredSlides":true},"576":{"slidesPerView":2.2,"spaceBetween":10,"centeredSlides":true},"768":{"slidesPerView":3,"spaceBetween":8,"centeredSlides":false},"992":{"slidesPerView":5,"spaceBetween":4,"centeredSlides":false}}}'>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="assets/img/faqs/A-580x580.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/faqs/B-580x580.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/faqs/D-580x580.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/faqs/F-580x580.png" alt=""></div>
-                <div class="swiper-slide"><img src="assets/img/faqs/I-580x580.png" alt=""></div>
-            </div>
-        </div>
+    <!-- FAQ Photo Strip — torn-paper bottom edge -->
+    <style>
+      /* ── Strip layout ── */
+      .torn-strip-wrap { position: relative; line-height: 0; }
+      .torn-strip {
+        display: flex;
+        width: 100%;
+        height: 340px;      /* ← strip height */
+        gap: 0;
+        clip-path: url(#torn-paper-clip);
+      }
+      .strip-photo {
+        position: relative;
+        flex: 1;
+        overflow: hidden;
+        transform-origin: bottom center;
+      }
+      .strip-photo img {
+        width: 112%; height: 112%;
+        margin: -6%;
+        object-fit: cover;
+        object-position: center 20%;
+        display: block;
+      }
+      /* per-photo widths + slight tilts */
+      .strip-photo.sp1 { flex: 1.15; transform: rotate(-1.5deg); }
+      .strip-photo.sp2 { flex: 1.05; transform: rotate(0.9deg);  }
+      .strip-photo.sp3 { flex: 1.1;  /* straight */               }
+      .strip-photo.sp4 { flex: 0.95; transform: rotate(-1deg);   }
+      .strip-photo.sp5 { flex: 1;    transform: rotate(1.3deg);  }
+
+      /* ── Mobile: horizontal scroll, tear disabled ── */
+      @media (max-width: 600px) {
+        .torn-strip {
+          overflow-x: auto; flex-wrap: nowrap;
+          height: 220px; clip-path: none;
+        }
+        .strip-photo { min-width: 72vw; flex: none; transform: none !important; }
+      }
+    </style>
+
+    <!-- SVG defines the torn-paper clip path.
+         clipPathUnits="objectBoundingBox" → all coords are 0–1 fractions of the element.
+         Tear baseline ≈ 0.87; small jags ≈ 0.87–0.90; fiber spikes ≈ 0.95–0.96.
+         Adjust those Y values to raise/lower or deepen the tear. -->
+    <svg width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden;">
+      <defs>
+        <clipPath id="torn-paper-clip" clipPathUnits="objectBoundingBox">
+          <path d="
+            M0,0 L1,0 L1,0.876
+            L0.994,0.889 L0.986,0.878 L0.981,0.885 L0.973,0.879
+            L0.968,0.893 L0.961,0.876 L0.957,0.883 L0.950,0.877
+            L0.941,0.946 L0.938,0.881 L0.932,0.875
+            L0.926,0.891 L0.919,0.880 L0.914,0.894 L0.908,0.876
+            L0.904,0.882 L0.900,0.878 L0.896,0.884 L0.892,0.879
+            L0.887,0.895 L0.881,0.878 L0.875,0.891 L0.868,0.876
+            L0.862,0.886 L0.855,0.879
+            L0.849,0.897 L0.843,0.881
+            L0.839,0.875 L0.835,0.880 L0.831,0.876 L0.827,0.882 L0.823,0.877
+            L0.818,0.891 L0.811,0.878 L0.804,0.893 L0.797,0.877
+            L0.789,0.952 L0.786,0.883 L0.780,0.876
+            L0.774,0.893 L0.767,0.878 L0.761,0.888 L0.754,0.876
+            L0.748,0.895 L0.741,0.877 L0.735,0.883
+            L0.728,0.872 L0.721,0.900 L0.714,0.877 L0.709,0.889 L0.702,0.875
+            L0.697,0.893
+            L0.693,0.880 L0.689,0.876 L0.685,0.884 L0.681,0.877
+            L0.668,0.961 L0.665,0.884 L0.660,0.877
+            L0.653,0.892 L0.646,0.878 L0.640,0.887 L0.633,0.875
+            L0.627,0.894 L0.620,0.878
+            L0.613,0.883 L0.607,0.876 L0.600,0.890 L0.593,0.878
+            L0.589,0.873 L0.585,0.879 L0.581,0.875 L0.577,0.882 L0.573,0.876
+            L0.568,0.894 L0.561,0.879 L0.554,0.891 L0.547,0.876
+            L0.541,0.887 L0.534,0.877
+            L0.527,0.902 L0.521,0.876 L0.515,0.888 L0.508,0.877
+            L0.501,0.953 L0.498,0.880 L0.492,0.876
+            L0.486,0.893 L0.479,0.878 L0.473,0.890 L0.466,0.876
+            L0.460,0.895 L0.453,0.879
+            L0.449,0.874 L0.445,0.881 L0.441,0.876 L0.437,0.884 L0.432,0.877
+            L0.425,0.892 L0.419,0.877 L0.412,0.888 L0.405,0.876
+            L0.399,0.895 L0.392,0.879 L0.386,0.886 L0.379,0.875
+            L0.373,0.893
+            L0.365,0.948 L0.362,0.877 L0.356,0.889 L0.349,0.876
+            L0.345,0.882 L0.341,0.877 L0.337,0.884 L0.333,0.878
+            L0.328,0.893 L0.321,0.877 L0.315,0.889 L0.308,0.876
+            L0.302,0.894 L0.295,0.878
+            L0.289,0.873 L0.282,0.901 L0.275,0.876 L0.270,0.887 L0.263,0.877
+            L0.257,0.892 L0.250,0.879 L0.244,0.885 L0.237,0.876
+            L0.233,0.881 L0.229,0.876 L0.225,0.883 L0.221,0.878
+            L0.216,0.893 L0.209,0.878 L0.202,0.890 L0.196,0.876
+            L0.189,0.949 L0.186,0.879 L0.180,0.875
+            L0.174,0.892 L0.167,0.877 L0.161,0.888 L0.154,0.876
+            L0.148,0.894 L0.141,0.878
+            L0.137,0.873 L0.133,0.880 L0.129,0.875 L0.125,0.882 L0.120,0.876
+            L0.114,0.893 L0.107,0.878 L0.100,0.889 L0.093,0.876
+            L0.087,0.895 L0.080,0.879 L0.073,0.886 L0.066,0.876
+            L0.060,0.891 L0.053,0.878 L0.047,0.888 L0.040,0.876
+            L0.034,0.893 L0.027,0.879 L0.021,0.887 L0.014,0.876
+            L0.007,0.892 L0,0.881 Z
+          "/>
+        </clipPath>
+      </defs>
+    </svg>
+
+    <div class="torn-strip-wrap">
+      <div class="torn-strip">
+        <div class="strip-photo sp1"><img src="assets/img/faqs/A-580x580.png" alt="Palistory event"></div>
+        <div class="strip-photo sp2"><img src="assets/img/faqs/B-580x580.png" alt="Palistory event"></div>
+        <div class="strip-photo sp3"><img src="assets/img/faqs/D-580x580.png" alt="Palistory event"></div>
+        <div class="strip-photo sp4"><img src="assets/img/faqs/B-580x580 (1).png" alt="Palistory event"></div>
+        <div class="strip-photo sp5"><img src="assets/img/faqs/I-580x580.png" alt="Palistory event"></div>
+      </div>
     </div>
 
 <!--==============================
 Team Area
 ==============================-->
-    <section class="space team-area-2" id="team-members">
-
+    <section class="pali-team-section" id="team-members">
         <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title after-none before-none">Our Team</span>
-                <h2 class="sec-title">Meet The Team Members</h2>
+
+            <!-- Header -->
+            <div class="pali-team-header">
+                <span class="pali-team-sub">Our Team</span>
+                <h2 class="pali-team-title">The People Behind <em>Every</em> Story</h2>
+                <div class="pali-team-divider"><span>&#10022;</span></div>
+                <p class="pali-team-desc">A passionate team dedicated to preserving Palestinian voices<br>and creating lasting impact.</p>
             </div>
-            <style>
-                .team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; align-items: start; }
-                .team-grid .team-img img { width: 100%; aspect-ratio: 9 / 16; height: auto; object-fit: cover; object-position: center top; display: block; }
-                /* No grayscale on hover */
-                .team-grid .team-card2:hover .team-img img { filter: none; -webkit-filter: none; }
-                /* Center a lone social icon (e.g. cards with only Instagram) */
-                .team-grid .team-card2 .th-social a:only-child { -webkit-transform: translate(0,0); transform: translate(0,0); }
-                @media (max-width: 1199px) { .team-grid { grid-template-columns: repeat(3, 1fr); } }
-                @media (max-width: 767px)  { .team-grid { grid-template-columns: repeat(2, 1fr); } }
-                @media (max-width: 479px)  { .team-grid { grid-template-columns: 1fr; } }
-            </style>
-            <div class="team-grid">
-                        <div class="th-team team-card2">
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/Members/ibrahim_awad-headshot3.jpg" alt="Ibrahim Awad">
-                                    </div>
-                                    <div class="team-social-hover">
-                                        <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
-                                        <div class="th-social">
-                                            <a target="_blank" href="https://www.facebook.com/KarateAttorney/"><i class="fab fa-facebook-f"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/karateattorney/"><i class="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="#">Ibrahim Awad</a></h3>
-                                    <span class="team-desig">CEO</span>
-                                </div>
-                            </div>
-                        <div class="th-team team-card2">
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/Members/malaka_mustafa-headshot.jpg" alt="Malaka Mustafa">
-                                    </div>
-                                    <div class="team-social-hover">
-                                        <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
-                                        <div class="th-social">
-                                            <a target="_blank" href="https://www.instagram.com/malakamustafa21/"><i class="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="#">Malaka Mustafa</a></h3>
-                                    <span class="team-desig">CFO</span>
-                                </div>
-                            </div>
-                        <div class="th-team team-card2">
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/Members/rana_hayyeh-headshot.jpg" alt="Ran Hayyeh">
-                                    </div>
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="#">Rana Hayyeh</a></h3>
-                                    <span class="team-desig">Secretary</span>
-                                </div>
-                            </div>
-                        <div class="th-team team-card2">
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/Members/basher_hassan-headshot.jpg" alt="Basher Hassan">
-                                    </div>
-                                    <div class="team-social-hover">
-                                        <a href="#" class="team-social-hover_btn"><i class="far fa-plus"></i></a>
-                                        <div class="th-social">
-                                            <a target="_blank" href="https://www.instagram.com/lawdawgbash/"><i class="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="#">Basher Hassan</a></h3>
-                                    <span class="team-desig">Co Founder</span>
-                                </div>
-                            </div>
-                        <div class="th-team team-card2">
-                                <div class="img-wrap">
-                                    <div class="team-img">
-                                        <img src="assets/img/Members/conrado123.png" alt="Conrado Pinto">
-                                    </div>
-                                </div>
-                                <div class="team-card-content">
-                                    <h3 class="box-title"><a href="#">Conrado Pinto</a></h3>
-                                    <span class="team-desig">CRM Manager</span>
-                                </div>
-                            </div>
+
+            <!-- Cards -->
+            <div class="pali-team-grid">
+
+                <div class="pali-card">
+                    <div class="pali-card-img">
+                        <img src="assets/img/membersnew/ibrahim.png" alt="Ibrahim Awad">
+                    </div>
+                    <div class="pali-card-info">
+                        <div class="pali-card-line"></div>
+                        <h3>Ibrahim Awad</h3>
+                        <span>CEO</span>
+                    </div>
+                </div>
+
+                <div class="pali-card">
+                    <div class="pali-card-img">
+                        <img src="assets/img/membersnew/malaka.png" alt="Malaka Mustafa">
+                    </div>
+                    <div class="pali-card-info">
+                        <div class="pali-card-line"></div>
+                        <h3>Malaka Mustafa</h3>
+                        <span>CFO</span>
+                    </div>
+                </div>
+
+                <div class="pali-card">
+                    <div class="pali-card-img">
+                        <img src="assets/img/membersnew/rana.png" alt="Rana Hayyeh">
+                    </div>
+                    <div class="pali-card-info">
+                        <div class="pali-card-line"></div>
+                        <h3>Rana Hayyeh</h3>
+                        <span>Secretary</span>
+                    </div>
+                </div>
+
+                <div class="pali-card">
+                    <div class="pali-card-img">
+                        <img src="assets/img/membersnew/basher.png" alt="Basher Hassan">
+                    </div>
+                    <div class="pali-card-info">
+                        <div class="pali-card-line"></div>
+                        <h3>Basher Hassan</h3>
+                        <span>Co Founder</span>
+                    </div>
+                </div>
+
+                <div class="pali-card">
+                    <div class="pali-card-img">
+                        <img src="assets/img/membersnew/conrado.png" alt="Conrado Pinto">
+                    </div>
+                    <div class="pali-card-info">
+                        <div class="pali-card-line"></div>
+                        <h3>Conrado Pinto</h3>
+                        <span>CRM Manager</span>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Footer quote -->
+            <div class="pali-team-quote">
+                <div class="pali-team-quote-line"></div>
+                <div class="pali-quote-mark">&#8220;</div>
+                <p>Rooted in <em class="green">purpose</em>. United in <em class="red">story</em>. Driven by <em class="green">impact</em>.</p>
+                <i class="far fa-heart pali-heart"></i>
+            </div>
+
         </div>
     </section>
     <!-- Donation and Testimonial sections removed -->
