@@ -3467,7 +3467,7 @@ hr.title-line {
   position: absolute;
   inset: 0;
   mix-blend-mode: color;
-  background: var(--theme-color2);
+  background: var(--theme-color3);
 }
 
 .mfp-zoom-in .mfp-content {
@@ -9341,6 +9341,11 @@ ul.comment-list .th-comment-item:has(.children) .th-post-comment {
   inset: 5px -16px -18px -1px;
   background: var(--theme-color);
   z-index: -1;
+}
+.hero-2-img .hero-2-shape-green {
+  inset: 10px -28px -32px -3px;
+  background: var(--theme-color3);
+  z-index: -2;
 }
 @media (max-width: 1500px) {
   .hero-2-img {
@@ -23729,6 +23734,7 @@ span.select2-selection.select2-selection--single:focus {
   background: #ffffff;
   color: #9a0e0e;
   border: 2px solid #ffffff;
+  border-radius: 50px;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 2px;
