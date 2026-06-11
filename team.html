@@ -263,8 +263,8 @@
         <div class="container">
             <div class="st-grid">
                 <div class="st-card">
-                    <div class="st-video-wrap">
-                        <iframe src="https://player.vimeo.com/video/1067098740" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="st-video-wrap" data-vimeo="1067098740" data-thumb="assets/img/storythumbnails/hassan-el-najjar.png" role="button" tabindex="0" aria-label="Play interview with Dr. Hassan El-Najjar">
+                        <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
                         <h4 class="st-name">Dr. Hassan El-Najjar</h4>
@@ -272,8 +272,8 @@
                     </div>
                 </div>
                 <div class="st-card">
-                    <div class="st-video-wrap">
-                        <iframe src="https://player.vimeo.com/video/1067092041" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="st-video-wrap" data-vimeo="1067092041" data-thumb="assets/img/storythumbnails/ghada-el-najjar.png" role="button" tabindex="0" aria-label="Play interview with Ghada El-Najjar">
+                        <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
                         <h4 class="st-name">Ghada El-Najjar</h4>
@@ -281,8 +281,8 @@
                     </div>
                 </div>
                 <div class="st-card">
-                    <div class="st-video-wrap">
-                        <iframe src="https://player.vimeo.com/video/1109029944" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="st-video-wrap" data-vimeo="1109029944" data-thumb="assets/img/storythumbnails/jamal-awad.png" role="button" tabindex="0" aria-label="Play interview with Jamal Awad">
+                        <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
                         <h4 class="st-name">Jamal Awad</h4>
@@ -290,8 +290,8 @@
                     </div>
                 </div>
                 <div class="st-card">
-                    <div class="st-video-wrap">
-                        <iframe src="https://player.vimeo.com/video/1067086904" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="st-video-wrap" data-vimeo="1067086904" data-thumb="assets/img/storythumbnails/abeer-abouyabis.png" role="button" tabindex="0" aria-label="Play interview with Dr. Abeer Abouyabis">
+                        <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
                         <h4 class="st-name">Dr. Abeer Abouyabis</h4>
@@ -299,8 +299,8 @@
                     </div>
                 </div>
                 <div class="st-card">
-                    <div class="st-video-wrap">
-                        <iframe src="https://player.vimeo.com/video/1067089847" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="st-video-wrap" data-vimeo="1067089847" data-thumb="assets/img/storythumbnails/fahed-abuakel.png" role="button" tabindex="0" aria-label="Play interview with Rev. Fahed Abuakel">
+                        <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
                         <h4 class="st-name">Rev. Fahed Abuakel</h4>
@@ -308,8 +308,8 @@
                     </div>
                 </div>
                 <div class="st-card">
-                    <div class="st-video-wrap">
-                        <iframe src="https://player.vimeo.com/video/1067108346" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="st-video-wrap" data-vimeo="1067108346" data-thumb="assets/img/storythumbnails/musa-ghanayem.png" role="button" tabindex="0" aria-label="Play interview with Musa Ghanayem">
+                        <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
                         <h4 class="st-name">Musa Ghanayem</h4>
@@ -319,6 +319,45 @@
             </div>
         </div>
     </section>
+
+    <script>
+    (function () {
+        var wraps = document.querySelectorAll('.st-section .st-video-wrap[data-vimeo]');
+        wraps.forEach(function (wrap) {
+            var id = wrap.getAttribute('data-vimeo');
+            var localThumb = wrap.getAttribute('data-thumb');
+            if (localThumb) {
+                // use local thumbnail
+                wrap.style.backgroundImage = 'url("' + localThumb + '")';
+            } else {
+                // fall back to Vimeo thumbnail as poster
+                fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + id + '&width=640')
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) {
+                        if (d && d.thumbnail_url) {
+                            wrap.style.backgroundImage = 'url("' + d.thumbnail_url + '")';
+                        }
+                    })
+                    .catch(function () {});
+            }
+
+            function play() {
+                if (wrap.classList.contains('is-playing')) return;
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://player.vimeo.com/video/' + id + '?autoplay=1&title=0&byline=0&portrait=0';
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+                iframe.setAttribute('allowfullscreen', '');
+                wrap.appendChild(iframe);
+                wrap.classList.add('is-playing');
+            }
+            wrap.addEventListener('click', play);
+            wrap.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+            });
+        });
+    })();
+    </script>
 
     <!--==============================
 		Footer Area
