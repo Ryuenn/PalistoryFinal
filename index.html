@@ -70,6 +70,18 @@
         #getInvolvedSlider .box-icon img { filter: hue-rotate(82deg) saturate(0.55) brightness(0.72); }
         #getInvolvedSlider .service-card:hover .box-icon:after { background-color: var(--theme-color3) !important; }
 
+        /* fade the hero background to ~60% strength with a white overlay */
+        #hero { position: relative; }
+        #hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.4);
+            z-index: 0;
+            pointer-events: none;
+        }
+        #hero > .container { position: relative; z-index: 1; }
+
         /* reduce the empty gap above the hero content on MacBook / mid-desktop widths */
         @media (min-width: 992px) and (max-width: 1750px) {
             .hero-2 .container { padding-top: 0; }
@@ -376,21 +388,6 @@
 Hero Area
 ==============================-->
     <div class="th-hero-wrapper hero-2" id="hero" data-bg-src="assets/img/hero_bg_lite.png">
-        <div class="shape-mockup hero-shape-2-1 jump" data-top="14%" data-left="5%">
-            <div class="color-masking">
-                <div class="masking-src" data-mask-src="assets/img/hero/hero-bg-shape2-1.png"></div>
-                <img src="assets/img/hero/hero-bg-shape2-1.png" alt="shape">
-            </div>
-        </div>
-        <div class="shape-mockup hero-shape-2-2 jump-reverse" data-top="9%" data-left="45%">
-            <img src="assets/img/hero/hero-bg-shape2-2.png" alt="shape">
-        </div>
-        <div class="shape-mockup hero-shape-2-4 ripple-animation" data-bottom="15%" data-left="45%">
-            <div class="color-masking">
-                <div class="masking-src" data-mask-src="assets/img/hero/hero-bg-shape2-4.png"></div>
-                <img src="assets/img/hero/hero-bg-shape2-4.png" alt="shape">
-            </div>
-        </div>
         <div class="shape-mockup hero-shape-2-5" data-bottom="-3%" data-left="8.5%">
             <div class="color-masking2">
                 <div class="masking-src" data-mask-src="assets/img/hero/hero-bg-shape2-5.png"></div>
@@ -639,7 +636,7 @@ Story Tellers Area
 
             <div class="st-grid">
                 <article class="st-card" data-reveal style="--reveal-delay:0s">
-                    <div class="st-video-wrap" data-vimeo="1067098740" role="button" tabindex="0" aria-label="Play interview with Dr. Hassan El-Najjar">
+                    <div class="st-video-wrap" data-vimeo="1067098740" data-thumb="assets/img/storythumbnails/hassan-el-najjar.png" role="button" tabindex="0" aria-label="Play interview with Dr. Hassan El-Najjar">
                         <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
@@ -649,7 +646,7 @@ Story Tellers Area
                     </div>
                 </article>
                 <article class="st-card" data-reveal style="--reveal-delay:.1s">
-                    <div class="st-video-wrap" data-vimeo="1067092041" role="button" tabindex="0" aria-label="Play interview with Ghada El-Najjar">
+                    <div class="st-video-wrap" data-vimeo="1067092041" data-thumb="assets/img/storythumbnails/ghada-el-najjar.png" role="button" tabindex="0" aria-label="Play interview with Ghada El-Najjar">
                         <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
@@ -659,7 +656,7 @@ Story Tellers Area
                     </div>
                 </article>
                 <article class="st-card" data-reveal style="--reveal-delay:.2s">
-                    <div class="st-video-wrap" data-vimeo="1109029944" role="button" tabindex="0" aria-label="Play interview with Jamal Awad">
+                    <div class="st-video-wrap" data-vimeo="1109029944" data-thumb="assets/img/storythumbnails/jamal-awad.png" role="button" tabindex="0" aria-label="Play interview with Jamal Awad">
                         <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
@@ -669,7 +666,7 @@ Story Tellers Area
                     </div>
                 </article>
                 <article class="st-card" data-reveal style="--reveal-delay:.1s">
-                    <div class="st-video-wrap" data-vimeo="1067086904" role="button" tabindex="0" aria-label="Play interview with Dr. Abeer Abouyabis">
+                    <div class="st-video-wrap" data-vimeo="1067086904" data-thumb="assets/img/storythumbnails/abeer-abouyabis.png" role="button" tabindex="0" aria-label="Play interview with Dr. Abeer Abouyabis">
                         <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
@@ -679,7 +676,7 @@ Story Tellers Area
                     </div>
                 </article>
                 <article class="st-card" data-reveal style="--reveal-delay:.2s">
-                    <div class="st-video-wrap" data-vimeo="1067089847" role="button" tabindex="0" aria-label="Play interview with Rev. Fahed Abuakel">
+                    <div class="st-video-wrap" data-vimeo="1067089847" data-thumb="assets/img/storythumbnails/fahed-abuakel.png" role="button" tabindex="0" aria-label="Play interview with Rev. Fahed Abuakel">
                         <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
@@ -689,7 +686,7 @@ Story Tellers Area
                     </div>
                 </article>
                 <article class="st-card" data-reveal style="--reveal-delay:.3s">
-                    <div class="st-video-wrap" data-vimeo="1067108346" role="button" tabindex="0" aria-label="Play interview with Musa Ghanayem">
+                    <div class="st-video-wrap" data-vimeo="1067108346" data-thumb="assets/img/storythumbnails/musa-ghanayem.png" role="button" tabindex="0" aria-label="Play interview with Musa Ghanayem">
                         <span class="st-play"><i class="fas fa-play"></i></span>
                     </div>
                     <div class="st-card-body">
@@ -707,15 +704,21 @@ Story Tellers Area
         var wraps = document.querySelectorAll('#story-tellers .st-video-wrap[data-vimeo]');
         wraps.forEach(function (wrap) {
             var id = wrap.getAttribute('data-vimeo');
-            // Load Vimeo thumbnail as poster
-            fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + id + '&width=640')
-                .then(function (r) { return r.json(); })
-                .then(function (d) {
-                    if (d && d.thumbnail_url) {
-                        wrap.style.backgroundImage = 'url("' + d.thumbnail_url + '")';
-                    }
-                })
-                .catch(function () {});
+            var localThumb = wrap.getAttribute('data-thumb');
+            if (localThumb) {
+                // use local thumbnail
+                wrap.style.backgroundImage = 'url("' + localThumb + '")';
+            } else {
+                // fall back to Vimeo thumbnail as poster
+                fetch('https://vimeo.com/api/oembed.json?url=https://vimeo.com/' + id + '&width=640')
+                    .then(function (r) { return r.json(); })
+                    .then(function (d) {
+                        if (d && d.thumbnail_url) {
+                            wrap.style.backgroundImage = 'url("' + d.thumbnail_url + '")';
+                        }
+                    })
+                    .catch(function () {});
+            }
 
             function play() {
                 if (wrap.classList.contains('is-playing')) return;
