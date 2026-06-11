@@ -16459,6 +16459,24 @@ span.select2-selection.select2-selection--single:focus {
   max-width: 1720px;
   margin: 0 auto;
 }
+@media (max-width: 1799px) {
+  .service-wrap1 {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .service-wrap1 {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .service-wrap1 {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
 
 /* Service Card 2---------------------------------- */
 .service-bg-shape2-2 {
@@ -23320,7 +23338,7 @@ span.select2-selection.select2-selection--single:focus {
    Why Stories Section — Editorial Split
    ============================================= */
 .ws-section {
-  padding: 10px 0 20px;
+  padding: 10px 0 60px;
   background: transparent;
 }
 
@@ -24058,4 +24076,15 @@ span.select2-selection.select2-selection--single:focus {
 @media (max-width: 479px) {
   .pali-team-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .pali-card-info h3 { font-size: 14px; }
+}
+
+/* ══════════════════════════════════════
+   Section background images at 45% opacity
+   (inset white wash sits above the bg image, below content)
+══════════════════════════════════════ */
+#hero,
+#about-sec,
+.ws-st-bgwrap,
+.pali-team-section {
+  box-shadow: inset 0 0 0 100vmax rgba(255, 255, 255, 0.55);
 }
