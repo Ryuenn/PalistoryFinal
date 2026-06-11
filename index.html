@@ -470,7 +470,7 @@ About Area
                             <div style="width:476px; height:458px; background-color:#386d3f; -webkit-mask:url(assets/img/shape/about_shape2_1.png) center/contain no-repeat; mask:url(assets/img/shape/about_shape2_1.png) center/contain no-repeat;"></div>
                         </div>
                         <div class="img1">
-                            <img src="assets/img/palistory1.JPG" alt="About" style="object-position: 70% center;">
+                            <img src="assets/img/leftmost.jpg" alt="About" style="object-position: 45% center;">
                         </div>
                         <div class="img2">
                             <img src="assets/img/palistory2.JPG" alt="About">
@@ -786,6 +786,8 @@ FAQ Area
       }
       .faq-area-2 { position: relative; }
       @media (max-width: 991px) { .faq-area-2 .faq-splash { display: none; } }
+      /* nudge the red splash rightward on MacBook / mid-desktop widths */
+      @media (min-width: 992px) and (max-width: 1750px) { .faq-area-2 .faq-splash { left: 0px; } }
     </style>
     <div class="space-top overflow-hidden faq-area-2" style="padding-bottom: 40px; background-color: #356842;">
         <div class="faq-splash">
@@ -909,9 +911,9 @@ FAQ Area
     <div class="torn-strip-wrap">
       <div class="torn-strip">
         <div class="strip-photo sp1"><img src="assets/img/faqs/A-580x580.png" alt="Palistory event"></div>
-        <div class="strip-photo sp2"><img src="assets/img/faqs/B-580x580.png" alt="Palistory event"></div>
+        <div class="strip-photo sp2"><img src="assets/img/2ndimage.jpg" alt="Palistory event"></div>
         <div class="strip-photo sp3"><img src="assets/img/faqs/D-580x580.png" alt="Palistory event"></div>
-        <div class="strip-photo sp4"><img src="assets/img/faqs/B-580x580 (1).png" alt="Palistory event"></div>
+        <div class="strip-photo sp4"><img src="assets/img/4thimage.jpg" alt="Palistory event"></div>
         <div class="strip-photo sp5"><img src="assets/img/faqs/I-580x580.png" alt="Palistory event"></div>
       </div>
     </div>
@@ -1393,16 +1395,13 @@ Cta Area
         <div class="shape-mockup video-bg-shape1-1" data-top="0" data-left="0">
             <img src="assets/img/shape/video_shape1_1.png" alt="img">
         </div>
-        <div class="shape-mockup video-bg-shape1-2" data-bottom="0" data-right="0">
-            <img src="assets/img/shape/video_shape1_2.png" alt="img">
-        </div>
         <div class="container">
             <div class="row gy-40 justify-content-between align-items-center">
                 <div class="col-xl-5">
                     <div class="title-area mb-0">
                         <span class="sub-title after-none before-none text-white">Contact Us</span>
                         <h2 class="sec-title text-white" style="line-height:1.0; font-size:3.4rem;">Be Part Of The Movement<br>To Preserve Truth</h2>
-                        <p class="text-white" style="margin-top:24px; font-size:1.25rem;">Are you Palestinian? Have a lived experience to share? Submit your story for potential inclusion in our upcoming projects.</p>
+                        <p class="text-white" style="margin-top:24px; font-size:1.05rem;">Are you Palestinian? Have a lived experience to share?<br>Submit your story for potential inclusion in our upcoming projects.</p>
                         <p class="text-white" style="font-size:1.2rem; font-weight:700; margin-top:10px;">
                             To Submit Your Queries Reach Us At&nbsp;
                             <a href="mailto:INFO@PALISTORY.COM" style="color:#fff; text-decoration:underline;">INFO@PALISTORY.COM</a>
@@ -1411,8 +1410,7 @@ Cta Area
                 </div>
                 <div class="col-xl-6">
                     <div class="video-thumb1-1 video-box-center">
-                        <img src="assets/img/palistoryimage123.jpg" alt="img">
-                        <a href="https://www.youtube.com/watch?v=gsmmOoTOZL4" class="play-btn style2 popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
+                        <img src="assets/img/faqspicture.jpg" alt="img">
                     </div>
                 </div>
             </div>

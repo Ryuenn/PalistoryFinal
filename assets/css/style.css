@@ -18248,7 +18248,7 @@ span.select2-selection.select2-selection--single:focus {
     width: 200px;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 991px) {
   .video-bg-shape1-1 {
     display: none;
   }
@@ -18258,7 +18258,7 @@ span.select2-selection.select2-selection--single:focus {
   z-index: 2;
   /* Extra large devices */
 }
-@media (max-width: 1500px) {
+@media (max-width: 991px) {
   .video-bg-shape1-2 {
     display: none;
   }
