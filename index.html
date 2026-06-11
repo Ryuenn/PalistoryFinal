@@ -768,11 +768,11 @@ Why Stories Area
 FAQ Area
 ==============================-->
     <style>
-      /* pull FAQ content toward the left (content only, image unaffected) */
-      .faq-area-2 .faq-wrap2 { margin-left: 0; padding-left: 0; max-width: 620px; }
-      /* only shift left on wide screens where there's room (avoids clipping on laptops) */
-      @media (min-width: 1400px) { .faq-area-2 .faq-wrap2 { margin-left: -60px; } }
-      @media (max-width: 991px) { .faq-area-2 .faq-wrap2 { max-width: none; } }
+      /* give the FAQ content some space from the left edge */
+      .faq-area-2 .faq-wrap2 { margin-left: 0; padding-left: 50px; max-width: 670px; }
+      @media (max-width: 991px) { .faq-area-2 .faq-wrap2 { max-width: none; padding-left: 0; } }
+      /* MacBook only: push the FAQ content a bit further right */
+      @media (min-width: 992px) and (max-width: 1750px) { .faq-area-2 .faq-wrap2 { padding-left: 0px; } }
       .faq-area-2 .title-area { padding-left: 0; }
       /* shorter accordion cards */
       .faq-area-2 .accordion-card .accordion-button { padding-top: 16px; padding-bottom: 16px; min-height: 0; }
