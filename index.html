@@ -82,6 +82,20 @@
         }
         #hero > .container { position: relative; z-index: 1; }
 
+        /* fade these section backgrounds to ~60% strength with a white overlay */
+        #about-sec, .ws-st-bgwrap, .pali-team-section { position: relative; }
+        #about-sec::after, .ws-st-bgwrap::after, .pali-team-section::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0.4);
+            z-index: 0;
+            pointer-events: none;
+        }
+        #about-sec > .container,
+        .ws-st-bgwrap > section,
+        .pali-team-section > .container { position: relative; z-index: 1; }
+
         /* reduce the empty gap above the hero content on MacBook / mid-desktop widths */
         @media (min-width: 992px) and (max-width: 1750px) {
             .hero-2 .container { padding-top: 0; }
