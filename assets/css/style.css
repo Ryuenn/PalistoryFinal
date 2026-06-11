@@ -7993,7 +7993,7 @@ ol.wp-block-rss {
 .footer-layout1 .footer-bg-shape1-1 {
   /* Extra large devices */
 }
-@media (max-width: 1500px) {
+@media (max-width: 991px) {
   .footer-layout1 .footer-bg-shape1-3,
   .footer-layout1 .footer-bg-shape1-2,
   .footer-layout1 .footer-bg-shape1-1 {
