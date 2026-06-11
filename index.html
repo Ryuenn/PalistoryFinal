@@ -794,6 +794,12 @@ FAQ Area
       @media (max-width: 991px) { .faq-area-2 .faq-splash { display: none; } }
       /* nudge the red splash rightward on MacBook / mid-desktop widths */
       @media (min-width: 992px) and (max-width: 1750px) { .faq-area-2 .faq-splash { left: 0px; } }
+      /* MacBook only: keep the FAQ photo bleeding to the section edges (no green bands) */
+      @media (min-width: 992px) and (max-width: 1750px) {
+        .faq-area-2 .faq-img-box2 { height: calc(100% + 220px); margin-top: -140px; margin-bottom: -80px; }
+        /* close the hairline gap between the torn edge and the green bg */
+        .faq-area-2 .faq-img-box2 .faq-img-shape { left: -2px; }
+      }
     </style>
     <div class="space-top overflow-hidden faq-area-2" style="padding-bottom: 40px; background-color: #356842;">
         <div class="faq-splash">
@@ -917,7 +923,7 @@ FAQ Area
     <div class="torn-strip-wrap">
       <div class="torn-strip">
         <div class="strip-photo sp1"><img src="assets/img/faqs/A-580x580.png" alt="Palistory event"></div>
-        <div class="strip-photo sp2"><img src="assets/img/2ndimage.jpg" alt="Palistory event"></div>
+        <div class="strip-photo sp2"><img src="assets/img/2ndimage.jpg" alt="Palistory event" style="object-position: 45% 20%;"></div>
         <div class="strip-photo sp3"><img src="assets/img/faqs/D-580x580.png" alt="Palistory event"></div>
         <div class="strip-photo sp4"><img src="assets/img/4thimage.jpg" alt="Palistory event"></div>
         <div class="strip-photo sp5"><img src="assets/img/faqs/I-580x580.png" alt="Palistory event"></div>
@@ -1392,9 +1398,9 @@ Team Area
 Cta Area
 ==============================-->
     <style>
-      /* tint the white paint-splash shape to the site green accent (#386d3f) */
+      /* tint the white paint-splash shape to the site yellow accent (#FDA10F) */
       .video-area-1 .video-bg-shape1-1 img {
-        filter: brightness(0) saturate(100%) invert(34%) sepia(18%) saturate(1100%) hue-rotate(83deg) brightness(95%) contrast(88%);
+        filter: brightness(0) saturate(100%) invert(72%) sepia(60%) saturate(1300%) hue-rotate(360deg) brightness(102%) contrast(101%);
       }
     </style>
     <div class="video-area-1 space bg-theme overflow-hidden" id="contact-sec">
