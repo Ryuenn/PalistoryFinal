@@ -91,7 +91,7 @@ Version: 1.0.0
   --theme-color: #c51919;
   --theme-dark: #6e0f0f;
   --theme-color2: #FDA10F;
-  --theme-color3: #386d3f;
+  --theme-color3: #2e512d;
   --title-color: #1F1F1F;
   --body-color: #797E88;
   --smoke-color: #F8F8F8;
@@ -7151,9 +7151,10 @@ ol.wp-block-rss {
 }
 .header-layout1 .sticky-wrapper {
   padding: 10px 0;
+  background: #2e512d;
 }
 .header-layout1 .sticky-wrapper.sticky {
-  background: var(--white-color);
+  background: #2e512d;
   padding: 10px 0;
 }
 .header-layout1.unittest-header .header-logo {
@@ -9285,8 +9286,9 @@ ul.comment-list .th-comment-item:has(.children) .th-post-comment {
   margin-top: 0;
 }
 .hero-2:before {
-  mix-blend-mode: color;
+  mix-blend-mode: normal;
   z-index: -1;
+  display: none;
 }
 
 .hero-shape-2-1,
@@ -22992,9 +22994,13 @@ span.select2-selection.select2-selection--single:focus {
 /* =============================================
    Story Tellers Section — Interactive Grid
    ============================================= */
+/* single continuous background spanning Story Tellers + Why Stories */
+.ws-st-bgwrap {
+  background: url('../img/whystories_bg.png') center top / cover no-repeat;
+}
 .st-section {
-  background: #ffffff;
-  padding: 0 0 30px;
+  background: transparent;
+  padding: 50px 0 30px;
   margin-top: -60px;
 }
 
@@ -23006,7 +23012,7 @@ span.select2-selection.select2-selection--single:focus {
   gap: 32px;
   margin-bottom: 48px;
   padding-bottom: 28px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #c51919;
 }
 
 .st-header-text {
@@ -23044,7 +23050,7 @@ span.select2-selection.select2-selection--single:focus {
 
 .st-subtitle {
   font-size: 16px;
-  color: #797E88;
+  color: #000;
   margin: 0;
   line-height: 1.6;
 }
@@ -23314,7 +23320,8 @@ span.select2-selection.select2-selection--single:focus {
    Why Stories Section — Editorial Split
    ============================================= */
 .ws-section {
-  padding: 10px 0 110px;
+  padding: 10px 0 20px;
+  background: transparent;
 }
 
 .ws-layout {
@@ -23382,7 +23389,7 @@ span.select2-selection.select2-selection--single:focus {
 .ws-text {
   font-size: 16px;
   line-height: 1.75;
-  color: #797E88;
+  color: #000;
   margin: 0 0 26px;
 }
 
@@ -23456,7 +23463,7 @@ span.select2-selection.select2-selection--single:focus {
   right: -22px;
   bottom: -22px;
   border-radius: 18px;
-  background: var(--theme-color3, #386d3f);
+  background: var(--theme-color3, #2e512d);
   z-index: 0;
 }
 
@@ -23642,7 +23649,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .gift-diamond {
-  color: #386d3f;
+  color: #2e512d;
   font-size: 12px;
 }
 
@@ -23868,7 +23875,7 @@ span.select2-selection.select2-selection--single:focus {
 ══════════════════════════════════════ */
 .pali-team-section {
   padding: 80px 0 60px;
-  background: #f5f0e8;
+  background: url('../img/teammembers_bg.png') center center / cover no-repeat;
   position: relative;
   overflow: hidden;
 }
@@ -23906,7 +23913,7 @@ span.select2-selection.select2-selection--single:focus {
   justify-content: center;
   gap: 12px;
   margin-bottom: 16px;
-  color: #386d3f;
+  color: #2e512d;
   font-size: 18px;
 }
 
@@ -24030,7 +24037,7 @@ span.select2-selection.select2-selection--single:focus {
   font-weight: 700;
 }
 
-.pali-team-quote p em.green { color: #386d3f; }
+.pali-team-quote p em.green { color: #2e512d; }
 .pali-team-quote p em.red   { color: #c51919; }
 
 .pali-heart {

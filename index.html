@@ -75,6 +75,13 @@
             .hero-2 .container { padding-top: 0; }
             .hero-2 .container > .row { margin-top: -100px; }
         }
+        /* reduce the gap between the hero image and the text on mobile */
+        @media (max-width: 767px) {
+            .hero-2 .container { padding-top: 0; }
+            .hero-2 .container > .row { margin-top: -40px; }
+            .hero-2 .hero-style2 { margin-top: -60px; }
+            .hero-2 .hero-2-img { margin-top: 40px !important; }
+        }
 
         /* Hero image reveal + gentle float */
         .hero-2-img {
@@ -185,8 +192,12 @@
         }
         /* Center the Palistory Mission heading and text on mobile */
         @media (max-width: 991px) {
-            #about-sec .about-wrap2 .title-area { text-align: center; }
-            #about-sec .about-wrap2 .sub-title { justify-content: center; }
+            #about-sec .about-wrap1 { text-align: center; }
+            #about-sec .about-wrap1 .title-area { text-align: center; }
+            #about-sec .about-wrap1 .sub-title { justify-content: center; }
+            #about-sec .about-wrap1 .btn-wrap { display: flex; justify-content: center; }
+            #about-sec .year-counter { text-align: center; }
+            #about-sec .year-counter_text { text-align: center; }
         }
         /* Center the Why Stories section on mobile */
         @media (max-width: 991px) {
@@ -322,7 +333,7 @@
             <div class="container">
                 <div class="menu-area">
                     <div class="header-logo" style="margin-left:-40px;">
-                        <a href="index.html"><img src="assets/img/PalistoryLogo.png" alt="Palistory" style="height:55px;"></a>
+                        <a href="index.html"><img src="assets/img/Palistory_LogoReal.png" alt="Palistory" style="height:55px;"></a>
                     </div>
                     <div class="menu-area-wrap">
                                                 <nav class="main-menu d-none d-lg-block">
@@ -364,7 +375,7 @@
     <!--==============================
 Hero Area
 ==============================-->
-    <div class="th-hero-wrapper hero-2" id="hero" data-bg-src="assets/img/hero/hero_bg_2_1.png" data-overlay="gray">
+    <div class="th-hero-wrapper hero-2" id="hero" data-bg-src="assets/img/hero_bg_lite.png">
         <div class="shape-mockup hero-shape-2-1 jump" data-top="14%" data-left="5%">
             <div class="color-masking">
                 <div class="masking-src" data-mask-src="assets/img/hero/hero-bg-shape2-1.png"></div>
@@ -394,12 +405,6 @@ Hero Area
         </div>
         <div class="shape-mockup hero-shape-2-7" data-bottom="-7%" data-left="0%">
             <img src="assets/img/hero/hero-bg-shape2-7.png" alt="shape">
-        </div>
-        <div class="shape-mockup hero-shape-2-8" data-top="0%" data-right="0%">
-            <div class="color-masking2">
-                <div class="masking-src" data-mask-src="assets/img/hero/hero-bg-shape2-8.png"></div>
-                <img src="assets/img/hero/hero-bg-shape2-8.png" alt="shape">
-            </div>
         </div>
         <div class="shape-mockup hero-shape-2-9" data-bottom="0%" data-left="0%" data-right="0">
             <img src="assets/img/hero/hero-bg-shape2-9.png" alt="shape">
@@ -467,13 +472,13 @@ Hero Area
     <!--==============================
 About Area
 ==============================-->
-    <div class="space bg-smoke2 overflow-hidden" id="about-sec" data-bg-src="assets/img/bg/about_bg_5.png" style="padding-top:40px; padding-bottom:40px;">
+    <div class="space bg-smoke2 overflow-hidden" id="about-sec" data-bg-src="assets/img/aboutpalistory.png" style="padding-top:40px; padding-bottom:40px;">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-xl-7 mb-50 mb-xl-0">
                     <div class="img-box5">
                         <div class="about-shape5-1 jump">
-                            <div style="width:476px; height:458px; background-color:#386d3f; -webkit-mask:url(assets/img/shape/about_shape2_1.png) center/contain no-repeat; mask:url(assets/img/shape/about_shape2_1.png) center/contain no-repeat;"></div>
+                            <div style="width:476px; height:458px; background-color:#2e512d; -webkit-mask:url(assets/img/shape/about_shape2_1.png) center/contain no-repeat; mask:url(assets/img/shape/about_shape2_1.png) center/contain no-repeat;"></div>
                         </div>
                         <div class="img1">
                             <img src="assets/img/leftmost.jpg" alt="About" style="object-position: 45% center;">
@@ -507,7 +512,7 @@ About Area
     <!--==============================
 Service Area
 ==============================-->
-    <section class="space-bottom overflow-hidden" id="service-sec">
+    <section class="overflow-hidden" id="service-sec" style="padding-top:20px; padding-bottom:80px;">
         <div class="service-wrap1 th-radius overflow-hidden" style="padding-top:40px; padding-bottom:40px;" data-bg-src="assets/img/bg/gray-bg2.png" data-overlay="gray" data-opacity="5">
             <div class="shape-mockup service-bg-shape1-5 d-xxl-inline-block d-none z-index-3 spin" data-top="15%" data-left="18%">
                 <div class="color-masking">
@@ -620,6 +625,7 @@ Service Area
     <!--==============================
 Story Tellers Area
 ==============================-->
+    <div class="ws-st-bgwrap">
     <section id="story-tellers" class="st-section">
         <div class="container">
             <div class="st-header">
@@ -763,6 +769,7 @@ Why Stories Area
             </div>
         </div>
     </section>
+    </div>
 
 <!--==============================
 FAQ Area
@@ -782,15 +789,22 @@ FAQ Area
       .faq-area-2 .accordion-card:not(:last-child) { margin-bottom: 18px; }
       /* keep the FAQ photo in full color */
       .faq-area-2 .faq-img-box2 .img1 { -webkit-filter: none !important; filter: none !important; }
-      /* tint the torn paint edge on the photo to the site green accent (#386d3f) */
-      .faq-area-2 .faq-img-box2 .faq-img-shape img {
-        filter: brightness(0) saturate(100%) invert(34%) sepia(18%) saturate(1100%) hue-rotate(83deg) brightness(95%) contrast(88%);
+      /* tint the torn paint edge to EXACT red accent (#c51919) via mask */
+      .faq-area-2 .faq-img-box2 .faq-img-shape { position: absolute; }
+      .faq-area-2 .faq-img-box2 .faq-img-shape img { visibility: hidden; }
+      .faq-area-2 .faq-img-box2 .faq-img-shape::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: #c51919;
+        -webkit-mask: url('assets/img/shape/faq-shape2-1.png') no-repeat left center / contain;
+                mask: url('assets/img/shape/faq-shape2-1.png') no-repeat left center / contain;
       }
-      /* red paint-splash accent in the FAQ corner (shows against green bg) */
+      /* green paint-splash accent in the FAQ corner (shows against red bg) */
       .faq-area-2 .faq-splash { position: absolute; top: 0; left: 0; width: 220px; z-index: 1; pointer-events: none; }
       .faq-area-2 .faq-splash img {
         width: 100%; height: auto; display: block;
-        filter: brightness(0) saturate(100%) invert(11%) sepia(85%) saturate(5000%) hue-rotate(355deg) brightness(95%) contrast(105%);
+        filter: brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(220%) hue-rotate(69deg) brightness(88%) contrast(95%);
       }
       .faq-area-2 { position: relative; }
       @media (max-width: 991px) { .faq-area-2 .faq-splash { display: none; } }
@@ -803,7 +817,7 @@ FAQ Area
         .faq-area-2 .faq-img-box2 .faq-img-shape { left: -2px; }
       }
     </style>
-    <div class="space-top overflow-hidden faq-area-2" style="padding-bottom: 40px; background-color: #356842;">
+    <div class="space-top overflow-hidden faq-area-2" style="padding-bottom: 40px; background-color: #c51919;">
         <div class="faq-splash">
             <img src="assets/img/shape/video_shape1_1.png" alt="">
         </div>
@@ -1091,7 +1105,7 @@ Team Area
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="donation-card" data-theme-color="#386d3f">
+                            <div class="donation-card" data-theme-color="#2e512d">
                                 <div class="donation-card-shape" data-mask-src="assets/img/donation/donation-card-bg-shape1-1.png"></div>
                                 <div class="box-thumb">
                                     <img src="assets/img/donation/donation1-3.png" alt="image">
@@ -1166,7 +1180,7 @@ Team Area
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="donation-card" data-theme-color="#386d3f">
+                            <div class="donation-card" data-theme-color="#2e512d">
                                 <div class="donation-card-shape" data-mask-src="assets/img/donation/donation-card-bg-shape1-1.png"></div>
                                 <div class="box-thumb">
                                     <img src="assets/img/donation/donation1-3.png" alt="image">
@@ -1400,9 +1414,9 @@ Team Area
 Cta Area
 ==============================-->
     <style>
-      /* tint the white paint-splash shape to the site green accent (#386d3f) */
+      /* tint the white paint-splash shape to the site green accent (#2e512d) */
       .video-area-1 .video-bg-shape1-1 img {
-        filter: brightness(0) saturate(100%) invert(34%) sepia(18%) saturate(1100%) hue-rotate(83deg) brightness(95%) contrast(88%);
+        filter: brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(220%) hue-rotate(69deg) brightness(88%) contrast(95%);
       }
     </style>
     <div class="video-area-1 space bg-theme overflow-hidden" id="contact-sec">
