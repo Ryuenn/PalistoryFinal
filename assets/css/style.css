@@ -23761,6 +23761,16 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 /* ── Responsive ── */
+/* MacBook / mid-desktop range: keep the centered kuffiyeh from sliding under the badges */
+@media (min-width: 992px) and (max-width: 1750px) {
+  .gift-banner { background-position: 130% center; padding-right: 30px; }
+  .gift-left { padding-left: 0px; flex: 0 0 24%; }
+  .gift-badges { flex: 0 1 auto; justify-content: flex-start; padding-left: 60px; padding-right: 30px; }
+  .gift-badge { padding: 0 14px; }
+  .gift-badge span { font-size: 11px; letter-spacing: 1px; }
+  .gift-right { padding-right: 0; }
+}
+
 @media (max-width: 1199px) {
   .gift-banner { padding: 40px; }
   .gift-badge { padding: 0 24px; }
