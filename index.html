@@ -765,56 +765,86 @@ Why Stories Area
 <!--==============================
 FAQ Area
 ==============================-->
-    <div class="space-top space-extra2-bottom faq-bg-section" style="background: linear-gradient(rgba(197,25,25,0.87), rgba(197,25,25,0.87)), url('assets/img/faqpic.png') center/cover no-repeat;">
+    <style>
+      /* pull FAQ content toward the left (content only, image unaffected) */
+      .faq-area-2 .faq-wrap2 { margin-left: -150px; padding-left: 0; }
+      @media (max-width: 991px) { .faq-area-2 .faq-wrap2 { margin-left: 0; } }
+      .faq-area-2 .title-area { padding-left: 0; }
+      /* shorter accordion cards */
+      .faq-area-2 .accordion-card .accordion-button { padding-top: 16px; padding-bottom: 16px; min-height: 0; }
+      .faq-area-2 .accordion-card .accordion-body { padding-top: 8px; padding-bottom: 16px; }
+      .faq-area-2 .accordion-card:not(:last-child) { margin-bottom: 18px; }
+      /* keep the FAQ photo in full color */
+      .faq-area-2 .faq-img-box2 .img1 { -webkit-filter: none !important; filter: none !important; }
+    </style>
+    <div class="space-top overflow-hidden faq-area-2" data-bg-src="assets/img/bg/gray-bg2.png" style="padding-bottom: 40px;">
         <div class="container">
-            <div class="row justify-content-center justify-content-lg-start">
-                <div class="col-xl-4">
-                    <div class="title-area mb-35">
-                        <span class="sub-title after-none before-none text-white"><i class="far fa-heart me-2"></i>Frequently Asked Questions</span>
-                        <h2 class="sec-title text-white">Things You Would Like To Know About</h2>
+            <div class="row gy-60 gx-60">
+                <div class="col-xl-7">
+                    <div class="faq-wrap2">
+                        <div class="title-area">
+                            <span class="sub-title after-none before-none"><i class="far fa-heart text-theme"></i> Frequently Asked Questions</span>
+                            <h2 class="sec-title">Things You Would Like To Know About</h2>
+                        </div>
+                        <div class="accordion" id="faqAccordion">
+
+
+                            <div class="accordion-card style2 active">
+                                <div class="accordion-header" id="collapse-item-1">
+                                    <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">What is Palistory?</button>
+                                </div>
+                                <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Palistory is a non-profit 501(c)(3) organization dedicated to producing documentary films and episodic series that amplify Palestinian voices, preserve history, and tell heart-felt stories of Palestinians around the world.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-card style2">
+                                <div class="accordion-header" id="collapse-item-2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Are your films based on real stories?</button>
+                                </div>
+                                <div id="collapse-2" class="accordion-collapse collapse " aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Yes. All of our content is grounded in lived experiences. We interview Palestinians from all walks of life — from the diaspora to those still on the ground — to document authentic, first-hand narratives.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-card style2">
+                                <div class="accordion-header" id="collapse-item-3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">How can I support Palistory?</button>
+                                </div>
+                                <div id="collapse-3" class="accordion-collapse collapse " aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">You can support us by donating at secure.qgiv.com/for/palistory, sharing our content, subscribing to our mailing list, submitting your story, or partnering with us as an organisation or sponsor.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="accordion-card style2">
+                                <div class="accordion-header" id="collapse-item-4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">Is Palistory a nonprofit organization?</button>
+                                </div>
+                                <div id="collapse-4" class="accordion-collapse collapse " aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Yes. Palistory, Inc. is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible and go directly toward funding our production costs, outreach, and branded merchandise.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xl-8">
-                    <div class="accordion mb-40" id="faqAccordionHome">
-                        <div class="accordion-card style3 active">
-                            <div class="accordion-header" id="home-collapse-item-1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-1" aria-expanded="true" aria-controls="home-collapse-1"><i class="far fa-book-open me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>What is Palistory?</button>
-                            </div>
-                            <div id="home-collapse-1" class="accordion-collapse collapse show" aria-labelledby="home-collapse-item-1" data-bs-parent="#faqAccordionHome">
-                                <div class="accordion-body">
-                                    <p class="faq-text">Palistory is a non-profit 501(c)(3) organization dedicated to producing documentary films and episodic series that amplify Palestinian voices, preserve history, and tell heart-felt stories of Palestinians around the world.</p>
-                                </div>
-                            </div>
+                <div class="col-xl-5">
+                    <div class="faq-img-box2">
+                        <div class="img1">
+                            <img src="assets/img/palestinekids.JPG" alt="img">
                         </div>
-                        <div class="accordion-card style3">
-                            <div class="accordion-header" id="home-collapse-item-2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-2" aria-expanded="false" aria-controls="home-collapse-2"><i class="far fa-film me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>Are your films based on real stories?</button>
-                            </div>
-                            <div id="home-collapse-2" class="accordion-collapse collapse" aria-labelledby="home-collapse-item-2" data-bs-parent="#faqAccordionHome">
-                                <div class="accordion-body">
-                                    <p class="faq-text">Yes. All of our content is grounded in lived experiences. We interview Palestinians from all walks of life — from the diaspora to those still on the ground — to document authentic, first-hand narratives.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-card style3">
-                            <div class="accordion-header" id="home-collapse-item-3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-3" aria-expanded="false" aria-controls="home-collapse-3"><i class="far fa-hand-holding-heart me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>How can I support Palistory?</button>
-                            </div>
-                            <div id="home-collapse-3" class="accordion-collapse collapse" aria-labelledby="home-collapse-item-3" data-bs-parent="#faqAccordionHome">
-                                <div class="accordion-body">
-                                    <p class="faq-text">You can support us by donating at secure.qgiv.com/for/palistory, sharing our content, subscribing to our mailing list, submitting your story, or partnering with us as an organisation or sponsor.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-card style3">
-                            <div class="accordion-header" id="home-collapse-item-4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#home-collapse-4" aria-expanded="false" aria-controls="home-collapse-4"><i class="far fa-landmark me-3" style="font-size:1.1em;color:var(--theme-color);flex-shrink:0;"></i>Is Palistory a nonprofit organization?</button>
-                            </div>
-                            <div id="home-collapse-4" class="accordion-collapse collapse" aria-labelledby="home-collapse-item-4" data-bs-parent="#faqAccordionHome">
-                                <div class="accordion-body">
-                                    <p class="faq-text">Yes. Palistory, Inc. is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible and go directly toward funding our production costs, outreach, and branded merchandise.</p>
-                                </div>
-                            </div>
+                        <div class="faq-img-shape">
+                            <img src="assets/img/shape/faq-shape2-1.png" alt="img">
                         </div>
                     </div>
                 </div>
@@ -1340,20 +1370,41 @@ Team Area
     <!--==============================
 Cta Area
 ==============================-->
-    <section class="overflow-hidden" id="contact-sec">
-        <div style="position:relative; padding:100px 20px; text-align:center; background-color:var(--theme-color); background-image:url('assets/img/cta1.png'); background-size:cover; background-position:center;">
-            <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(197,25,25,0.85), rgba(197,25,25,0.95));"></div>
-            <div style="position:relative; z-index:2; max-width:800px; margin:0 auto;">
-                <span class="sub-title after-none before-none justify-content-center" style="color:#fff;">Contact Us</span>
-                <h2 class="sec-title text-white mt-2">Be part of the movement<br>to preserve truth</h2>
-                <p style="color:rgba(255,255,255,0.85); margin-top:20px; font-size:1rem;">Are you Palestinian? Have a lived experience to share?<br>Submit your story for potential inclusion in our upcoming projects.</p>
-                <p style="color:#fff; font-size:1.2rem; font-weight:700; margin-top:30px;">
-                    To Submit Your Queries Reach Us At&nbsp;
-                    <a href="mailto:INFO@PALISTORY.COM" style="color:#fff; text-decoration:underline;">INFO@PALISTORY.COM</a>
-                </p>
+    <style>
+      /* tint the white paint-splash shape to the site green accent (#386d3f) */
+      .video-area-1 .video-bg-shape1-1 img {
+        filter: brightness(0) saturate(100%) invert(34%) sepia(18%) saturate(1100%) hue-rotate(83deg) brightness(95%) contrast(88%);
+      }
+    </style>
+    <div class="video-area-1 space bg-theme overflow-hidden" id="contact-sec">
+        <div class="shape-mockup video-bg-shape1-1" data-top="0" data-left="0">
+            <img src="assets/img/shape/video_shape1_1.png" alt="img">
+        </div>
+        <div class="shape-mockup video-bg-shape1-2" data-bottom="0" data-right="0">
+            <img src="assets/img/shape/video_shape1_2.png" alt="img">
+        </div>
+        <div class="container">
+            <div class="row gy-40 justify-content-between align-items-center">
+                <div class="col-xl-5">
+                    <div class="title-area mb-0">
+                        <span class="sub-title after-none before-none text-white">Contact Us</span>
+                        <h2 class="sec-title text-white">Be Part Of The Movement<br>To Preserve Truth</h2>
+                        <p class="text-white">Are you Palestinian? Have a lived experience to share? Submit your story for potential inclusion in our upcoming projects.</p>
+                        <p class="text-white" style="font-size:1.2rem; font-weight:700; margin-top:10px;">
+                            To Submit Your Queries Reach Us At&nbsp;
+                            <a href="mailto:INFO@PALISTORY.COM" style="color:#fff; text-decoration:underline;">INFO@PALISTORY.COM</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="video-thumb1-1 video-box-center">
+                        <img src="assets/img/palistoryimage123.jpg" alt="img">
+                        <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style2 popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
     <!--==============================
 Blog Area - REMOVED
 ==============================
