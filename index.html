@@ -70,6 +70,12 @@
         #getInvolvedSlider .box-icon img { filter: hue-rotate(82deg) saturate(0.55) brightness(0.72); }
         #getInvolvedSlider .service-card:hover .box-icon:after { background-color: var(--theme-color3) !important; }
 
+        /* reduce the empty gap above the hero content on MacBook / mid-desktop widths */
+        @media (min-width: 992px) and (max-width: 1750px) {
+            .hero-2 .container { padding-top: 0; }
+            .hero-2 .container > .row { margin-top: -100px; }
+        }
+
         /* Hero image reveal + gentle float */
         .hero-2-img {
             animation: heroReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) both,
